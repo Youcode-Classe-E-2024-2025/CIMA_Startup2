@@ -11,6 +11,7 @@
 ## Links
 
 - **Github Backlog:**[View Backlog](https://github.com/orgs/Youcode-Classe-E-2024-2025/projects/18/views/1)
+- **Low Fidelity:**[View low fidelity maquette](https://balsamiq.cloud/scrl6mm/pi6gno2/r604B)
 - **Figma Maquette:** [View on Figma](https://www.figma.com/design/eHJGu8LdfvYEMxXdRQ46O2/CIMA-Startup-2?node-id=1-3&t=5ofrBzNfbjfrYXDm-1)
 - **GitHub Repository:** [View on GitHub](https://github.com/Youcode-Classe-E-2024-2025/CIMA_Startup2.git)
 - **Hosted Page:** [View Live](https://youcode-classe-e-2024-2025.github.io/CIMA_Startup2/)
