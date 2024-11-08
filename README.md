@@ -6,7 +6,7 @@
 
 **Scrum Master:** Ibrahim Nidam. 
 
-**collaborateur :** AbdeAli latifi -Chaimaa El omrani - Moustapha Ndiaye.
+**collaborateur :** AbdeAli latifi - Chaimaa El omrani - Moustapha Ndiaye.
 
 ## Links
 
