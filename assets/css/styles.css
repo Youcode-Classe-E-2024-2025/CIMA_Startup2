@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Product Description Page Animation start */
+
+/* Testimonials Section */
+
+.testimonial-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial {
+    transition: all 0.5s ease;
+    opacity: 0.7;
+    transform: scale(0.9);
+}
+
+.testimonial.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.quote {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    pointer-events: none;
+}
+
+.quote.active {
+    opacity: 1;
+}
+
+
+/* Product Description Page Animation end */
