@@ -9,9 +9,9 @@
       "inStock": true,
       "promotion": "Crafted with high-quality materials, this watch is perfect for adding elegance and sophistication to any style.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 1/WMP1-1.jpg",
-        "assets/images/Products/Watches/Men/Product 1/WMP1-2.jpg",
-        "assets/images/Products/Watches/Men/Product 1/WMP1-3.jpg"
+        "../images/Products/Watches/Men/Product%201/WMP1-1.jpg",
+        "../images/Products/Watches/Men/Product%201/WMP1-2.jpg",
+        "../images/Products/Watches/Men/Product%201/WMP1-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -25,10 +25,10 @@
       "inStock": true,
       "promotion": "This watch exudes strength and sophistication, ideal for those who demand both style and performance.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 2/WMP2-1.webp",
-        "assets/images/Products/Watches/Men/Product 2/WMP2-2.webp",
-        "assets/images/Products/Watches/Men/Product 2/WMP2-3.webp",
-        "assets/images/Products/Watches/Men/Product 2/WMP2-4.webp"
+        "../images/Products/Watches/Men/Product%202/WMP2-1.webp",
+        "../images/Products/Watches/Men/Product%202/WMP2-2.webp",
+        "../images/Products/Watches/Men/Product%202/WMP2-3.webp",
+        "../images/Products/Watches/Men/Product%202/WMP2-4.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -42,10 +42,10 @@
       "inStock": true,
       "promotion": "Designed for those who seek refinement in every aspect of their life, this timepiece radiates luxury.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 3/WMP3-1.webp",
-        "assets/images/Products/Watches/Men/Product 3/WMP3-2.webp",
-        "assets/images/Products/Watches/Men/Product 3/WMP3-3.webp",
-        "assets/images/Products/Watches/Men/Product 3/WMP3-4.webp"
+        "../images/Products/Watches/Men/Product%203/WMP3-1.webp",
+        "../images/Products/Watches/Men/Product%203/WMP3-2.webp",
+        "../images/Products/Watches/Men/Product%203/WMP3-3.webp",
+        "../images/Products/Watches/Men/Product%203/WMP3-4.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -59,9 +59,9 @@
       "inStock": true,
       "promotion": "Built to last, the Titanium Royale is a true statement of both rugged durability and sophistication.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 4/WMP4-1.webp",
-        "assets/images/Products/Watches/Men/Product 4/WMP4-2.webp",
-        "assets/images/Products/Watches/Men/Product 4/WMP4-3.webp"
+        "../images/Products/Watches/Men/Product%204/WMP4-1.webp",
+        "../images/Products/Watches/Men/Product%204/WMP4-2.webp",
+        "../images/Products/Watches/Men/Product%204/WMP4-3.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -75,10 +75,10 @@
       "inStock": true,
       "promotion": "Subtle yet bold, this watch exudes an air of mystery and sophistication for the discerning individual.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 5/WMP5-1.webp",
-        "assets/images/Products/Watches/Men/Product 5/WMP5-2.webp",
-        "assets/images/Products/Watches/Men/Product 5/WMP5-3.webp",
-        "assets/images/Products/Watches/Men/Product 5/WMP5-4.webp"
+        "../images/Products/Watches/Men/Product%205/WMP5-1.webp",
+        "../images/Products/Watches/Men/Product%205/WMP5-2.webp",
+        "../images/Products/Watches/Men/Product%205/WMP5-3.webp",
+        "../images/Products/Watches/Men/Product%205/WMP5-4.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -92,11 +92,11 @@
       "inStock": true,
       "promotion": "Crafted with intricate details and premium materials, this watch will make a lasting impression wherever you go.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 6/WMP6-1.webp",
-        "assets/images/Products/Watches/Men/Product 6/WMP6-2.webp",
-        "assets/images/Products/Watches/Men/Product 6/WMP6-3.webp",
-        "assets/images/Products/Watches/Men/Product 6/WMP6-4.webp",
-        "assets/images/Products/Watches/Men/Product 6/WMP6-5.webp"
+        "../images/Products/Watches/Men/Product%206/WMP6-1.webp",
+        "../images/Products/Watches/Men/Product%206/WMP6-2.webp",
+        "../images/Products/Watches/Men/Product%206/WMP6-3.webp",
+        "../images/Products/Watches/Men/Product%206/WMP6-4.webp",
+        "../images/Products/Watches/Men/Product%206/WMP6-5.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -110,10 +110,10 @@
       "inStock": true,
       "promotion": "A minimalist yet refined design, perfect for those who appreciate luxury in its simplest form.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 7/WMP7-1.webp",
-        "assets/images/Products/Watches/Men/Product 7/WMP7-2.webp",
-        "assets/images/Products/Watches/Men/Product 7/WMP7-3.webp",
-        "assets/images/Products/Watches/Men/Product 7/WMP7-4.webp"
+        "../images/Products/Watches/Men/Product%207/WMP7-1.webp",
+        "../images/Products/Watches/Men/Product%207/WMP7-2.webp",
+        "../images/Products/Watches/Men/Product%207/WMP7-3.webp",
+        "../images/Products/Watches/Men/Product%207/WMP7-4.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -127,9 +127,9 @@
       "inStock": true,
       "promotion": "The Titan's Crown stands as a symbol of triumph, designed for the modern man who demands excellence.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 8/WMP8-1.webp",
-        "assets/images/Products/Watches/Men/Product 8/WMP8-2.webp",
-        "assets/images/Products/Watches/Men/Product 8/WMP8-3.webp"
+        "../images/Products/Watches/Men/Product%208/WMP8-1.webp",
+        "../images/Products/Watches/Men/Product%208/WMP8-2.webp",
+        "../images/Products/Watches/Men/Product%208/WMP8-3.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -143,11 +143,11 @@
       "inStock": true,
       "promotion": "Perfect for the distinguished gentleman, this watch boasts both style and functionality, embodying the essence of luxury.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 9/WMP9-1.webp",
-        "assets/images/Products/Watches/Men/Product 9/WMP9-2.webp",
-        "assets/images/Products/Watches/Men/Product 9/WMP9-3.webp",
-        "assets/images/Products/Watches/Men/Product 9/WMP9-4.webp",
-        "assets/images/Products/Watches/Men/Product 9/WMP9-5.webp"
+        "../images/Products/Watches/Men/Product%209/WMP9-1.webp",
+        "../images/Products/Watches/Men/Product%209/WMP9-2.webp",
+        "../images/Products/Watches/Men/Product%209/WMP9-3.webp",
+        "../images/Products/Watches/Men/Product%209/WMP9-4.webp",
+        "../images/Products/Watches/Men/Product%209/WMP9-5.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -161,9 +161,9 @@
       "inStock": true,
       "promotion": "Built to endure the elements, this watch is for those who demand the best in both form and function.",
       "images": [
-        "assets/images/Products/Watches/Men/Product 10/WMP10-1.jpg",
-        "assets/images/Products/Watches/Men/Product 10/WMP10-2.jpg",
-        "assets/images/Products/Watches/Men/Product 10/WMP10-3.jpg"
+        "../images/Products/Watches/Men/Product%2010/WMP10-1.jpg",
+        "../images/Products/Watches/Men/Product%2010/WMP10-2.jpg",
+        "../images/Products/Watches/Men/Product%2010/WMP10-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -177,10 +177,10 @@
       "inStock": true,
       "promotion": "Crafted with high-quality materials, this piece showcases timeless design and durability, perfect for adding elegance and sophistication to any style.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 1/WWP1-1.jpg",
-        "assets/images/Products/Watches/Women/Product 1/WWP1-2.jpg",
-        "assets/images/Products/Watches/Women/Product 1/WWP1-3.jpg",
-        "assets/images/Products/Watches/Women/Product 1/WWP1-4.jpg"
+        "../images/Products/Watches/Women/Product%201/WWP1-1.jpg",
+        "../images/Products/Watches/Women/Product%201/WWP1-2.jpg",
+        "../images/Products/Watches/Women/Product%201/WWP1-3.jpg",
+        "../images/Products/Watches/Women/Product%201/WWP1-4.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -194,12 +194,12 @@
       "inStock": true,
       "promotion": "A refined design made for the modern woman, combining sophistication with durability for a watch that stands the test of time.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 2/WWP2-1.webp",
-        "assets/images/Products/Watches/Women/Product 2/WWP2-2.webp",
-        "assets/images/Products/Watches/Women/Product 2/WWP2-3.webp",
-        "assets/images/Products/Watches/Women/Product 2/WWP2-4.webp",
-        "assets/images/Products/Watches/Women/Product 2/WWP2-5.webp",
-        "assets/images/Products/Watches/Women/Product 2/WWP2-6.webp"
+        "../images/Products/Watches/Women/Product%202/WWP2-1.webp",
+        "../images/Products/Watches/Women/Product%202/WWP2-2.webp",
+        "../images/Products/Watches/Women/Product%202/WWP2-3.webp",
+        "../images/Products/Watches/Women/Product%202/WWP2-4.webp",
+        "../images/Products/Watches/Women/Product%202/WWP2-5.webp",
+        "../images/Products/Watches/Women/Product%202/WWP2-6.webp"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -213,12 +213,12 @@
       "inStock": true,
       "promotion": "With a stunning design, this watch evokes a sense of timeless beauty, crafted to elevate any wardrobe.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 3/WWP3-1.webp",
-        "assets/images/Products/Watches/Women/Product 3/WWP3-2.webp",
-        "assets/images/Products/Watches/Women/Product 3/WWP3-3.webp",
-        "assets/images/Products/Watches/Women/Product 3/WWP3-4.webp",
-        "assets/images/Products/Watches/Women/Product 3/WWP3-5.webp",
-        "assets/images/Products/Watches/Women/Product 3/WWP3-6.webp"
+        "../images/Products/Watches/Women/Product%203/WWP3-1.webp",
+        "../images/Products/Watches/Women/Product%203/WWP3-2.webp",
+        "../images/Products/Watches/Women/Product%203/WWP3-3.webp",
+        "../images/Products/Watches/Women/Product%203/WWP3-4.webp",
+        "../images/Products/Watches/Women/Product%203/WWP3-5.webp",
+        "../images/Products/Watches/Women/Product%203/WWP3-6.webp"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -232,10 +232,10 @@
       "inStock": true,
       "promotion": "Crafted from the finest materials, the design embraces the beauty of celestial motifs, making it a luxurious piece for any occasion.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 4/WWP4-1.jpg",
-        "assets/images/Products/Watches/Women/Product 4/WWP4-2.jpg",
-        "assets/images/Products/Watches/Women/Product 4/WWP4-3.jpg",
-        "assets/images/Products/Watches/Women/Product 4/WWP4-4.jpg"
+        "../images/Products/Watches/Women/Product%204/WWP4-1.jpg",
+        "../images/Products/Watches/Women/Product%204/WWP4-2.jpg",
+        "../images/Products/Watches/Women/Product%204/WWP4-3.jpg",
+        "../images/Products/Watches/Women/Product%204/WWP4-4.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -249,9 +249,9 @@
       "inStock": true,
       "promotion": "This high-end timepiece merges simplicity with glamour, making it perfect for both casual and formal wear.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 5/WWP5-1.jpg",
-        "assets/images/Products/Watches/Women/Product 5/WWP5-2.jpg",
-        "assets/images/Products/Watches/Women/Product 5/WWP5-3.jpg"
+        "../images/Products/Watches/Women/Product%205/WWP5-1.jpg",
+        "../images/Products/Watches/Women/Product%205/WWP5-2.jpg",
+        "../images/Products/Watches/Women/Product%205/WWP5-3.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -265,9 +265,9 @@
       "inStock": true,
       "promotion": "Every element of this watch is carefully crafted, offering timeless beauty and lasting durability.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 6/WWP6-1.jpg",
-        "assets/images/Products/Watches/Women/Product 6/WWP6-2.jpg",
-        "assets/images/Products/Watches/Women/Product 6/WWP6-3.jpg"
+        "../images/Products/Watches/Women/Product%206/WWP6-1.jpg",
+        "../images/Products/Watches/Women/Product%206/WWP6-2.jpg",
+        "../images/Products/Watches/Women/Product%206/WWP6-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -281,10 +281,10 @@
       "inStock": true,
       "promotion": "Sleek and stylish, this watch adds a touch of ethereal grace to any outfit, embodying luxury in every detail.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 7/WWP7-1.webp",
-        "assets/images/Products/Watches/Women/Product 7/WWP7-2.webp",
-        "assets/images/Products/Watches/Women/Product 7/WWP7-3.webp",
-        "assets/images/Products/Watches/Women/Product 7/WWP7-4.webp"
+        "../images/Products/Watches/Women/Product%207/WWP7-1.webp",
+        "../images/Products/Watches/Women/Product%207/WWP7-2.webp",
+        "../images/Products/Watches/Women/Product%207/WWP7-3.webp",
+        "../images/Products/Watches/Women/Product%207/WWP7-4.webp"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -298,9 +298,9 @@
       "inStock": true,
       "promotion": "With its sophisticated design and elegant finish, this watch is perfect for those who value both beauty and precision.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 8/WWP8-1.jpg",
-        "assets/images/Products/Watches/Women/Product 8/WWP8-2.jpg",
-        "assets/images/Products/Watches/Women/Product 8/WWP8-3.jpg"
+        "../images/Products/Watches/Women/Product%208/WWP8-1.jpg",
+        "../images/Products/Watches/Women/Product%208/WWP8-2.jpg",
+        "../images/Products/Watches/Women/Product%208/WWP8-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -314,12 +314,12 @@
       "inStock": true,
       "promotion": "Designed for sophistication and beauty, this watch exudes luxury with every glance.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 9/WWP9-1.webp",
-        "assets/images/Products/Watches/Women/Product 9/WWP9-2.webp",
-        "assets/images/Products/Watches/Women/Product 9/WWP9-3.webp",
-        "assets/images/Products/Watches/Women/Product 9/WWP9-4.webp",
-        "assets/images/Products/Watches/Women/Product 9/WWP9-5.webp",
-        "assets/images/Products/Watches/Women/Product 9/WWP9-6.webp"
+        "../images/Products/Watches/Women/Product%209/WWP9-1.webp",
+        "../images/Products/Watches/Women/Product%209/WWP9-2.webp",
+        "../images/Products/Watches/Women/Product%209/WWP9-3.webp",
+        "../images/Products/Watches/Women/Product%209/WWP9-4.webp",
+        "../images/Products/Watches/Women/Product%209/WWP9-5.webp",
+        "../images/Products/Watches/Women/Product%209/WWP9-6.webp"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -333,12 +333,12 @@
       "inStock": true,
       "promotion": "Perfect for those who enjoy luxury with a classic flair, this piece will elevate any occasion with its royal appeal.",
       "images": [
-        "assets/images/Products/Watches/Women/Product 10/WWP10-1.webp",
-        "assets/images/Products/Watches/Women/Product 10/WWP10-2.webp",
-        "assets/images/Products/Watches/Women/Product 10/WWP10-3.webp",
-        "assets/images/Products/Watches/Women/Product 10/WWP10-4.webp",
-        "assets/images/Products/Watches/Women/Product 10/WWP10-5.webp",
-        "assets/images/Products/Watches/Women/Product 10/WWP10-6.webp"
+        "../images/Products/Watches/Women/Product%2010/WWP10-1.webp",
+        "../images/Products/Watches/Women/Product%2010/WWP10-2.webp",
+        "../images/Products/Watches/Women/Product%2010/WWP10-3.webp",
+        "../images/Products/Watches/Women/Product%2010/WWP10-4.webp",
+        "../images/Products/Watches/Women/Product%2010/WWP10-5.webp",
+        "../images/Products/Watches/Women/Product%2010/WWP10-6.webp"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -352,12 +352,12 @@
       "inStock": true,
       "promotion": "Crafted with high-quality materials, this piece embodies elegance and durability, adding sophistication to any ensemble.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 1/NMP1-1.webp",
-        "assets/images/Products/Necklaces/Men/Product 1/NMP1-2.webp",
-        "assets/images/Products/Necklaces/Men/Product 1/NMP1-3.webp",
-        "assets/images/Products/Necklaces/Men/Product 1/NMP1-4.webp",
-        "assets/images/Products/Necklaces/Men/Product 1/NMP1-5.webp",
-        "assets/images/Products/Necklaces/Men/Product 1/NMP1-6.webp"
+        "../images/Products/Necklaces/Men/Product%201/NMP1-1.webp",
+        "../images/Products/Necklaces/Men/Product%201/NMP1-2.webp",
+        "../images/Products/Necklaces/Men/Product%201/NMP1-3.webp",
+        "../images/Products/Necklaces/Men/Product%201/NMP1-4.webp",
+        "../images/Products/Necklaces/Men/Product%201/NMP1-5.webp",
+        "../images/Products/Necklaces/Men/Product%201/NMP1-6.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -371,11 +371,11 @@
       "inStock": true,
       "promotion": "Made with premium materials, this necklace is the perfect accessory for those who seek adventure and elegance.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 2/NMP2-1.webp",
-        "assets/images/Products/Necklaces/Men/Product 2/NMP2-2.webp",
-        "assets/images/Products/Necklaces/Men/Product 2/NMP2-3.webp",
-        "assets/images/Products/Necklaces/Men/Product 2/NMP2-4.webp",
-        "assets/images/Products/Necklaces/Men/Product 2/NMP2-5.webp"
+        "../images/Products/Necklaces/Men/Product%202/NMP2-1.webp",
+        "../images/Products/Necklaces/Men/Product%202/NMP2-2.webp",
+        "../images/Products/Necklaces/Men/Product%202/NMP2-3.webp",
+        "../images/Products/Necklaces/Men/Product%202/NMP2-4.webp",
+        "../images/Products/Necklaces/Men/Product%202/NMP2-5.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -389,10 +389,10 @@
       "inStock": true,
       "promotion": "This timeless piece is designed to offer unmatched durability and elegance, elevating your style effortlessly.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 3/NMP3-1.jpg",
-        "assets/images/Products/Necklaces/Men/Product 3/NMP3-2.jpg",
-        "assets/images/Products/Necklaces/Men/Product 3/NMP3-3.jpg",
-        "assets/images/Products/Necklaces/Men/Product 3/NMP3-4.jpg"
+        "../images/Products/Necklaces/Men/Product%203/NMP3-1.jpg",
+        "../images/Products/Necklaces/Men/Product%203/NMP3-2.jpg",
+        "../images/Products/Necklaces/Men/Product%203/NMP3-3.jpg",
+        "../images/Products/Necklaces/Men/Product%203/NMP3-4.jpg"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -406,10 +406,10 @@
       "inStock": true,
       "promotion": "Bold and captivating, the Eclipse Vanguard is designed for those who embrace both the strength and beauty of the universe.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 4/NMP4-1.jpg",
-        "assets/images/Products/Necklaces/Men/Product 4/NMP4-2.jpg",
-        "assets/images/Products/Necklaces/Men/Product 4/NMP4-3.jpg",
-        "assets/images/Products/Necklaces/Men/Product 4/NMP4-4.jpg"
+        "../images/Products/Necklaces/Men/Product%204/NMP4-1.jpg",
+        "../images/Products/Necklaces/Men/Product%204/NMP4-2.jpg",
+        "../images/Products/Necklaces/Men/Product%204/NMP4-3.jpg",
+        "../images/Products/Necklaces/Men/Product%204/NMP4-4.jpg"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -423,9 +423,9 @@
       "inStock": true,
       "promotion": "Elegance and regality combine in this unique necklace, crafted to perfection for those who demand the finest.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 5/NMP5-1.jpg",
-        "assets/images/Products/Necklaces/Men/Product 5/NMP5-2.jpg",
-        "assets/images/Products/Necklaces/Men/Product 5/NMP5-3.jpg"
+        "../images/Products/Necklaces/Men/Product%205/NMP5-1.jpg",
+        "../images/Products/Necklaces/Men/Product%205/NMP5-2.jpg",
+        "../images/Products/Necklaces/Men/Product%205/NMP5-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -439,12 +439,12 @@
       "inStock": true,
       "promotion": "Crafted from the rarest materials, the Obsidian Legacy is an enduring symbol of elegance and resilience.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 6/NMP6-1.webp",
-        "assets/images/Products/Necklaces/Men/Product 6/NMP6-2.webp",
-        "assets/images/Products/Necklaces/Men/Product 6/NMP6-3.webp",
-        "assets/images/Products/Necklaces/Men/Product 6/NMP6-4.webp",
-        "assets/images/Products/Necklaces/Men/Product 6/NMP6-5.webp",
-        "assets/images/Products/Necklaces/Men/Product 6/NMP6-6.webp"
+        "../images/Products/Necklaces/Men/Product%206/NMP6-1.webp",
+        "../images/Products/Necklaces/Men/Product%206/NMP6-2.webp",
+        "../images/Products/Necklaces/Men/Product%206/NMP6-3.webp",
+        "../images/Products/Necklaces/Men/Product%206/NMP6-4.webp",
+        "../images/Products/Necklaces/Men/Product%206/NMP6-5.webp",
+        "../images/Products/Necklaces/Men/Product%206/NMP6-6.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -458,11 +458,11 @@
       "inStock": true,
       "promotion": "With unmatched craftsmanship, this necklace is a bold statement of style, grace, and power.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 7/NMP7-1.webp",
-        "assets/images/Products/Necklaces/Men/Product 7/NMP7-2.webp",
-        "assets/images/Products/Necklaces/Men/Product 7/NMP7-3.webp",
-        "assets/images/Products/Necklaces/Men/Product 7/NMP7-4.webp",
-        "assets/images/Products/Necklaces/Men/Product 7/NMP7-5.webp"
+        "../images/Products/Necklaces/Men/Product%207/NMP7-1.webp",
+        "../images/Products/Necklaces/Men/Product%207/NMP7-2.webp",
+        "../images/Products/Necklaces/Men/Product%207/NMP7-3.webp",
+        "../images/Products/Necklaces/Men/Product%207/NMP7-4.webp",
+        "../images/Products/Necklaces/Men/Product%207/NMP7-5.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -476,9 +476,9 @@
       "inStock": true,
       "promotion": "The Arcadian Dream necklace is perfect for those who seek elegance and comfort with a touch of mystery.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 8/NMP8-1.webp",
-        "assets/images/Products/Necklaces/Men/Product 8/NMP8-2.webp",
-        "assets/images/Products/Necklaces/Men/Product 8/NMP8-3.webp"
+        "../images/Products/Necklaces/Men/Product%208/NMP8-1.webp",
+        "../images/Products/Necklaces/Men/Product%208/NMP8-2.webp",
+        "../images/Products/Necklaces/Men/Product%208/NMP8-3.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -492,11 +492,11 @@
       "inStock": true,
       "promotion": "Crafted with the finest sapphires, this necklace exudes a regal charm that is perfect for any sophisticated gentleman.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 9/NMP9-1.webp",
-        "assets/images/Products/Necklaces/Men/Product 9/NMP9-2.webp",
-        "assets/images/Products/Necklaces/Men/Product 9/NMP9-3.webp",
-        "assets/images/Products/Necklaces/Men/Product 9/NMP9-4.webp",
-        "assets/images/Products/Necklaces/Men/Product 9/NMP9-5.webp"
+        "../images/Products/Necklaces/Men/Product%209/NMP9-1.webp",
+        "../images/Products/Necklaces/Men/Product%209/NMP9-2.webp",
+        "../images/Products/Necklaces/Men/Product%209/NMP9-3.webp",
+        "../images/Products/Necklaces/Men/Product%209/NMP9-4.webp",
+        "../images/Products/Necklaces/Men/Product%209/NMP9-5.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -510,11 +510,11 @@
       "inStock": true,
       "promotion": "With a design inspired by the mysteries of the night, this piece adds a subtle yet captivating allure to your collection.",
       "images": [
-        "assets/images/Products/Necklaces/Men/Product 10/NMP10-1.webp",
-        "assets/images/Products/Necklaces/Men/Product 10/NMP10-2.webp",
-        "assets/images/Products/Necklaces/Men/Product 10/NMP10-3.webp",
-        "assets/images/Products/Necklaces/Men/Product 10/NMP10-4.webp",
-        "assets/images/Products/Necklaces/Men/Product 10/NMP10-5.webp"
+        "../images/Products/Necklaces/Men/Product%2010/NMP10-1.webp",
+        "../images/Products/Necklaces/Men/Product%2010/NMP10-2.webp",
+        "../images/Products/Necklaces/Men/Product%2010/NMP10-3.webp",
+        "../images/Products/Necklaces/Men/Product%2010/NMP10-4.webp",
+        "../images/Products/Necklaces/Men/Product%2010/NMP10-5.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -528,9 +528,9 @@
       "inStock": true,
       "promotion": "Crafted with exquisite detail, this piece blends luxury with elegance, perfect for adding calm sophistication to any occasion.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 1/NWP1-1.jpg",
-        "assets/images/Products/Necklaces/Women/Product 1/NWP1-2.jpg",
-        "assets/images/Products/Necklaces/Women/Product 1/NWP1-3.jpg"
+        "../images/Products/Necklaces/Women/Product%201/NWP1-1.jpg",
+        "../images/Products/Necklaces/Women/Product%201/NWP1-2.jpg",
+        "../images/Products/Necklaces/Women/Product%201/NWP1-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -544,9 +544,9 @@
       "inStock": true,
       "promotion": "Designed for those who seek elegance with a touch of celestial wonder, this piece brings an aura of mystery and grace.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 2/NWP2-1.jpg",
-        "assets/images/Products/Necklaces/Women/Product 2/NWP2-2.jpg",
-        "assets/images/Products/Necklaces/Women/Product 2/NWP2-3.jpg"
+        "../images/Products/Necklaces/Women/Product%202/NWP2-1.jpg",
+        "../images/Products/Necklaces/Women/Product%202/NWP2-2.jpg",
+        "../images/Products/Necklaces/Women/Product%202/NWP2-3.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -560,9 +560,9 @@
       "inStock": true,
       "promotion": "This radiant piece symbolizes purity and luxury, designed to make a statement with every wear.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 3/NWP3-1.jpg",
-        "assets/images/Products/Necklaces/Women/Product 3/NWP3-2.jpg",
-        "assets/images/Products/Necklaces/Women/Product 3/NWP3-3.jpg"
+        "../images/Products/Necklaces/Women/Product%203/NWP3-1.jpg",
+        "../images/Products/Necklaces/Women/Product%203/NWP3-2.jpg",
+        "../images/Products/Necklaces/Women/Product%203/NWP3-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -576,9 +576,9 @@
       "inStock": true,
       "promotion": "Crafted from the finest crystals, this necklace is a timeless expression of beauty and grace.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 4/NWP4-1.jpg",
-        "assets/images/Products/Necklaces/Women/Product 4/NWP4-2.jpg",
-        "assets/images/Products/Necklaces/Women/Product 4/NWP4-3.jpg"
+        "../images/Products/Necklaces/Women/Product%204/NWP4-1.jpg",
+        "../images/Products/Necklaces/Women/Product%204/NWP4-2.jpg",
+        "../images/Products/Necklaces/Women/Product%204/NWP4-3.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -592,9 +592,9 @@
       "inStock": true,
       "promotion": "This luxurious necklace brings the elegance of the divine into every moment, designed for those who seek excellence.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 5/NWP5-1.jpg",
-        "assets/images/Products/Necklaces/Women/Product 5/NWP5-2.jpg",
-        "assets/images/Products/Necklaces/Women/Product 5/NWP5-3.jpg"
+        "../images/Products/Necklaces/Women/Product%205/NWP5-1.jpg",
+        "../images/Products/Necklaces/Women/Product%205/NWP5-2.jpg",
+        "../images/Products/Necklaces/Women/Product%205/NWP5-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -608,9 +608,9 @@
       "inStock": true,
       "promotion": "Made from the highest quality materials, this necklace captures the spirit of sophistication and timeless allure.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 6/NWP6-1.jpg",
-        "assets/images/Products/Necklaces/Women/Product 6/NWP6-2.jpg",
-        "assets/images/Products/Necklaces/Women/Product 6/NWP6-3.jpg"
+        "../images/Products/Necklaces/Women/Product%206/NWP6-1.jpg",
+        "../images/Products/Necklaces/Women/Product%206/NWP6-2.jpg",
+        "../images/Products/Necklaces/Women/Product%206/NWP6-3.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -624,9 +624,9 @@
       "inStock": true,
       "promotion": "This floral-inspired necklace is perfect for adding a touch of nature's elegance to any outfit, embodying sophistication and charm.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 7/NWP7-1.jpg",
-        "assets/images/Products/Necklaces/Women/Product 7/NWP7-2.jpg",
-        "assets/images/Products/Necklaces/Women/Product 7/NWP7-3.jpg"
+        "../images/Products/Necklaces/Women/Product%207/NWP7-1.jpg",
+        "../images/Products/Necklaces/Women/Product%207/NWP7-2.jpg",
+        "../images/Products/Necklaces/Women/Product%207/NWP7-3.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -640,10 +640,10 @@
       "inStock": true,
       "promotion": "A luxurious statement piece, crafted to add an element of mystery and beauty to your collection.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 8/NWP8-1.webp",
-        "assets/images/Products/Necklaces/Women/Product 8/NWP8-2.webp",
-        "assets/images/Products/Necklaces/Women/Product 8/NWP8-3.webp",
-        "assets/images/Products/Necklaces/Women/Product 8/NWP8-4.webp"
+        "../images/Products/Necklaces/Women/Product%208/NWP8-1.webp",
+        "../images/Products/Necklaces/Women/Product%208/NWP8-2.webp",
+        "../images/Products/Necklaces/Women/Product%208/NWP8-3.webp",
+        "../images/Products/Necklaces/Women/Product%208/NWP8-4.webp"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -657,10 +657,10 @@
       "inStock": true,
       "promotion": "This luxurious necklace is perfect for those who desire a piece that reflects both beauty and strength.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 9/NWP9-1.webp",
-        "assets/images/Products/Necklaces/Women/Product 9/NWP9-2.webp",
-        "assets/images/Products/Necklaces/Women/Product 9/NWP9-3.webp",
-        "assets/images/Products/Necklaces/Women/Product 9/NWP9-4.webp"
+        "../images/Products/Necklaces/Women/Product%209/NWP9-1.webp",
+        "../images/Products/Necklaces/Women/Product%209/NWP9-2.webp",
+        "../images/Products/Necklaces/Women/Product%209/NWP9-3.webp",
+        "../images/Products/Necklaces/Women/Product%209/NWP9-4.webp"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -674,12 +674,12 @@
       "inStock": true,
       "promotion": "With its captivating design and radiant colors, this necklace is perfect for the modern woman who seeks elegance and mystery.",
       "images": [
-        "assets/images/Products/Necklaces/Women/Product 10/NWP10-1.webp",
-        "assets/images/Products/Necklaces/Women/Product 10/NWP10-2.webp",
-        "assets/images/Products/Necklaces/Women/Product 10/NWP10-3.webp",
-        "assets/images/Products/Necklaces/Women/Product 10/NWP10-4.webp",
-        "assets/images/Products/Necklaces/Women/Product 10/NWP10-5.webp",
-        "assets/images/Products/Necklaces/Women/Product 10/NWP10-6.webp"
+        "../images/Products/Necklaces/Women/Product%2010/NWP10-1.webp",
+        "../images/Products/Necklaces/Women/Product%2010/NWP10-2.webp",
+        "../images/Products/Necklaces/Women/Product%2010/NWP10-3.webp",
+        "../images/Products/Necklaces/Women/Product%2010/NWP10-4.webp",
+        "../images/Products/Necklaces/Women/Product%2010/NWP10-5.webp",
+        "../images/Products/Necklaces/Women/Product%2010/NWP10-6.webp"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -693,9 +693,9 @@
       "inStock": true,
       "promotion": "Crafted from the finest materials, this ring brings a touch of royal elegance to any occasion.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 1/RMP1-1.webp",
-        "assets/images/Products/Rings/Men/Product 1/RMP1-2.webp",
-        "assets/images/Products/Rings/Men/Product 1/RMP1-3.webp"
+        "../images/Products/Rings/Men/Product%201/RMP1-1.webp",
+        "../images/Products/Rings/Men/Product%201/RMP1-2.webp",
+        "../images/Products/Rings/Men/Product%201/RMP1-3.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -709,10 +709,10 @@
       "inStock": true,
       "promotion": "A design that speaks of modern luxury and refined taste, this ring is the ultimate statement of class.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 2/RMP2-1.webp",
-        "assets/images/Products/Rings/Men/Product 2/RMP2-2.webp",
-        "assets/images/Products/Rings/Men/Product 2/RMP2-3.webp",
-        "assets/images/Products/Rings/Men/Product 2/RMP2-4.webp"
+        "../images/Products/Rings/Men/Product%202/RMP2-1.webp",
+        "../images/Products/Rings/Men/Product%202/RMP2-2.webp",
+        "../images/Products/Rings/Men/Product%202/RMP2-3.webp",
+        "../images/Products/Rings/Men/Product%202/RMP2-4.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -726,10 +726,10 @@
       "inStock": true,
       "promotion": "Perfectly balanced between sleek modernity and timeless design, this ring offers both strength and elegance.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 3/RMP3-1.webp",
-        "assets/images/Products/Rings/Men/Product 3/RMP3-2.webp",
-        "assets/images/Products/Rings/Men/Product 3/RMP3-3.webp",
-        "assets/images/Products/Rings/Men/Product 3/RMP3-4.webp"
+        "../images/Products/Rings/Men/Product%203/RMP3-1.webp",
+        "../images/Products/Rings/Men/Product%203/RMP3-2.webp",
+        "../images/Products/Rings/Men/Product%203/RMP3-3.webp",
+        "../images/Products/Rings/Men/Product%203/RMP3-4.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -743,9 +743,9 @@
       "inStock": true,
       "promotion": "Crafted with the finest materials, this ring captures the essence of sovereignty and high-class luxury.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 4/RMP4-1.webp",
-        "assets/images/Products/Rings/Men/Product 4/RMP4-2.webp",
-        "assets/images/Products/Rings/Men/Product 4/RMP4-3.webp"
+        "../images/Products/Rings/Men/Product%204/RMP4-1.webp",
+        "../images/Products/Rings/Men/Product%204/RMP4-2.webp",
+        "../images/Products/Rings/Men/Product%204/RMP4-3.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -759,9 +759,9 @@
       "inStock": true,
       "promotion": "Designed with precision and style, this ring adds a touch of starry elegance to any ensemble.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 5/RMP5-1.webp",
-        "assets/images/Products/Rings/Men/Product 5/RMP5-2.webp",
-        "assets/images/Products/Rings/Men/Product 5/RMP5-3.webp"
+        "../images/Products/Rings/Men/Product%205/RMP5-1.webp",
+        "../images/Products/Rings/Men/Product%205/RMP5-2.webp",
+        "../images/Products/Rings/Men/Product%205/RMP5-3.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -775,11 +775,11 @@
       "inStock": true,
       "promotion": "With a bold, fiery design, the Emberflare ring represents passion and confidence, crafted for those who dare to stand out.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 6/RMP6-1.webp",
-        "assets/images/Products/Rings/Men/Product 6/RMP6-2.webp",
-        "assets/images/Products/Rings/Men/Product 6/RMP6-3.webp",
-        "assets/images/Products/Rings/Men/Product 6/RMP6-4.webp",
-        "assets/images/Products/Rings/Men/Product 6/RMP6-5.webp"
+        "../images/Products/Rings/Men/Product%206/RMP6-1.webp",
+        "../images/Products/Rings/Men/Product%206/RMP6-2.webp",
+        "../images/Products/Rings/Men/Product%206/RMP6-3.webp",
+        "../images/Products/Rings/Men/Product%206/RMP6-4.webp",
+        "../images/Products/Rings/Men/Product%206/RMP6-5.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -793,9 +793,9 @@
       "inStock": true,
       "promotion": "A masterpiece of design and craftsmanship, this ring draws the eye and captures the essence of luxury.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 7/RMP7-1.jpg",
-        "assets/images/Products/Rings/Men/Product 7/RMP7-2.jpg",
-        "assets/images/Products/Rings/Men/Product 7/RMP7-3.jpg"
+        "../images/Products/Rings/Men/Product%207/RMP7-1.jpg",
+        "../images/Products/Rings/Men/Product%207/RMP7-2.jpg",
+        "../images/Products/Rings/Men/Product%207/RMP7-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -809,11 +809,11 @@
       "inStock": true,
       "promotion": "An unforgettable ring that combines imperial power with elegance, designed for the discerning gentleman.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 8/RMP8-1.webp",
-        "assets/images/Products/Rings/Men/Product 8/RMP8-2.webp",
-        "assets/images/Products/Rings/Men/Product 8/RMP8-3.webp",
-        "assets/images/Products/Rings/Men/Product 8/RMP8-4.webp",
-        "assets/images/Products/Rings/Men/Product 8/RMP8-5.webp"
+        "../images/Products/Rings/Men/Product%208/RMP8-1.webp",
+        "../images/Products/Rings/Men/Product%208/RMP8-2.webp",
+        "../images/Products/Rings/Men/Product%208/RMP8-3.webp",
+        "../images/Products/Rings/Men/Product%208/RMP8-4.webp",
+        "../images/Products/Rings/Men/Product%208/RMP8-5.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -827,11 +827,11 @@
       "inStock": true,
       "promotion": "The Vortex of Eternity ring is for those who seek both beauty and strength in their accessories, crafted to last.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 9/RMP9-1.webp",
-        "assets/images/Products/Rings/Men/Product 9/RMP9-2.webp",
-        "assets/images/Products/Rings/Men/Product 9/RMP9-3.webp",
-        "assets/images/Products/Rings/Men/Product 9/RMP9-4.webp",
-        "assets/images/Products/Rings/Men/Product 9/RMP9-5.webp"
+        "../images/Products/Rings/Men/Product%209/RMP9-1.webp",
+        "../images/Products/Rings/Men/Product%209/RMP9-2.webp",
+        "../images/Products/Rings/Men/Product%209/RMP9-3.webp",
+        "../images/Products/Rings/Men/Product%209/RMP9-4.webp",
+        "../images/Products/Rings/Men/Product%209/RMP9-5.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -845,11 +845,11 @@
       "inStock": true,
       "promotion": "The Crown of Aether is a regal, elegant piece crafted to perfection, making a statement of grace and mystique.",
       "images": [
-        "assets/images/Products/Rings/Men/Product 10/RMP10-1.webp",
-        "assets/images/Products/Rings/Men/Product 10/RMP10-2.webp",
-        "assets/images/Products/Rings/Men/Product 10/RMP10-3.webp",
-        "assets/images/Products/Rings/Men/Product 10/RMP10-4.webp",
-        "assets/images/Products/Rings/Men/Product 10/RMP10-5.webp"
+        "../images/Products/Rings/Men/Product%2010/RMP10-1.webp",
+        "../images/Products/Rings/Men/Product%2010/RMP10-2.webp",
+        "../images/Products/Rings/Men/Product%2010/RMP10-3.webp",
+        "../images/Products/Rings/Men/Product%2010/RMP10-4.webp",
+        "../images/Products/Rings/Men/Product%2010/RMP10-5.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -863,10 +863,10 @@
       "inStock": true,
       "promotion": "Crafted with precision, the Ethereal Halo ring is designed to bring sophistication and charm to any occasion.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 1/RWP1-1.jpg",
-        "assets/images/Products/Rings/Women/Product 1/RWP1-2.jpg",
-        "assets/images/Products/Rings/Women/Product 1/RWP1-3.jpg",
-        "assets/images/Products/Rings/Women/Product 1/RWP1-4.jpg"
+        "../images/Products/Rings/Women/Product%201/RWP1-1.jpg",
+        "../images/Products/Rings/Women/Product%201/RWP1-2.jpg",
+        "../images/Products/Rings/Women/Product%201/RWP1-3.jpg",
+        "../images/Products/Rings/Women/Product%201/RWP1-4.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -880,9 +880,9 @@
       "inStock": true,
       "promotion": "This ring embodies purity and elegance, crafted to perfection to offer timeless beauty and grace.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 2/RWP2-1.webp",
-        "assets/images/Products/Rings/Women/Product 2/RWP2-2.webp",
-        "assets/images/Products/Rings/Women/Product 2/RWP2-3.webp"
+        "../images/Products/Rings/Women/Product%202/RWP2-1.webp",
+        "../images/Products/Rings/Women/Product%202/RWP2-2.webp",
+        "../images/Products/Rings/Women/Product%202/RWP2-3.webp"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -896,9 +896,9 @@
       "inStock": true,
       "promotion": "The Opal Radiance ring captures light and elegance, perfect for those who appreciate understated luxury.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 3/RWP3-1.webp",
-        "assets/images/Products/Rings/Women/Product 3/RWP3-2.webp",
-        "assets/images/Products/Rings/Women/Product 3/RWP3-3.webp"
+        "../images/Products/Rings/Women/Product%203/RWP3-1.webp",
+        "../images/Products/Rings/Women/Product%203/RWP3-2.webp",
+        "../images/Products/Rings/Women/Product%203/RWP3-3.webp"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -912,9 +912,9 @@
       "inStock": true,
       "promotion": "The Luminous Embrace ring is crafted to reflect light and elegance, designed for those who value subtle opulence.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 4/RWP4-1.jpg",
-        "assets/images/Products/Rings/Women/Product 4/RWP4-2.jpg",
-        "assets/images/Products/Rings/Women/Product 4/RWP4-3.jpg"
+        "../images/Products/Rings/Women/Product%204/RWP4-1.jpg",
+        "../images/Products/Rings/Women/Product%204/RWP4-2.jpg",
+        "../images/Products/Rings/Women/Product%204/RWP4-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -928,9 +928,9 @@
       "inStock": true,
       "promotion": "A symbol of enduring elegance, this ring is perfect for those who cherish timeless beauty.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 5/RWP5-1.jpg",
-        "assets/images/Products/Rings/Women/Product 5/RWP5-2.jpg",
-        "assets/images/Products/Rings/Women/Product 5/RWP5-3.jpg"
+        "../images/Products/Rings/Women/Product%205/RWP5-1.jpg",
+        "../images/Products/Rings/Women/Product%205/RWP5-2.jpg",
+        "../images/Products/Rings/Women/Product%205/RWP5-3.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -944,10 +944,10 @@
       "inStock": true,
       "promotion": "Crafted with exceptional care, this ring offers both boldness and elegance, perfect for a statement look.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 6/RWP6-1.webp",
-        "assets/images/Products/Rings/Women/Product 6/RWP6-2.webp",
-        "assets/images/Products/Rings/Women/Product 6/RWP6-3.webp",
-        "assets/images/Products/Rings/Women/Product 6/RWP6-4.webp"
+        "../images/Products/Rings/Women/Product%206/RWP6-1.webp",
+        "../images/Products/Rings/Women/Product%206/RWP6-2.webp",
+        "../images/Products/Rings/Women/Product%206/RWP6-3.webp",
+        "../images/Products/Rings/Women/Product%206/RWP6-4.webp"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -961,10 +961,10 @@
       "inStock": true,
       "promotion": "Designed to evoke a sense of beauty, the Elysian Bloom ring enhances your elegance with a floral touch.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 7/RWP7-1.webp",
-        "assets/images/Products/Rings/Women/Product 7/RWP7-2.webp",
-        "assets/images/Products/Rings/Women/Product 7/RWP7-3.webp",
-        "assets/images/Products/Rings/Women/Product 7/RWP7-4.webp"
+        "../images/Products/Rings/Women/Product%207/RWP7-1.webp",
+        "../images/Products/Rings/Women/Product%207/RWP7-2.webp",
+        "../images/Products/Rings/Women/Product%207/RWP7-3.webp",
+        "../images/Products/Rings/Women/Product%207/RWP7-4.webp"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -978,8 +978,8 @@
       "inStock": true,
       "promotion": "With its curved, flowing design, the Royal Crescent ring is a symbol of luxury and grandeur.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 8/RWP8-1.jpg",
-        "assets/images/Products/Rings/Women/Product 8/RWP8-2.jpg"
+        "../images/Products/Rings/Women/Product%208/RWP8-1.jpg",
+        "../images/Products/Rings/Women/Product%208/RWP8-2.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -993,10 +993,10 @@
       "inStock": true,
       "promotion": "This ring captures the essence of eternity, crafted with an opal stone that embodies timeless beauty.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 9/RWP9-1.webp",
-        "assets/images/Products/Rings/Women/Product 9/RWP9-2.webp",
-        "assets/images/Products/Rings/Women/Product 9/RWP9-3.webp",
-        "assets/images/Products/Rings/Women/Product 9/RWP9-4.webp"
+        "../images/Products/Rings/Women/Product%209/RWP9-1.webp",
+        "../images/Products/Rings/Women/Product%209/RWP9-2.webp",
+        "../images/Products/Rings/Women/Product%209/RWP9-3.webp",
+        "../images/Products/Rings/Women/Product%209/RWP9-4.webp"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -1010,9 +1010,9 @@
       "inStock": true,
       "promotion": "The Golden Mirage ring combines classic design with a contemporary twist, making it perfect for any high-end collection.",
       "images": [
-        "assets/images/Products/Rings/Women/Product 10/RWP10-1.webp",
-        "assets/images/Products/Rings/Women/Product 10/RWP10-2.webp",
-        "assets/images/Products/Rings/Women/Product 10/RWP10-3.webp"
+        "../images/Products/Rings/Women/Product%2010/RWP10-1.webp",
+        "../images/Products/Rings/Women/Product%2010/RWP10-2.webp",
+        "../images/Products/Rings/Women/Product%2010/RWP10-3.webp"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -1026,10 +1026,10 @@
       "inStock": true,
       "promotion": "This bracelet combines innovation and luxury, perfect for adding a sophisticated yet bold touch to any style.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 1/BMP1-1.webp",
-        "assets/images/Products/Bracelets/Men/Product 1/BMP1-2.webp",
-        "assets/images/Products/Bracelets/Men/Product 1/BMP1-3.webp",
-        "assets/images/Products/Bracelets/Men/Product 1/BMP1-4.webp"
+        "../images/Products/Bracelets/Men/Product%201/BMP1-1.webp",
+        "../images/Products/Bracelets/Men/Product%201/BMP1-2.webp",
+        "../images/Products/Bracelets/Men/Product%201/BMP1-3.webp",
+        "../images/Products/Bracelets/Men/Product%201/BMP1-4.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -1043,11 +1043,11 @@
       "inStock": true,
       "promotion": "With its timeless design, the Luxe Infinity bracelet elevates your look with a touch of sophistication.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 2/BMP2-1.webp",
-        "assets/images/Products/Bracelets/Men/Product 2/BMP2-2.webp",
-        "assets/images/Products/Bracelets/Men/Product 2/BMP2-3.webp",
-        "assets/images/Products/Bracelets/Men/Product 2/BMP2-4.webp",
-        "assets/images/Products/Bracelets/Men/Product 2/BMP2-5.webp"
+        "../images/Products/Bracelets/Men/Product%202/BMP2-1.webp",
+        "../images/Products/Bracelets/Men/Product%202/BMP2-2.webp",
+        "../images/Products/Bracelets/Men/Product%202/BMP2-3.webp",
+        "../images/Products/Bracelets/Men/Product%202/BMP2-4.webp",
+        "../images/Products/Bracelets/Men/Product%202/BMP2-5.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -1061,10 +1061,10 @@
       "inStock": true,
       "promotion": "A true statement piece, this bracelet exudes power and elegance, perfect for those who command attention.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 3/BMP3-1.webp",
-        "assets/images/Products/Bracelets/Men/Product 3/BMP3-2.webp",
-        "assets/images/Products/Bracelets/Men/Product 3/BMP3-3.webp",
-        "assets/images/Products/Bracelets/Men/Product 3/BMP3-4.webp"
+        "../images/Products/Bracelets/Men/Product%203/BMP3-1.webp",
+        "../images/Products/Bracelets/Men/Product%203/BMP3-2.webp",
+        "../images/Products/Bracelets/Men/Product%203/BMP3-3.webp",
+        "../images/Products/Bracelets/Men/Product%203/BMP3-4.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -1078,9 +1078,9 @@
       "inStock": true,
       "promotion": "Crafted with high-quality materials, the Majestic Armor bracelet is a blend of toughness and sophistication.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 4/BMP4-1.webp",
-        "assets/images/Products/Bracelets/Men/Product 4/BMP4-2.webp",
-        "assets/images/Products/Bracelets/Men/Product 4/BMP4-3.webp"
+        "../images/Products/Bracelets/Men/Product%204/BMP4-1.webp",
+        "../images/Products/Bracelets/Men/Product%204/BMP4-2.webp",
+        "../images/Products/Bracelets/Men/Product%204/BMP4-3.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -1094,10 +1094,10 @@
       "inStock": true,
       "promotion": "The Zenith Steel bracelet represents the highest level of craftsmanship and design, an essential for the discerning gentleman.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 5/BMP5-1.webp",
-        "assets/images/Products/Bracelets/Men/Product 5/BMP5-2.webp",
-        "assets/images/Products/Bracelets/Men/Product 5/BMP5-3.webp",
-        "assets/images/Products/Bracelets/Men/Product 5/BMP5-4.webp"
+        "../images/Products/Bracelets/Men/Product%205/BMP5-1.webp",
+        "../images/Products/Bracelets/Men/Product%205/BMP5-2.webp",
+        "../images/Products/Bracelets/Men/Product%205/BMP5-3.webp",
+        "../images/Products/Bracelets/Men/Product%205/BMP5-4.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -1111,10 +1111,10 @@
       "inStock": true,
       "promotion": "The Gilded Legacy bracelet is a luxurious tribute to craftsmanship, made to elevate any gentleman's style.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 6/BMP6-1.webp",
-        "assets/images/Products/Bracelets/Men/Product 6/BMP6-2.webp",
-        "assets/images/Products/Bracelets/Men/Product 6/BMP6-3.webp",
-        "assets/images/Products/Bracelets/Men/Product 6/BMP6-4.webp"
+        "../images/Products/Bracelets/Men/Product%206/BMP6-1.webp",
+        "../images/Products/Bracelets/Men/Product%206/BMP6-2.webp",
+        "../images/Products/Bracelets/Men/Product%206/BMP6-3.webp",
+        "../images/Products/Bracelets/Men/Product%206/BMP6-4.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -1128,9 +1128,9 @@
       "inStock": true,
       "promotion": "The Titanium Forge bracelet is made for those who appreciate bold, sleek designs and the durability of cutting-edge materials.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 7/BMP7-1.webp",
-        "assets/images/Products/Bracelets/Men/Product 7/BMP7-2.webp",
-        "assets/images/Products/Bracelets/Men/Product 7/BMP7-3.webp"
+        "../images/Products/Bracelets/Men/Product%207/BMP7-1.webp",
+        "../images/Products/Bracelets/Men/Product%207/BMP7-2.webp",
+        "../images/Products/Bracelets/Men/Product%207/BMP7-3.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -1144,10 +1144,10 @@
       "inStock": true,
       "promotion": "Crafted for those who honor the past while embracing the future, the Eternal Legacy bracelet is a tribute to classic design.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 8/BMP8-1.jpg",
-        "assets/images/Products/Bracelets/Men/Product 8/BMP8-2.jpg",
-        "assets/images/Products/Bracelets/Men/Product 8/BMP8-3.jpg",
-        "assets/images/Products/Bracelets/Men/Product 8/BMP8-4.jpg"
+        "../images/Products/Bracelets/Men/Product%208/BMP8-1.jpg",
+        "../images/Products/Bracelets/Men/Product%208/BMP8-2.jpg",
+        "../images/Products/Bracelets/Men/Product%208/BMP8-3.jpg",
+        "../images/Products/Bracelets/Men/Product%208/BMP8-4.jpg"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -1161,11 +1161,11 @@
       "inStock": true,
       "promotion": "With a perfect blend of tradition and modernity, the Noble Essence bracelet is an elegant piece that complements any look.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 9/BMP9-1.webp",
-        "assets/images/Products/Bracelets/Men/Product 9/BMP9-2.webp",
-        "assets/images/Products/Bracelets/Men/Product 9/BMP9-3.webp",
-        "assets/images/Products/Bracelets/Men/Product 9/BMP9-4.webp",
-        "assets/images/Products/Bracelets/Men/Product 9/BMP9-5.webp"
+        "../images/Products/Bracelets/Men/Product%209/BMP9-1.webp",
+        "../images/Products/Bracelets/Men/Product%209/BMP9-2.webp",
+        "../images/Products/Bracelets/Men/Product%209/BMP9-3.webp",
+        "../images/Products/Bracelets/Men/Product%209/BMP9-4.webp",
+        "../images/Products/Bracelets/Men/Product%209/BMP9-5.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -1179,11 +1179,11 @@
       "inStock": true,
       "promotion": "The Luxor Steel bracelet combines strength and elegance, designed for the modern man who demands the best.",
       "images": [
-        "assets/images/Products/Bracelets/Men/Product 10/BMP10-1.webp",
-        "assets/images/Products/Bracelets/Men/Product 10/BMP10-2.webp",
-        "assets/images/Products/Bracelets/Men/Product 10/BMP10-3.webp",
-        "assets/images/Products/Bracelets/Men/Product 10/BMP10-4.webp",
-        "assets/images/Products/Bracelets/Men/Product 10/BMP10-5.webp"
+        "../images/Products/Bracelets/Men/Product%2010/BMP10-1.webp",
+        "../images/Products/Bracelets/Men/Product%2010/BMP10-2.webp",
+        "../images/Products/Bracelets/Men/Product%2010/BMP10-3.webp",
+        "../images/Products/Bracelets/Men/Product%2010/BMP10-4.webp",
+        "../images/Products/Bracelets/Men/Product%2010/BMP10-5.webp"
       ],
       "bestSeller": false,
       "gender": "Men"
@@ -1197,9 +1197,9 @@
       "inStock": true,
       "promotion": "Crafted from premium materials, this piece showcases a refined design, perfect for adding elegance to any occasion.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 1/BWP1-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 1/BWP1-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 1/BWP1-3.jpg"
+        "../images/Products/Bracelets/Women/Product%201/BWP1-1.jpg",
+        "../images/Products/Bracelets/Women/Product%201/BWP1-2.jpg",
+        "../images/Products/Bracelets/Women/Product%201/BWP1-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -1213,10 +1213,10 @@
       "inStock": true,
       "promotion": "Crafted from the finest metals, this bracelet brings together luxury and durability, offering a statement of sophistication.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 2/BWP2-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 2/BWP2-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 2/BWP2-3.jpg",
-        "assets/images/Products/Bracelets/Women/Product 2/BWP2-4.jpg"
+        "../images/Products/Bracelets/Women/Product%202/BWP2-1.jpg",
+        "../images/Products/Bracelets/Women/Product%202/BWP2-2.jpg",
+        "../images/Products/Bracelets/Women/Product%202/BWP2-3.jpg",
+        "../images/Products/Bracelets/Women/Product%202/BWP2-4.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -1230,11 +1230,11 @@
       "inStock": true,
       "promotion": "Designed to stand out, the Celestial Aura bracelet combines elegance and celestial allure, ideal for evening wear.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 3/BWP3-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 3/BWP3-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 3/BWP3-3.jpg",
-        "assets/images/Products/Bracelets/Women/Product 3/BWP3-4.jpg",
-        "assets/images/Products/Bracelets/Women/Product 3/BWP3-5.jpg"
+        "../images/Products/Bracelets/Women/Product%203/BWP3-1.jpg",
+        "../images/Products/Bracelets/Women/Product%203/BWP3-2.jpg",
+        "../images/Products/Bracelets/Women/Product%203/BWP3-3.jpg",
+        "../images/Products/Bracelets/Women/Product%203/BWP3-4.jpg",
+        "../images/Products/Bracelets/Women/Product%203/BWP3-5.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -1248,9 +1248,9 @@
       "inStock": true,
       "promotion": "Crafted with attention to detail, this bracelet combines intricate design with luxurious materials to create a piece that lasts.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 4/BWP4-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 4/BWP4-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 4/BWP4-3.jpg"
+        "../images/Products/Bracelets/Women/Product%204/BWP4-1.jpg",
+        "../images/Products/Bracelets/Women/Product%204/BWP4-2.jpg",
+        "../images/Products/Bracelets/Women/Product%204/BWP4-3.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -1264,10 +1264,10 @@
       "inStock": true,
       "promotion": "This bracelet is a symbol of calm and elegance, blending perfectly with any sophisticated outfit.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 5/BWP5-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 5/BWP5-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 5/BWP5-3.jpg",
-        "assets/images/Products/Bracelets/Women/Product 5/BWP5-4.jpg"
+        "../images/Products/Bracelets/Women/Product%205/BWP5-1.jpg",
+        "../images/Products/Bracelets/Women/Product%205/BWP5-2.jpg",
+        "../images/Products/Bracelets/Women/Product%205/BWP5-3.jpg",
+        "../images/Products/Bracelets/Women/Product%205/BWP5-4.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -1281,10 +1281,10 @@
       "inStock": true,
       "promotion": "The Infinity Radiance bracelet shines with its delicate craftsmanship, making it the perfect addition to any luxury collection.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 6/BWP6-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 6/BWP6-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 6/BWP6-3.jpg",
-        "assets/images/Products/Bracelets/Women/Product 6/BWP6-4.jpg"
+        "../images/Products/Bracelets/Women/Product%206/BWP6-1.jpg",
+        "../images/Products/Bracelets/Women/Product%206/BWP6-2.jpg",
+        "../images/Products/Bracelets/Women/Product%206/BWP6-3.jpg",
+        "../images/Products/Bracelets/Women/Product%206/BWP6-4.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -1298,9 +1298,9 @@
       "inStock": true,
       "promotion": "This bracelet reflects the allure of opal, with a timeless design that can complement both day and evening wear.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 7/BWP7-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 7/BWP7-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 7/BWP7-3.jpg"
+        "../images/Products/Bracelets/Women/Product%207/BWP7-1.jpg",
+        "../images/Products/Bracelets/Women/Product%207/BWP7-2.jpg",
+        "../images/Products/Bracelets/Women/Product%207/BWP7-3.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -1314,9 +1314,9 @@
       "inStock": true,
       "promotion": "Gilded Serenity is the perfect bracelet for women seeking a touch of calm and elegance, crafted from the finest materials.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 8/BWP8-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 8/BWP8-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 8/BWP8-3.jpg"
+        "../images/Products/Bracelets/Women/Product%208/BWP8-1.jpg",
+        "../images/Products/Bracelets/Women/Product%208/BWP8-2.jpg",
+        "../images/Products/Bracelets/Women/Product%208/BWP8-3.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
@@ -1330,10 +1330,10 @@
       "inStock": true,
       "promotion": "Crafted to sparkle with every movement, the Twilight Sparkle bracelet is a testament to modern luxury and timeless beauty.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 9/BWP9-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 9/BWP9-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 9/BWP9-3.jpg",
-        "assets/images/Products/Bracelets/Women/Product 9/BWP9-4.jpg"
+        "../images/Products/Bracelets/Women/Product%209/BWP9-1.jpg",
+        "../images/Products/Bracelets/Women/Product%209/BWP9-2.jpg",
+        "../images/Products/Bracelets/Women/Product%209/BWP9-3.jpg",
+        "../images/Products/Bracelets/Women/Product%209/BWP9-4.jpg"
       ],
       "bestSeller": true,
       "gender": "Women"
@@ -1347,9 +1347,9 @@
       "inStock": true,
       "promotion": "Moonlit Blossom brings a sense of tranquility and elegance, perfect for evening wear or any occasion that calls for a touch of luxury.",
       "images": [
-        "assets/images/Products/Bracelets/Women/Product 10/BWP10-1.jpg",
-        "assets/images/Products/Bracelets/Women/Product 10/BWP10-2.jpg",
-        "assets/images/Products/Bracelets/Women/Product 10/BWP10-3.jpg"
+        "../images/Products/Bracelets/Women/Product%2010/BWP10-1.jpg",
+        "../images/Products/Bracelets/Women/Product%2010/BWP10-2.jpg",
+        "../images/Products/Bracelets/Women/Product%2010/BWP10-3.jpg"
       ],
       "bestSeller": false,
       "gender": "Women"
