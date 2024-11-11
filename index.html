@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="p-0 m-0">
 
 <head>
   <meta charset="UTF-8" />
@@ -32,13 +32,10 @@
           <div class="hidden md:flex items-center justify-between flex-1 pl-12">
             <!-- Menu principal centré -->
             <div class="flex-1 flex justify-center space-x-8 font-inria">
-              <a href="#"
-                class="  hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Bracelets</a>
-              <a href="#"
-                class="  hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Necklaces</a>
+              <a href="#" class="  hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Bracelets</a>
+              <a href="#" class="  hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Necklaces</a>
               <a href="#" class="  hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Rings</a>
-              <a href="#"
-                class="  hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Watches</a>
+              <a href="#" class="  hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Watches</a>
             </div>
 
             <!-- Menu droite (Us + Panier) -->
@@ -84,7 +81,40 @@
       </div>
     </nav>
   </header>
-  <main></main>
+  <main>
+    <section>
+      <!-- Conteneur carrousel -->
+      <div class="container overflow-hidden">
+        <!-- Élément carrousel -->
+        <div class="carousel relative">
+          <!-- Conteneur interne-->
+          <div class="carousel-inner flex overflow-hidden sm:h-72 md:h-80 lg:h-screen">
+            <!-- Première diapositive -->
+            <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
+              <img src="assets/images/Home Carroussel/pexels-andersbk-447570.jpg" alt="Image 1"
+                class="w-full h-full object-cover">
+            </div>
+            <!-- Deuxième diapositive -->
+            <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
+              <img src="assets/images/Home Carroussel/pexels-cottonbro-9544231.jpg" alt="Image 2"
+                class="w-full h-full object-cover">
+            </div>
+            <!-- Troisième diapositive -->
+            <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
+              <img src="assets/images/Home Carroussel/pexels-olly-974911.jpg" alt="Image 3"
+                class="w-full h-full object-cover">
+            </div>
+          </div>
+          <!-- points de navigation -->
+          <div class="carousel-dots absolute z-10 left-1/2 transform -translate-x-1/2 bottom-10 flex justify-center">
+            <!-- Les points de navigation seront ici -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
 
 
 
