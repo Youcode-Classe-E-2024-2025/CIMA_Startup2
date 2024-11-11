@@ -20,9 +20,257 @@
   </head>
   <body>
     <header></header>
-    <main>
+    <main class=" mx-auto ">
+     
+    <!-- Product Description Section -->
+    <section class=" max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 container mx-auto mb-32 px-4 lg:px-8 py-8">
+
+        <!-- Left Side - Image Gallery -->
+        <article class="flex flex-col items-center gap-6">
+            <div class="w-full max-w-[530px] aspect-square">
+                <img 
+                    src="../images/Products/Bracelets/Men/Product 1/BMP1-1.webp" 
+                    alt="Luminous Embrace Ring" 
+                    width="530" 
+                    height="530" 
+                    class="w-full h-full object-cover shadow-lg"
+                >
+            </div>
+            <div class="flex justify-center gap-4 w-full max-w-[530px]">
+                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0">
+                    <img 
+                        src="../images/Products/Bracelets/Men/Product 1/BMP1-2.webp" 
+                        alt="Ring view 1" 
+                        width="110" 
+                        height="110" 
+                        class="w-full h-full object-cover border border-[rgba(0,0,0,0.24)]"
+                    >
+                </button>
+                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0">
+                    <img 
+                        src="../images/Products/Bracelets/Men/Product 1/BMP1-3.webp" 
+                        alt="Ring view 2" 
+                        width="110" 
+                        height="110" 
+                        class="w-full h-full object-cover border border-[rgba(0,0,0,0.24)]"
+                    >
+                </button>
+                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0">
+                    <img 
+                        src="../images/Products/Bracelets/Men/Product 1/BMP1-4.webp" 
+                        alt="Ring view 3" 
+                        width="110" 
+                        height="110" 
+                        class="w-full h-full object-cover border border-[rgba(0,0,0,0.24)]"
+                    >
+                </button>
+            </div>
+        </article>
+
+        <!-- Right Side - Product Details -->
+        <article class="flex flex-col text-center gap-5 lg:text-left lg:justify-evenly lg:h-[530px] font-inria">
+            <div class="space-y-2">
+                <h1 class="text-4xl font-montaga">Luminous Embrace</h1>
+                <p class="text-gray_used_in_small_text">Out of Stock</p>
+                <p class="text-2xl text-darkGolden">$ 4599</p>
+            </div>
+
+            <p class="text-[#333333] mt-6 lg:mt-0">-- Shipping all over The World --</p>
+
+            <div class="flex flex-wrap justify-center lg:justify-start gap-8 mt-6 lg:mt-0">
+                <div class="flex items-center gap-2">
+                    <label class="text-gray_used_in_small_text">Qty :</label>
+                    <div class="flex items-center border-2">
+                        <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center">
+                            <img src="../images/Icons/minus.svg" alt="">
+                        </button>
+                        <input type="text" value="3" class="w-12 h-8 text-center">
+                        <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center">
+                            <img src="../images/Icons/plus.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <label class="text-gray_used_in_small_text">Size :</label>
+                    <div class="relative inline-block border-2">
+                        <select class="w-24 h-8 pl-3 pr-8 bg-white cursor-pointer focus:outline-none">
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none bg-button_divs_background">
+                            <img src="../images/Icons/arrow down.svg" alt="Dropdown arrow" class="w-4 h-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-700 max-w-md mx-auto lg:mx-0 mt-6 lg:mt-0">
+                The Luminous Embrace ring is crafted to reflect light and elegance, designed for those who value subtle opulence.
+            </p>
+
+            <button class="w-1/2 lg:w-full mx-auto rounded bg-button_divs_background py-4 text-xl font-medium mt-6 lg:mt-0 outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform">
+                Own This Piece
+            </button>
+        </article>
+    </section>
+
+    <!-- Brands Testimonials Section -->
+    <section id="testimonials" class="w-full bg-[#FBD65C] mb-32 px-6 font-inria">
+        <div class="mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row items-center justify-between md:gap-8">
+
+                <!-- Quotes Container -->
+                <div class="w-full md:flex-1 min-h-[80px] relative flex items-center">
+                    <div class="w-full relative h-20 text-center md:text-left flex items-center">
+                        <p class="quote active absolute w-full left-0 text-xl md:text-2xl" data-brand="Chanel">
+                            "<span class="font-bold italic font-montaga">Eternia</span> captures timeless elegance and unmatched craftsmanship."
+                        </p>
+                        <p class="quote absolute w-full left-0 text-xl md:text-2xl" data-brand="LouisVuitton">
+                            "<span class="font-bold italic font-montaga">Eternia</span> redefines luxury with creativity and sophistication."
+                        </p>
+                        <p class="quote absolute w-full left-0 text-xl md:text-2xl" data-brand="Rolex">
+                            "<span class="font-bold italic font-montaga">Eternia</span> stands as a symbol of precision and luxury."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Logos Container -->
+                <div class="flex items-center gap-8 md:gap-12">
+                    <div class="testimonial active cursor-pointer w-16 md:w-20" data-brand="Chanel">
+                        <img src="../images/brand logo/Chanel.png" alt="Chanel" class="w-full h-auto">
+                    </div>
+                    <div class="testimonial cursor-pointer w-16 md:w-20" data-brand="LouisVuitton">
+                        <img src="../images/brand logo/Louis viton.png" alt="Louis Vuitton" class="w-full h-auto">
+                    </div>
+                    <div class="testimonial cursor-pointer w-16 md:w-20" data-brand="Rolex">
+                        <img src="../images/brand logo/Rolex.png" alt="Rolex" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Category Suite -->
+    <section class="suite mb-32">
+        <div class="container mx-auto px-4 max-w-6xl py-8 font-inria">
+            <header class="mb-12">
+                <h1 class="text-4xl text-center font-montaga">The <span class="category-used"> Rings </span> Suite</h1>
+            </header>
+            
+            <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <article class="flex flex-col cursor-pointer">
+                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
+                        <img 
+                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
+                            alt="Crystal Ring" 
+                            class="object-cover w-full h-full transition-transform duration-300"
+                            loading="lazy"
+                        >
+                    </figure>
+                    <div class="px-1">
+                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
+                        <p class="text-sm text-darkGolden">$69.00</p>
+                    </div>
+                </article>
+
+                <article class="flex flex-col">
+                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
+                        <img 
+                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
+                            alt="Golden Ring" 
+                            class="object-cover w-full h-full transition-transform duration-300"
+                            loading="lazy"
+                        >
+                    </figure>
+                    <div class="px-1">
+                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
+                        <p class="text-sm text-darkGolden">$69.00</p>
+                    </div>
+                </article>
+
+                <article class="flex flex-col">
+                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
+                        <img 
+                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
+                            alt="Simple Ring" 
+                            class="object-cover w-full h-full transition-transform duration-300"
+                            loading="lazy"
+                        >
+                    </figure>
+                    <div class="px-1">
+                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
+                        <p class="text-sm text-darkGolden">$69.00</p>
+                    </div>
+                </article>
+
+                <article class="flex flex-col">
+                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
+                        <img 
+                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
+                            alt="Vintage Ring" 
+                            class="object-cover w-full h-full transition-transform duration-300"
+                            loading="lazy"
+                        >
+                    </figure>
+                    <div class="px-1">
+                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
+                        <p class="text-sm text-darkGolden">$69.00</p>
+                    </div>
+                </article>
+
+                <article class="flex flex-col">
+                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
+                        <img 
+                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
+                            alt="Sun Ring" 
+                            class="object-cover w-full h-full transition-transform duration-300"
+                            loading="lazy"
+                        >
+                    </figure>
+                    <div class="px-1">
+                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
+                        <p class="text-sm text-darkGolden">$69.00</p>
+                    </div>
+                </article>
+
+                <article class="flex flex-col">
+                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
+                        <img 
+                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
+                            alt="Heart Ring" 
+                            class="object-cover w-full h-full transition-transform duration-300"
+                            loading="lazy"
+                        >
+                    </figure>
+                    <div class="px-1">
+                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
+                        <p class="text-sm text-darkGolden">$69.00</p>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </section>
     </main>
-    <footer></footer>
+
+    <footer class="font-inria flex flex-col items-center mb-5 gap-4 px-3">
+        <img src="../images/Logo/logo-eternia-400-400.png" alt="" width="180" height="180">
+        <div class="flex gap-4 text-goldenrod font-semibold text-xs sm:text-base lg:text-xl">
+            <a class="" href="../../index.html">HOME</a>
+            <a class="" href="../html/About_Contact.html">CONTACT US</a>
+            <a class="" href="../html/About_Contact.html">ABOUT US</a>
+        </div>
+        <P class="font-montaga text-xs text-center sm:text-sm lg:text-xl">&copy; ETERNIA 2024.  No rights can be derived from the data presented on this site.</P>
+        <div class="flex gap-4">
+            <img src="../images/Icons/facebook.svg" alt="">
+            <img src="../images/Icons/instagram.svg" alt="">
+            <img src="../images/Icons/twitter.svg" alt="">
+        </div>
+    </footer>
 
     <script src="../js/Desc_page.js"></script>
   </body>
