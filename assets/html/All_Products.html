@@ -20,21 +20,24 @@
       rel="stylesheet"
     />
   </head>
+  
   <body>
     <header></header>
     <main>
       <Section>
-        <div class="text-center	my-8	">
-          <input class="border-2 border-black	rounded-lg pl-2	w-60" type="search" placeholder="search... ">
-        </div>
-        <div class="text-center text-2xl font-medium font-inria">
-          <span class="px-10 ">men</span>
-          <span class="px-10">women</span>
-          <span class="px-10">price</span>
-          <span class="px-10">title</span>
-          <span class="px-10">category</span>
+        <div class="text-center my-10 relative">
+          <input class="border-2 rounded-lg pl-4 pr-12 w-80" type="search" placeholder="search...">
+          <img class="absolute ml-[750px] bottom-0.5 " src="../images/Icons/search.svg" alt="search icon">
+      </div>      
+        <div class="text-center text-2xl font-medium font-inria max-sm:text-base ">
+          <span class="px-10 max-md:px-4  max-sm:px-3">men</span>
+          <span class="px-10 max-md:px-4  max-sm:px-3">women</span>
+          <span class="px-10 max-md:px-4  max-sm:px-3">price</span>
+          <span class="px-10 max-md:px-4  max-sm:px-3">title</span>
+          <span class="px-10 max-md:px-4  max-sm:px-3">category</span>
         </div>
       </Section>
+      <section>
       <div class="text-center my-14 text-5xl font-montaga "><h1>Your Collection</h1></div>
       <div class="flex justify-center ">
         <div class="grid gap-6 grid-cols-4 grid-rows-4 w-11/12 font-inria">
@@ -120,16 +123,18 @@
           <div class="ml-2 text-darkGolden	text-xl">72$</div>
         </div>    
       </div>
-      </div>
-      
-        </div>
-
-
+      </section>
+      <section>
+        <div class="flex justify-center font-inria ">
+          <span class="px-7 text-xl"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg></span>
+          <span class="px-7 text-xl">1</span>
+          <span class="px-7 text-xl">2</span>
+          <span class="px-7 text-xl">3</span>
+          <span class="px-7 text-xl">4</span>
+          <span class="px-7 text-xl"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></span>       
+         </div>
+      </section>
     </main>
-    
-    
-
-
     <!-- footer section -->
     <footer class="font-inria flex flex-col items-center mb-5 gap-4 px-3">
       <a href="../../index.html"><img src="../images/Logo/logo-eternia-400-400.png" alt="" width="180" height="180"></a>
