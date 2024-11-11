@@ -59,4 +59,30 @@ menuButton.addEventListener('click', () => {
             }
         });
     })
-})()
+})() ;
+
+// card products Bracelets
+const braceletsLink = document.querySelector('a[href="#"]:nth-child(1)'); 
+const cardSection = document.querySelector('.cardOfNavbar');
+
+// Ajout des événements de survol sur le lien "Bracelets"
+braceletsLink.addEventListener('mouseenter', () => {
+  cardSection.classList.add('visible'); 
+});
+
+braceletsLink.addEventListener('mouseleave', () => {
+  // disparaît pas immédiatement, on attend que la souris quitte aussi la carte
+  if (!cardSection.matches(':hover')) {
+    cardSection.classList.remove('visible');
+  }
+});
+
+// Ajout des événements de survol sur la carte
+cardSection.addEventListener('mouseenter', () => {
+  cardSection.classList.add('visible');
+});
+
+cardSection.addEventListener('mouseleave', () => {
+  cardSection.classList.remove('visible'); 
+});
+
