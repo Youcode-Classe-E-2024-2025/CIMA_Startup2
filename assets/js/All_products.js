@@ -23,4 +23,23 @@ function displayProducts(page) {
   });
 }
 
+function loadProducts() {
+  fetch('../Data/products.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log("Fetched products:", data);  
+      products = data.products;
 
+      displayProducts(currentpage);
+    })
+    .catch(error => {
+      console.error("Error loading products:", error);
+    });
+}
+
+loadProducts();
