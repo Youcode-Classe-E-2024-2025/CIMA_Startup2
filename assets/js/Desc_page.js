@@ -247,4 +247,86 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Product suite section start
 
+async function loadAllProducts() {
+    try {
+
+        if (allProducts.length === 0) {
+            const response = await fetch('../Data/products.json');
+            const data = await response.json();
+            allProducts = data.products;
+
+            if (allProducts.length > 0) {
+                displayRelatedProducts();
+            } 
+        } else {
+            displayRelatedProducts();
+        }
+    } catch (error) {
+        console.error('Error loading all products:', error);
+    }
+}
+
+function displayRelatedProducts() {
+    if (!currentProduct) {
+        console.error('Current product data is missing!');
+        return;
+    }
+
+    const category = currentProduct.category;
+    const gender = currentProduct.gender;
+
+    let filteredProducts = allProducts.filter(product => 
+        product.category === category && 
+        product.gender === gender &&
+        product.id !== currentProduct.id
+    );
+
+    if (filteredProducts.length === 0) {
+        console.log('No related products found based on category and gender!');
+        return;
+    }
+
+    for (let i = filteredProducts.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [filteredProducts[i], filteredProducts[j]] = [filteredProducts[j], filteredProducts[i]];
+    }
+
+    const randomProducts = filteredProducts.slice(0, 6);
+
+    const relatedProductsContainer = document.getElementById('related-products');
+    if (!relatedProductsContainer) {
+        console.error('Related products container not found!');
+        return;
+    }
+
+    relatedProductsContainer.innerHTML = '';
+    randomProducts.forEach(product => {
+        const article = document.createElement('article');
+        article.classList.add('flex', 'flex-col', 'cursor-pointer');
+
+        article.innerHTML = `
+            <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg transition-all duration-1000 ease-in-out">
+                <img src="${product.images[0]}" alt="${product.name}" data-hover-src="${product.images[1]}" class="product-image object-cover w-full h-full transition-transform duration-500" loading="lazy">
+            </figure>
+            <div class="px-1">
+                <h2 class="text-sm font-light text-gray-800">${product.name}</h2>
+                <p class="text-sm text-darkGolden">$${product.price}</p>
+            </div>
+        `;
+
+        const imageElement = article.querySelector('.product-image');
+        
+        imageElement.addEventListener('mouseenter', () => {
+            imageElement.src = imageElement.getAttribute('data-hover-src');
+        });
+
+        imageElement.addEventListener('mouseleave', () => {
+            imageElement.src = product.images[0];
+        });
+
+        relatedProductsContainer.appendChild(article);
+    });
+}
+
 // Product suite section end
+
