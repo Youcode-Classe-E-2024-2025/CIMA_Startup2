@@ -245,3 +245,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Product Details Section end
 
+// Product suite section start
+
+// Product suite section end
