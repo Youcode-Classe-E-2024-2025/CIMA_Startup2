@@ -320,13 +320,34 @@ function displayRelatedProducts() {
             imageElement.src = product.images[0];
         });
  
-        
+        // Click handler for products in suite Start
+        productLink.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const productId = productLink.getAttribute('data-product-id');
+            
+            const newUrl = `${window.location.pathname}?id=${productId}`;
+            window.history.pushState({ productId }, '', newUrl);
+            
+            await loadProductData();
+            await loadAllProducts();
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        });
+        // Click handler for products in suite end
 
         relatedProductsContainer.appendChild(article);
     });
 }
 
-
+// Handle browser back/forward buttons (copy / paste) start
+window.addEventListener('popstate', async (event) => {
+    if (event.state && event.state.productId) {
+        await loadProductData();
+        await loadAllProducts();
+    }
+});
+// Handle browser back/forward buttons (copy / paste) end 
 
 // Load functions on window load start
 document.addEventListener('DOMContentLoaded', async () => {
