@@ -6,7 +6,6 @@ const mainContainer = document.querySelector(".flex.items-center.justify-between
 const countries = ["Morocco", "United States", "Canada", "France", "Germany", "United Kingdom", "Australia", "Japan", "China", "India"];
 
 
-
 // Shipping estimator country list start
 countries.forEach(country => {
     const countryItem = document.createElement("div");
