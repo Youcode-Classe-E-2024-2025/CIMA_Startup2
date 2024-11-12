@@ -319,7 +319,7 @@ function displayRelatedProducts() {
         imageElement.addEventListener('mouseleave', () => {
             imageElement.src = product.images[0];
         });
-
+ 
         
 
         relatedProductsContainer.appendChild(article);
