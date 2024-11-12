@@ -1,6 +1,13 @@
 let products = [];  
 let currentpage = 1;
-const numbre_elements_page = 16; 
+const numbre_elements_page = 16;  
+
+function shufflearray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];  
+  }
+}
 
 function displayProducts(page) {
   const startindex = (page - 1) * numbre_elements_page;
@@ -8,7 +15,7 @@ function displayProducts(page) {
   const currentProducts = products.slice(startindex, endindex);
 
   const product_container = document.getElementById("product_container");
-  product_container.innerHTML = ""; 
+  product_container.innerHTML = "";  
 
   currentProducts.forEach(product => {
     const productdiv = document.createElement("div");
@@ -32,14 +39,13 @@ function loadProducts() {
       return response.json();
     })
     .then(data => {
-      console.log("Fetched products:", data);  
       products = data.products;
+
+      shufflearray(products);
 
       displayProducts(currentpage);
     })
-    .catch(error => {
-      console.error("Error loading products:", error);
-    });
+   
 }
 
 loadProducts();
