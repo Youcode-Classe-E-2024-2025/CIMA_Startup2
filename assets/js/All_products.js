@@ -86,3 +86,31 @@ function loadProducts() {
 }
 
 loadProducts();
+
+
+document.getElementById("search").addEventListener("input", function () {
+
+const search_item = this.value.toLowerCase();
+
+const results = products.filter( item => 
+
+product.name.toLowerCase().includes(search_item) ) ;
+
+productdiv.innerHTML = " "
+
+results.forEach(item =>{
+
+const resultsterm = document.createElement("div") ; 
+
+  resultsterm.innerHTML =  `
+  <img src="${product.images[0]}" alt="${product.name}" class="w-full h-[80%] object-cover">
+  <div class="mx-2">${product.name}</div>
+  <div class="ml-2 text-darkGolden text-xl">${product.price} $</div>
+`;
+
+productdiv.appendChild(resultsterm) ;
+ 
+}) ;
+
+})
+
