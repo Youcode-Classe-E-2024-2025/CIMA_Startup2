@@ -61,28 +61,37 @@ menuButton.addEventListener('click', () => {
     })
 })() ;
 
-// card products Bracelets
-const braceletsLink = document.querySelector('a[href="#"]:nth-child(1)'); 
+// Sélection des éléments
+const braceletsLink = document.querySelector('a[href="#"]:nth-child(1)');
 const cardSection = document.querySelector('.cardOfNavbar');
 
-// Ajout des événements de survol sur le lien "Bracelets"
+let isHoveringLink = false;
+let isHoveringCard = false;
+
+// Événements pour le lien Bracelets
 braceletsLink.addEventListener('mouseenter', () => {
-  cardSection.classList.add('visible'); 
-});
-
-braceletsLink.addEventListener('mouseleave', () => {
-  // disparaît pas immédiatement, on attend que la souris quitte aussi la carte
-  if (!cardSection.matches(':hover')) {
-    cardSection.classList.remove('visible');
-  }
-});
-
-// Ajout des événements de survol sur la carte
-cardSection.addEventListener('mouseenter', () => {
+  isHoveringLink = true;
   cardSection.classList.add('visible');
 });
 
-cardSection.addEventListener('mouseleave', () => {
-  cardSection.classList.remove('visible'); 
+braceletsLink.addEventListener('mouseleave', () => {
+  isHoveringLink = false;
+  // Petit délai pour permettre à la souris d'atteindre la section des cartes
+  setTimeout(() => {
+    if (!isHoveringCard) {
+      cardSection.classList.remove('visible');
+    }
+  }, 100);
 });
 
+// Événements pour la section des cartes
+cardSection.addEventListener('mouseenter', () => {
+  isHoveringCard = true;
+});
+
+cardSection.addEventListener('mouseleave', () => {
+  isHoveringCard = false;
+  if (!isHoveringLink) {
+    cardSection.classList.remove('visible');
+  }
+});
