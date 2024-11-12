@@ -7,95 +7,110 @@
 /* Testimonials Section */
 
 .testimonial-container {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .testimonial {
-    transition: all 0.5s ease;
-    opacity: 0.7;
-    transform: scale(0.9);
+  transition: all 0.5s ease;
+  opacity: 0.7;
+  transform: scale(0.9);
 }
 
 .testimonial.active {
-    opacity: 1;
-    transform: scale(1.1);
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .quote {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    position: absolute;
-    pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  pointer-events: none;
 }
 
 .quote.active {
-    opacity: 1;
+  opacity: 1;
 }
-
 
 /* Product Description Page Animation end */
 
 html,
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 /* stroke navbar */
 .text-outline {
-    text-shadow: 
-        -1px -1px 0 #000,  
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-    color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: white;
 }
 
 /* caroussel */
 
 /* Définition du carrousel */
 .carousel {
-    position: relative;
+  position: relative;
 }
 .carousel-inner {
-    display: flex;
-    overflow: hidden;
-    height: 100vh;
-    flex-wrap: nowrap;
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  flex-wrap: nowrap;
 }
 .slide {
-    flex: 0 0 100%;
-    height: 100%;
-    transition: .5s ease-in-out;
+  flex: 0 0 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
 }
 .carousel-controls {
-    position: absolute;
-    z-index: 5;
-    left: 10%;
-    right: 10%;
-    top: 50%;
-    display: flex;
-    justify-content: space-between;
+  position: absolute;
+  z-index: 5;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 .carousel-controls button {
-    padding: 10px;
-    background-color: aquamarine;
+  padding: 10px;
+  background-color: aquamarine;
 }
 .carousel-dots .dot {
-    border-radius: 50%;
-    margin: 5px;
-    cursor: pointer;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
 }
 .carousel-dots .active {
-    border: 10px solid #D19D0E !important;
+  border: 10px solid #d19d0e !important;
 }
 .carousel-dots .inactive {
-    border: 10px solid white;
+  border: 10px solid white;
 }
 
 /* card products */
-/* Style de base de la carte */
-.cardOfNavbar {
+/* Style de base de la carte bracelets */
+/* .braceletsOfNavbar {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+  display: none;
+}
+
+.braceletsOfNavbar.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+  display: block;
+}
+ */
+/* Masquer par défaut les sections de produits */
+.elementOfNavbar > div {
     position: absolute;
     top: 4rem; 
     left: 0;
@@ -104,13 +119,12 @@ body {
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0s 0.3s;
     display: none; 
-  }
-  
-  .cardOfNavbar.visible {
+}
+
+/* Afficher la section visible */
+.elementOfNavbar > div.visible {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease;
     display: block;
-  }
-  
-  
+}

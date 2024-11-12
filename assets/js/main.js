@@ -15,7 +15,7 @@ menuButton.addEventListener('click', () => {
 // caroussel
 (function () {
     "use stict"
-    const slideTimeout = 5000;    
+    const slideTimeout = 5000;
     const $slides = document.querySelectorAll('.slide');
     let $dots;
     let intervalId;
@@ -23,7 +23,7 @@ menuButton.addEventListener('click', () => {
     function slideTo(index) {
         currentSlide = index >= $slides.length || index < 1 ? 0 : index;
         $slides.forEach($elt => $elt.style.transform = `translateX(-${currentSlide * 100}%)`);
-        $dots.forEach(($elt, key) => $elt.classList = `dot ${key === currentSlide? 'active': 'inactive'}`);
+        $dots.forEach(($elt, key) => $elt.classList = `dot ${key === currentSlide ? 'active' : 'inactive'}`);
     }
     function showSlide() {
         slideTo(currentSlide);
@@ -36,7 +36,7 @@ menuButton.addEventListener('click', () => {
     }
     $dots = document.querySelectorAll('.dot');
     $dots.forEach(($elt, key) => $elt.addEventListener('click', () => slideTo(key)));
-    
+
     intervalId = setInterval(showSlide, slideTimeout)
     $slides.forEach($elt => {
         let startX;
@@ -59,39 +59,69 @@ menuButton.addEventListener('click', () => {
             }
         });
     })
-})() ;
+})();
 
-// Sélection des éléments
-const braceletsLink = document.querySelector('a[href="#"]:nth-child(1)');
-const cardSection = document.querySelector('.cardOfNavbar');
+// Bracelets
+// const braceletsLink = document.querySelector('a[href="#"]:nth-child(1)');
+// const cardSection = document.querySelector('.braceletsOfNavbar');
 
-let isHoveringLink = false;
-let isHoveringCard = false;
+// let isHoveringLink = false;
+// let isHoveringCard = false;
 
-// Événements pour le lien Bracelets
-braceletsLink.addEventListener('mouseenter', () => {
-  isHoveringLink = true;
-  cardSection.classList.add('visible');
+// // Événements pour le lien Bracelets
+// braceletsLink.addEventListener('mouseenter', () => {
+//   isHoveringLink = true;
+//   cardSection.classList.add('visible');
+// });
+
+// braceletsLink.addEventListener('mouseleave', () => {
+//   isHoveringLink = false;
+//   // Petit délai pour permettre à la souris d'atteindre la section des cartes
+//   setTimeout(() => {
+//     if (!isHoveringCard) {
+//       cardSection.classList.remove('visible');
+//     }
+//   }, 100);
+// });
+
+// // Événements pour la section des cartes
+// cardSection.addEventListener('mouseenter', () => {
+//   isHoveringCard = true;
+// });
+
+// cardSection.addEventListener('mouseleave', () => {
+//   isHoveringCard = false;
+//   if (!isHoveringLink) {
+//     cardSection.classList.remove('visible');
+//   }
+// });
+// Sélectionner les liens et sections
+const navbarLinks = document.querySelectorAll('.navbar-link');
+const sections = document.querySelectorAll('.elementOfNavbar > div');
+
+// Masquer toutes les sections
+function hideAllSections() {
+    sections.forEach(section => {
+        section.classList.remove('visible');
+    });
+}
+
+// Fonction pour afficher une section spécifique
+function showSection(index) {
+    hideAllSections();
+    sections[index].classList.add('visible');
+}
+
+// Événements pour montrer/masquer les sections
+navbarLinks.forEach((link, index) => {
+    link.addEventListener('mouseenter', () => showSection(index));
 });
+document.querySelector('.elementOfNavbar').addEventListener('mouseleave', hideAllSections);
 
-braceletsLink.addEventListener('mouseleave', () => {
-  isHoveringLink = false;
-  // Petit délai pour permettre à la souris d'atteindre la section des cartes
-  setTimeout(() => {
-    if (!isHoveringCard) {
-      cardSection.classList.remove('visible');
-    }
-  }, 100);
-});
 
-// Événements pour la section des cartes
-cardSection.addEventListener('mouseenter', () => {
-  isHoveringCard = true;
-});
 
-cardSection.addEventListener('mouseleave', () => {
-  isHoveringCard = false;
-  if (!isHoveringLink) {
-    cardSection.classList.remove('visible');
-  }
-});
+
+
+
+
+
