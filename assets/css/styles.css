@@ -103,6 +103,22 @@
     transition: opacity 0.3s ease;
     display: block;
 }
+
   
+
+/* Styles personnalisés pour les animations  de la video*/
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
   
+  .animate-fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .delay-100 {
+    animation-delay: 100ms;
+  }
   

@@ -86,9 +86,50 @@ navbarLinks.forEach((link, index) => {
 document.querySelector('.elementOfNavbar').addEventListener('mouseleave', hideAllSections);
 
 
+// Script pour la gestion du formulaire et des animations
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Animation pour faire apparaître les éléments au scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px'
+  };
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100');
+        entry.target.classList.remove('opacity-0');
+      }
+    });
+  }, observerOptions);
 
+  // Observer les éléments avec animation
+  document.querySelectorAll('.animate-fadeIn').forEach(el => {
+    observer.observe(el);
+  });
 
+  // Gestion du formulaire newsletter
+  const form = document.getElementById('newsletterForm');
+  const confirmationMessage = document.getElementById('confirmationMessage');
 
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const email = form.email.value;
+    
+    // Simulation d'envoi (remplacer par votre logique d'envoi réelle)
+    setTimeout(() => {
+      form.reset();
+      form.style.display = 'none';
+      confirmationMessage.classList.remove('hidden');
+      
+      // Réinitialiser après 5 secondes
+      setTimeout(() => {
+        form.style.display = 'flex';
+        confirmationMessage.classList.add('hidden');
+      }, 5000);
+    }, 1000);
+  });
+});
 
