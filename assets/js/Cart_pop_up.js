@@ -64,7 +64,7 @@ async function createPopup() {
 
     // Create the popup overlay start
     const popupOverlay = document.createElement('div');
-    popupOverlay.classList.add('fixed', 'inset-0', 'flex', 'items-center', 'justify-center', 'bg-black', 'bg-opacity-50', 'z-50');
+    popupOverlay.classList.add('fixed', 'inset-0', 'flex', 'items-center', 'justify-center', 'bg-black', 'bg-opacity-50', 'z-50','fade-in');
     // Create the popup overlay end
 
 
@@ -79,7 +79,8 @@ async function createPopup() {
     closeButton.classList.add('absolute', 'top-2', 'right-2', 'text-gray-500', 'hover:text-gray-700', 'text-4xl', 'focus:outline-none');
     closeButton.innerHTML = '&times;';
     closeButton.addEventListener('click', () => {
-        document.body.removeChild(popupOverlay);
+        popupOverlay.classList.add('fade-out');
+        setTimeout(() => document.body.removeChild(popupOverlay), 500); // Wait for fade-out to finish
     });
     popupContent.appendChild(closeButton);
     // Add the close button end

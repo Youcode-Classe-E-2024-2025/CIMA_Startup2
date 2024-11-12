@@ -36,6 +36,25 @@
 
 /* Product Description Page Animation end */
 
+/* CSS for fade-in and fade-out animations */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 
 /* stroke navbar */
 .text-outline {
