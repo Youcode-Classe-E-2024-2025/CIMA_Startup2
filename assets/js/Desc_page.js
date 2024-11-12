@@ -17,11 +17,12 @@ let isPaused = false;
 let currentProduct;
 let allProducts = [];
 
+
 // Testimonials animation start
 function showTestimonial(index) {
     testimonials.forEach(t => t.classList.remove('active'));
     quotes.forEach(q => q.classList.remove('active'));
-
+    
     testimonials[index].classList.add('active');
     quotes[index].classList.add('active');
 }
@@ -42,7 +43,7 @@ testimonials.forEach((testimonial, index) => {
     testimonial.addEventListener('mouseleave', () => {
         isPaused = false;
     });
-
+    
     testimonial.addEventListener('click', () => {
         currentIndex = index;
         showTestimonial(index);
@@ -54,26 +55,15 @@ interval = setInterval(nextTestimonial, 7000);
 window.addEventListener('unload', () => {
     clearInterval(interval);
 });
-
 // Testimonials animation ends
+
+
+
 
 
 // Product Details Section start
 
-// Load product data from a JSON file start
-async function loadProductData() {
-    try {
-        const response = await fetch('../Data/products.json');
-        const data = await response.json();
-        currentProduct = data.products[15];
 
-        document.title = `ETERNIA || ${currentProduct.name}`;
-        ProductDisplay();
-    } catch (error) {
-        console.error('Error loading product data:', error);
-    }
-}
-// Load product data from a JSON file end
 
 
 // Display product based on data start
@@ -172,7 +162,7 @@ function saveToLocalStorage() {
     
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    console.log(productData.size)
+    console.log(productData.size);
 
     const existingItemIndex = cart.findIndex(item => 
         item.id === productData.id && item.size === productData.size
@@ -192,13 +182,12 @@ function saveToLocalStorage() {
 
 // Add to cart button start
 function setupAddToCart() {
-
     addToCartButton.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
 
         if (!currentProduct.inStock) {
-            alert('Sorry, this item is currently out of stock.');
+            alert('Sorry, this item is currently out of stock. Until 01/01/2025.');
             return;
         }
 
@@ -230,26 +219,9 @@ function setupZoom() {
 // Image zoom effect end
 
 
-// Load functions on window load start
-document.addEventListener('DOMContentLoaded', async () => {
-    await loadProductData();
-    setupAddToCart();
-    setupZoom();
-    quantityInput.value = 1;
-
-    setTimeout(() => {
-        loadAllProducts();
-    }, 100); 
-});
-// Load functions on window load end
-
-// Product Details Section end
-
 // Product suite section start
-
 async function loadAllProducts() {
     try {
-
         if (allProducts.length === 0) {
             const response = await fetch('../Data/products.json');
             const data = await response.json();
@@ -292,8 +264,8 @@ function displayRelatedProducts() {
     }
 
     const randomProducts = filteredProducts.slice(0, 6);
-
     const relatedProductsContainer = document.getElementById('related-products');
+    
     if (!relatedProductsContainer) {
         console.error('Related products container not found!');
         return;
@@ -305,16 +277,19 @@ function displayRelatedProducts() {
         article.classList.add('flex', 'flex-col', 'cursor-pointer');
 
         article.innerHTML = `
-            <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg transition-all duration-1000 ease-in-out">
-                <img src="${product.images[0]}" alt="${product.name}" data-hover-src="${product.images[1]}" class="product-image object-cover w-full h-full transition-transform duration-500" loading="lazy">
-            </figure>
-            <div class="px-1">
-                <h2 class="text-sm font-light text-gray-800">${product.name}</h2>
-                <p class="text-sm text-darkGolden">$${product.price}</p>
-            </div>
+            <a href="javascript:void(0)" class="product-link" data-product-id="${product.id}">
+                <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg transition-all duration-1000 ease-in-out">
+                    <img src="${product.images[0]}" alt="${product.name}" data-hover-src="${product.images[1]}" class="product-image object-cover w-full h-full transition-transform duration-500" loading="lazy">
+                </figure>
+                <div class="px-1">
+                    <h2 class="text-sm font-light">${product.name}</h2>
+                    <p class="text-sm text-darkGolden">$${product.price}</p>
+                </div>
+            </a>
         `;
 
         const imageElement = article.querySelector('.product-image');
+        const productLink = article.querySelector('.product-link');
         
         imageElement.addEventListener('mouseenter', () => {
             imageElement.src = imageElement.getAttribute('data-hover-src');
@@ -324,9 +299,23 @@ function displayRelatedProducts() {
             imageElement.src = product.images[0];
         });
 
+        
+
         relatedProductsContainer.appendChild(article);
     });
 }
 
-// Product suite section end
 
+
+// Load functions on window load start
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadProductData();
+    setupAddToCart();
+    setupZoom();
+    quantityInput.value = 1;
+
+    setTimeout(() => {
+        loadAllProducts();
+    }, 100); 
+});
+// Load functions on window load end
