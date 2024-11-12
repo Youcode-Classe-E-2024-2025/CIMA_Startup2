@@ -1,6 +1,7 @@
-let products = [];  
+let products = [];   
 let currentpage = 1;
 const numbre_elements_page = 16;  
+let totalpages = 1; 
 
 function shufflearray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -25,27 +26,63 @@ function displayProducts(page) {
       <div class="mx-2">${product.name}</div>
       <div class="ml-2 text-darkGolden text-xl">${product.price} $</div>
     `;
-    
     product_container.appendChild(productdiv);
+  });
+
+  updatePagination(page);
+}
+
+function updatePagination(page) {
+  const paginationNumbers = document.getElementById("paginationNumbers");
+  paginationNumbers.innerHTML = "";
+
+  for (let i = 1; i <= totalpages; i++) {
+    const pageButton = document.createElement("span");
+    pageButton.classList.add("px-3", "cursor-pointer", "mx-2", "text-xl", "rounded-full");
+    pageButton.textContent = i;
+    
+    if (i === page) {
+      pageButton.classList.add("bg-yellow-500");
+    }
+
+    pageButton.addEventListener("click", () => {
+      currentpage = i;
+      displayProducts(currentpage);
+    });
+    
+    paginationNumbers.appendChild(pageButton);
+  }
+}
+
+function setupNavigation() {
+  document.getElementById("prevPage").addEventListener("click", () => {
+    if (currentpage > 1) {
+      currentpage--;
+      displayProducts(currentpage);
+    }
+  });
+
+  document.getElementById("nextPage").addEventListener("click", () => {
+    if (currentpage < totalpages) {
+      currentpage++;
+      displayProducts(currentpage);
+    }
   });
 }
 
 function loadProducts() {
   fetch('../Data/products.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
-      products = data.products;
-
+      products = data.products; 
       shufflearray(products);
+      
+      totalpages = Math.ceil(products.length / numbre_elements_page);
 
       displayProducts(currentpage);
+      setupNavigation();
     })
-   
+    .catch(error => console.error("Erreur de chargement des produits:", error));
 }
 
 loadProducts();

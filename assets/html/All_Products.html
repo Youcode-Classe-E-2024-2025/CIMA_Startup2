@@ -42,20 +42,17 @@
     </Section>
       <section class="flex justify-center ">
         <div id="product_container" class="grid gap-6 grid-cols-4 grid-rows-4 w-11/12 font-inria">
-       /
       </section>
-      <section>
-        <div class="flex justify-center font-inria ">
-          <span class="px-3 cursor-pointer rounded-full text-xl self-center"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg></span>
-          <span class="px-3 cursor-pointer mx-2 text-xl rounded-full hover:bg-yellow-500	">1</span>
-          <div class="h-2 w-2  bg-slate-300 mt-3 rounded-full"></div>
-          <span class="px-3 cursor-pointer mx-2 text-xl rounded-full hover:bg-yellow-500	">2</span>
-          <div class="h-2 w-2 bg-slate-300 mt-3 rounded-full"></div>
-          <span class="px-3 cursor-pointer mx-2 text-xl rounded-full hover:bg-yellow-500	">3</span>
-          <div class="h-2 w-2 bg-slate-300 mt-3 rounded-full"></div>
-          <span class="px-3 cursor-pointer mx-2 text-xl rounded-full hover:bg-yellow-500	">4</span>
-          <span class="px-3 cursor-pointer rounded-full text-xl self-center"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></span>       
-         </div>
+      <section>      
+        <div class="flex justify-center font-inria my-10">
+          <span id="prevPage" class="px-3 cursor-pointer rounded-full text-xl self-center hover:bg-yellow-500 transition-all duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fill-current text-gray-700 hover:text-yellow-500 transition-all duration-200"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
+          </span>
+          <div id="paginationNumbers" class="flex items-center"></div>
+          <span id="nextPage" class="px-3 cursor-pointer rounded-full text-xl self-center hover:bg-yellow-500 transition-all duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fill-current text-gray-700 hover:text-yellow-500 transition-all duration-200"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+          </span>
+        </div>
       </section>
     </main>
     <!-- footer section -->
