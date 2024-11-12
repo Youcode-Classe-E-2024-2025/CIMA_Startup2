@@ -58,12 +58,33 @@ window.addEventListener('unload', () => {
 // Testimonials animation ends
 
 
-
+// Get product ID from URL parameters start
+function getProductIdFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    return productId || 'Eternia-9K1L7N2R';
+}
+// Get product ID from URL parameters end
 
 
 // Product Details Section start
 
-
+// Load product data from a JSON file start
+async function loadProductData() {
+    try {
+        const response = await fetch('../Data/products.json');
+        const data = await response.json();
+        const productId = getProductIdFromUrl();
+        
+        currentProduct = data.products.find(p => p.id === productId);
+        
+        document.title = `ETERNIA || ${currentProduct.name}`;
+        ProductDisplay();
+    } catch (error) {
+        console.error('Error loading product data:', error);
+    }
+}
+// Load product data from a JSON file end
 
 
 // Display product based on data start
