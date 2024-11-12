@@ -61,40 +61,7 @@ menuButton.addEventListener('click', () => {
     })
 })();
 
-// Bracelets
-// const braceletsLink = document.querySelector('a[href="#"]:nth-child(1)');
-// const cardSection = document.querySelector('.braceletsOfNavbar');
 
-// let isHoveringLink = false;
-// let isHoveringCard = false;
-
-// // Événements pour le lien Bracelets
-// braceletsLink.addEventListener('mouseenter', () => {
-//   isHoveringLink = true;
-//   cardSection.classList.add('visible');
-// });
-
-// braceletsLink.addEventListener('mouseleave', () => {
-//   isHoveringLink = false;
-//   // Petit délai pour permettre à la souris d'atteindre la section des cartes
-//   setTimeout(() => {
-//     if (!isHoveringCard) {
-//       cardSection.classList.remove('visible');
-//     }
-//   }, 100);
-// });
-
-// // Événements pour la section des cartes
-// cardSection.addEventListener('mouseenter', () => {
-//   isHoveringCard = true;
-// });
-
-// cardSection.addEventListener('mouseleave', () => {
-//   isHoveringCard = false;
-//   if (!isHoveringLink) {
-//     cardSection.classList.remove('visible');
-//   }
-// });
 // Sélectionner les liens et sections
 const navbarLinks = document.querySelectorAll('.navbar-link');
 const sections = document.querySelectorAll('.elementOfNavbar > div');
