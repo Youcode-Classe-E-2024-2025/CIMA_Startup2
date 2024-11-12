@@ -86,7 +86,7 @@ body {
   border: 10px solid #d19d0e !important;
 }
 .carousel-dots .inactive {
-  border: 10px solid white;
+  border: 10px solid grey;
 }
 
 /* card products */
