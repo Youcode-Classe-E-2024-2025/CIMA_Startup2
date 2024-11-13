@@ -80,7 +80,7 @@ async function createPopup() {
     closeButton.innerHTML = '&times;';
     closeButton.addEventListener('click', () => {
         popupOverlay.classList.add('fade-out');
-        setTimeout(() => document.body.removeChild(popupOverlay), 500); // Wait for fade-out to finish
+        setTimeout(() => document.body.removeChild(popupOverlay), 500);
     });
     popupContent.appendChild(closeButton);
     // Add the close button end
