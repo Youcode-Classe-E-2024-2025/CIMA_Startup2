@@ -104,15 +104,23 @@ function applyFilters() {
 
 document.getElementById("filtermen").addEventListener("click", () => {
   genderFilter = "men"; 
-  applyFilters(); 
-  document.getElementById("filtermen").classList.add("text-goldenrod") ;
+  applyFilters();
+  
+  document.getElementById("filtermen").classList.add("text-goldenrod");
+  document.getElementById("filterwomen").classList.remove("text-goldenrod"); 
+});
+
+document.getElementById("filterwomen").addEventListener("click", () => {
+  genderFilter = "women";
+  applyFilters();
+  
+  document.getElementById("filterwomen").classList.add("text-goldenrod");
+  document.getElementById("filtermen").classList.remove("text-goldenrod"); 
 });
 
 document.getElementById("search").addEventListener("input", function () {
   searchQuery = this.value.toLowerCase(); 
-  applyFilters(); 
+  applyFilters();
 });
 
 loadProducts();
-
-
