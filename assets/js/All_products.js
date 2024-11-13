@@ -1,8 +1,10 @@
 let products = [];
-let filteredProducts = []; 
+let filteredProducts = [];
 let currentpage = 1;
 const numbre_elements_page = 16;
 let totalpages = 1;
+let genderFilter = ""; 
+let searchQuery = ""; 
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -78,7 +80,7 @@ function loadProducts() {
       products = data.products;
       shuffleArray(products);
 
-      filteredProducts = products; 
+      filteredProducts = products;
       totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
 
       displayProducts(currentpage);
@@ -87,33 +89,30 @@ function loadProducts() {
     .catch(error => console.error("Erreur de chargement des produits:", error));
 }
 
-document.getElementById("search").addEventListener("input", function () {
-  const search_item = this.value.toLowerCase();
+function applyFilters() {
+  filteredProducts = products.filter(item => {
+    const matchesGender = genderFilter ? item.gender && item.gender.toLowerCase() === genderFilter : true;
+    const matchesSearch = item.name.toLowerCase().includes(searchQuery);
 
-  filteredProducts = products.filter(item =>
-    item.name.toLowerCase().includes(search_item)
-  );
+    return matchesGender && matchesSearch;
+  });
+
   currentpage = 1;
-
+  totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
   displayProducts(currentpage);
+}
+
+document.getElementById("filtermen").addEventListener("click", () => {
+  genderFilter = "men"; 
+  applyFilters(); 
+  
+});
+
+document.getElementById("search").addEventListener("input", function () {
+  searchQuery = this.value.toLowerCase(); 
+  applyFilters(); 
 });
 
 loadProducts();
-
-document.getElementById("filtermen").addEventListener("click", () => {
-  filterMen(); 
-});
-
-function filterMen() {
-  filteredProducts = products.filter(item => item.gender && item.gender.toLowerCase() === "men");
-  
-  currentpage = 1; 
-  totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
-
-  displayProducts(currentpage); 
-}
-
-
-
 
 
