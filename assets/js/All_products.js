@@ -99,3 +99,21 @@ document.getElementById("search").addEventListener("input", function () {
 });
 
 loadProducts();
+
+document.getElementById("filtermen").addEventListener("click", () => {
+  filterMen(); 
+});
+
+function filterMen() {
+  filteredProducts = products.filter(item => item.gender && item.gender.toLowerCase() === "men");
+  
+  currentpage = 1; 
+  totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
+
+  displayProducts(currentpage); 
+}
+
+
+
+
+
