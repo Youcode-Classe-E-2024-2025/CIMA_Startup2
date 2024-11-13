@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // Function to format the price with spaces end
 
-
     // Updating the total price function start
     function updateSubtotal() {
         const subtotalElement = document.getElementById('subtotal');
@@ -51,6 +50,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // Updating the total price function end
 
+    // Function to delete cart items start
+    function deleteCartItem(index) {
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCartItems();
+    }
+    // Function to delete cart items end
 
     // creation of cart item start
     function renderCartItems() {
@@ -62,50 +68,53 @@ document.addEventListener("DOMContentLoaded", function() {
         container.appendChild(divider);
 
         cart.forEach((item, index) => {
-        const itemElement = document.createElement('article');
-        itemElement.className = "py-11 h-min border-b border-gray_used_in_divider_lines flex flex-col 503:flex-row justify-between";
+            const itemElement = document.createElement('article');
+            itemElement.className = "py-11 h-min border-b border-gray_used_in_divider_lines flex flex-col 503:flex-row justify-between";
 
-        itemElement.innerHTML = `
-            <div class="flex gap-4">
-            <img class="object-cover border border-[rgba(0,0,0,0.24)] mb-4" src="${item.selectedImage}" alt="${item.name}" width="148" height="200">
-            <div class="flex flex-col text-left pt-4">
-                <h1 class="text-xl md:text-4xl font-montaga">${item.name}</h1>
-                <p class="text-xl text-darkGolden">$ ${item.price}</p>
-            </div>
-            </div>
-            <div class="flex flex-col gap-4 self-center pr-4">
-            <div class="flex items-center gap-2">
-                <label class="text-gray_used_in_small_text text-nowrap">Qty :</label>
-                <div class="flex items-center border-2">
-                <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center" onclick="updateQuantity(${index}, -1)">
-                    <img src="../images/Icons/minus.svg" alt="Decrease Quantity">
-                </button>
-                <input type="text" value="${item.quantity}" class="w-12 h-8 text-center" readonly>
-                <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center" onclick="updateQuantity(${index}, 1)">
-                    <img src="../images/Icons/plus.svg" alt="Increase Quantity">
-                </button>
+            itemElement.innerHTML = `
+                <div class="flex gap-4">
+                    <img class="object-cover border border-[rgba(0,0,0,0.24)] mb-4" src="${item.selectedImage}" alt="${item.name}" width="148" height="200">
+                    <div class="flex flex-col text-left pt-4">
+                        <h1 class="text-xl md:text-4xl font-montaga">${item.name}</h1>
+                        <p class="text-xl text-darkGolden">$ ${item.price}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="flex items-center gap-2 self-end">
-                <label class="text-gray_used_in_small_text">Size :</label>
-                <div class="relative inline-block border-2">
-                <select class="w-24 h-8 pl-3 pr-8 bg-white cursor-pointer focus:outline-none" onchange="updateSize(${index}, this.value)">
-                    <option ${item.size === '6' ? 'selected' : ''}>6</option>
-                    <option ${item.size === '7' ? 'selected' : ''}>7</option>
-                    <option ${item.size === '8' ? 'selected' : ''}>8</option>
-                    <option ${item.size === '9' ? 'selected' : ''}>9</option>
-                    <option ${item.size === '10' ? 'selected' : ''}>10</option>
-                </select>
-                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none bg-button_divs_background">
-                    <img src="../images/Icons/arrow down.svg" alt="Dropdown arrow" class="w-4 h-4">
+                <div class="flex flex-col gap-4 self-center pr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="503:self-end 503:translate-x-0 translate-x-[5.5rem] cursor-pointer trash" height="20px" viewBox="0 -960 960 960" width="20px" onclick="deleteCartItem(${index})">
+                        <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+                    </svg>
+                    <div class="flex items-center gap-2">
+                        <label class="text-gray_used_in_small_text text-nowrap">Qty :</label>
+                        <div class="flex items-center border-2">
+                            <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center" onclick="updateQuantity(${index}, -1)">
+                                <img src="../images/Icons/minus.svg" alt="Decrease Quantity">
+                            </button>
+                            <input type="text" value="${item.quantity}" class="w-12 h-8 text-center" readonly>
+                            <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center" onclick="updateQuantity(${index}, 1)">
+                                <img src="../images/Icons/plus.svg" alt="Increase Quantity">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 self-end">
+                        <label class="text-gray_used_in_small_text">Size :</label>
+                        <div class="relative inline-block border-2">
+                            <select class="w-24 h-8 pl-3 pr-8 bg-white cursor-pointer focus:outline-none" onchange="updateSize(${index}, this.value)">
+                                <option ${item.size === '6' ? 'selected' : ''}>6</option>
+                                <option ${item.size === '7' ? 'selected' : ''}>7</option>
+                                <option ${item.size === '8' ? 'selected' : ''}>8</option>
+                                <option ${item.size === '9' ? 'selected' : ''}>9</option>
+                                <option ${item.size === '10' ? 'selected' : ''}>10</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none bg-button_divs_background">
+                                <img src="../images/Icons/arrow down.svg" alt="Dropdown arrow" class="w-4 h-4">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
-            </div>
-        `;
-        container.appendChild(itemElement);
+            `;
+            container.appendChild(itemElement);
         });
-        
+
         updateSubtotal();
     }
     // creation of cart item end
@@ -114,9 +123,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update quantity function start
     window.updateQuantity = function(index, change) {
         if (cart[index].quantity + change > 0) {
-        cart[index].quantity += change;
-        localStorage.setItem('cart', JSON.stringify(cart));
-        renderCartItems();
+            cart[index].quantity += change;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCartItems();
         }
     };
     // Update quantity function end
@@ -129,6 +138,17 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     // Update size function end
 
+    // Add delete function to window for inline use
+    window.deleteCartItem = deleteCartItem;
+
     renderCartItems();
 });
 // Handling cart items end
+
+
+
+// Redirecting to pdf page start
+pdf.addEventListener("click",()=>{
+    window.location.href = "../html/Estimate_pdf.html"
+})
+// Redirecting to pdf page end
