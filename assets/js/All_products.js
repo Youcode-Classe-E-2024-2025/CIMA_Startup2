@@ -105,7 +105,7 @@ function applyFilters() {
 document.getElementById("filtermen").addEventListener("click", () => {
   genderFilter = "men"; 
   applyFilters(); 
-  
+  document.getElementById("filtermen").classList.add("text-goldenrod") ;
 });
 
 document.getElementById("search").addEventListener("input", function () {
