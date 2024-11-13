@@ -2,6 +2,7 @@ const countryList = document.getElementById("country-list");
 const selectedCountry = document.getElementById("selected-country");
 const toggleButton = document.querySelector("#shipping_estimator button");
 const mainContainer = document.querySelector(".flex.items-center.justify-between");
+const pdf = document.getElementById("pdf")
 
 const countries = ["Morocco", "United States", "Canada", "France", "Germany", "United Kingdom", "Australia", "Japan", "China", "India"];
 
@@ -29,3 +30,5 @@ toggleButton.addEventListener("click", () => {
     }
 });
 // Shipping estimator country list end
+
+

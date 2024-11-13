@@ -25,11 +25,11 @@
 
       <!-- Purchased Section -->
       <section id="purchased" class="mb-28 max-w-md sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto">
-        <div class="overflow-y-auto  h-[577px]">
+        <div id="purchased-items-container" class="overflow-y-auto h-[577px]">
 
           <div class="w-full h-px bg-gray_used_in_divider_lines"></div>
           
-          <article class="py-11 h-min border-b border-gray_used_in_divider_lines flex flex-col 503:flex-row justify-between">
+          <!-- <article class="py-11 h-min border-b border-gray_used_in_divider_lines flex flex-col 503:flex-row justify-between">
           <div class="flex gap-4">
             <img class="object-cover border border-[rgba(0,0,0,0.24)] mb-4" src="../images/Products/Bracelets/Men/Product 1/BMP1-3.webp" alt="" width="148" height="200">
             <div class="flex flex-col text-left pt-4">
@@ -144,17 +144,17 @@
                     </div>
                   </div>
                 </div>
-        </article>
+        </article> -->
       </div>
 
         <article class="flex justify-between pt-7 font-montaga text-2xl mb-20">
           <p>SubTotal</p>
-              <p>$ 30.594</p>
+              <p id="subtotal"></p>
             </article>
 
             <div class="sm:w-full w-2/3 flex text-center flex-col items-center justify-center gap-3 sm:gap-5 md:gap-10 sm:flex-row sm:justify-center font-inria text-sm sm:text-xl mx-auto">
-              <button class="py-2 px-16 sm:px-10 md:px-20 bg-button_divs_background rounded w-full sm:w-auto outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform">Estimate in PDF</button>
-              <button class="py-2 px-16 sm:px-10 md:px-20 bg-button_divs_background rounded w-full sm:w-auto outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform">Checkout</button>
+              <button id="pdf" class="py-2 px-16 sm:px-10 md:px-20 bg-button_divs_background rounded w-full sm:w-auto outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform">Estimate in PDF</button>
+              <button id="checkout" class="py-2 px-16 sm:px-10 md:px-20 bg-button_divs_background rounded w-full sm:w-auto outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform"><a href="">Checkout</a></button>
             </div>
             
             
@@ -176,16 +176,16 @@
                 </div>
                 <div class="px-6 py-4 space-y-4">
                   <div class="flex flex-col 503:flex-row items-center justify-between">
-                    <span class="flex flex-col 503:flex-row" >Standard Shipping <span> (approx. 7-12 business days)</span></span>
-                    <span >$8.50</span>
+                    <span class="flex flex-col 503:flex-row gap-2" >Standard Shipping<span>(approx. 7-12 business days)</span></span>
+                    <span >$ 800.00</span>
                   </div>
                   <div class="flex flex-col 503:flex-row items-center justify-between">
-                    <span class="flex flex-col 503:flex-row">Expedited shipping <span>(approx. 3-6 business days)</span></span>
-                    <span >$15.00</span>
+                    <span class="flex flex-col 503:flex-row gap-2">Expedited shipping <span>(approx. 3-6 business days)</span></span>
+                    <span >$ 1 500.00</span>
                   </div>
                   <div class="flex flex-col 503:flex-row items-center justify-between">
-                    <span class="flex flex-col 503:flex-row">Express Shipping <span>(approx. 2-4 business days)</span></span>
-                    <span >$45.00</span>
+                    <span class="flex flex-col 503:flex-row gap-2">Express Shipping <span>(approx. 2-4 business days)</span></span>
+                    <span >$ 4 500.00</span>
                   </div>
                 </div>
               </div>
@@ -212,7 +212,7 @@
       </div>
   </footer>
 
-    <script src="../js/Cart_pop_up.js"></script>
+    <!-- <script src="../js/Cart_pop_up.js"></script> -->
     <script src="../js/Cart.js"></script>
   </body>
 </html>
