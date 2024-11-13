@@ -613,9 +613,50 @@ video {
   right: 0px;
 }
 
+.top-10 {
+  top: 2.5rem;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-start-5 {
+  grid-column-start: 5;
+}
+
+.col-start-9 {
+  grid-column-start: 9;
+}
+
+.col-end-13 {
+  grid-column-end: 13;
+}
+
+.col-end-5 {
+  grid-column-end: 5;
+}
+
+.col-end-9 {
+  grid-column-end: 9;
+}
+
+.row-start-2 {
+  grid-row-start: 2;
+}
+
+.m-20 {
+  margin: 5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mb-12 {
@@ -650,8 +691,47 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.size-9 {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.size-8 {
+  width: 2rem;
+  height: 2rem;
+}
+
+.size-6 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.size-12 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.size-5 {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.size-3 {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.size-1 {
+  width: 0.25rem;
+  height: 0.25rem;
 }
 
 .h-20 {
@@ -660,6 +740,10 @@ video {
 
 .h-4 {
   height: 1rem;
+}
+
+.h-60 {
+  height: 15rem;
 }
 
 .h-8 {
@@ -676,6 +760,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .min-h-\[80px\] {
@@ -714,6 +802,14 @@ video {
   width: 100%;
 }
 
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -746,12 +842,24 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .items-center {
@@ -790,10 +898,23 @@ video {
   gap: 2rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-x-20 {
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.self-end {
+  align-self: flex-end;
 }
 
 .overflow-hidden {
@@ -826,14 +947,44 @@ video {
   background-color: rgb(251 214 92 / var(--tw-bg-opacity));
 }
 
+.bg-orange-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 215 170 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-orange-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-9 {
+  padding: 2.25rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-7 {
+  padding: 1.75rem;
 }
 
 .px-1 {
@@ -861,6 +1012,11 @@ video {
   padding-right: 1.5rem;
 }
 
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -877,6 +1033,10 @@ video {
 
 .pr-8 {
   padding-right: 2rem;
+}
+
+.pt-px {
+  padding-top: 1px;
 }
 
 .text-center {
@@ -901,6 +1061,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -914,6 +1079,16 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -954,6 +1129,20 @@ video {
 .text-gray_used_in_small_text {
   --tw-text-opacity: 1;
   color: rgb(188 188 188 / var(--tw-text-opacity));
+}
+
+.text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.decoration-black {
+  text-decoration-color: #000;
 }
 
 .shadow-lg {
@@ -1015,6 +1204,11 @@ video {
 }
 
 /* Product Description Page Animation end */
+
+/* @layer base;
+.cards{
+    @apply col-start-1 col-end-5 p-10 row-start-2 bg-orange-200 w-full  h-60 flex flex-col  items-center gap-4;
+} */
 
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
