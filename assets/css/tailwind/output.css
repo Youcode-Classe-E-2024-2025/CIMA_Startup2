@@ -1383,7 +1383,29 @@ video {
 
 /* Product Description Page Animation end */
 
-/* CSS for fade-in and fade-out animations */
+/* Shipping estimator section : option function animation start */
+
+#country-list {
+  background-color: #f9fafb;
+  border: 1px solid;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#country-list div {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #4a5568;
+  border-bottom: 1px solid;
+}
+
+#country-list div:hover {
+  background-color: #e2e8f0;
+  color: #1a202c;
+}
+
+/* Shipping estimator section : option function animation end */
+
+/* Cart pop up fade-in and fade-out animations start */
 
 .fade-in {
   animation: fadeIn 0.5s ease forwards;
@@ -1412,6 +1434,8 @@ video {
     opacity: 0;
   }
 }
+
+/* Cart pop up fade-in and fade-out animations end */
 
 /* stroke navbar */
 
