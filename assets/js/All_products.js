@@ -124,3 +124,16 @@ document.getElementById("search").addEventListener("input", function () {
 });
 
 loadProducts();
+
+function filterprice() {
+    const sortedProducts = products.sort((a, b) => a.price - b.price);
+    currentpage = 1;
+    totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
+
+    displayProducts(currentpage);
+}
+
+document.getElementById("filterprice").addEventListener("click", function() {
+    filterprice();
+    document.getElementById("filterprice").classList.add("text-goldenrod");
+});
