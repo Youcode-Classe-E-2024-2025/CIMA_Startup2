@@ -4,6 +4,11 @@ const toggleButton = document.querySelector("#shipping_estimator button");
 const mainContainer = document.querySelector(".flex.items-center.justify-between");
 const pdf = document.getElementById("pdf")
 
+const checkoutButton = document.getElementById("checkout");
+const purchasedSection = document.getElementById("purchased");
+const shippingEstimator = document.getElementById("shipping_estimator");
+const purchaseAnimation = document.getElementById("purchase-animation");
+
 const countries = ["Morocco", "United States", "Canada", "France", "Germany", "United Kingdom", "Australia", "Japan", "China", "India"];
 
 
@@ -180,3 +185,19 @@ pdf.addEventListener("click",()=>{
     window.location.href = "../html/Estimate_pdf.html"
 })
 // Redirecting to pdf page end
+
+// Redirecting to home after animation start
+checkoutButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    purchasedSection.style.display = "none";
+    shippingEstimator.style.display = "none";
+
+    purchaseAnimation.style.display = "flex";
+
+    setTimeout(() => {
+        window.location.href = "../../index.html";
+    }, 7000);
+});
+// Redirecting to home after animation end
+
