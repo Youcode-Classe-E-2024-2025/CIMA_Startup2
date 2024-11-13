@@ -139,7 +139,8 @@ document.getElementById("filterprice").addEventListener("click", function() {
 });
 
 function filtertitle() {
-    const resultat = data.sort((a, b) => b.titre.localeCompare(a.titre));
+    filteredProducts = filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+    
     currentpage = 1;
     totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
 
