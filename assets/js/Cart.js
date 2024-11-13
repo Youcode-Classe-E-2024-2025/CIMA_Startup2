@@ -34,7 +34,7 @@ toggleButton.addEventListener("click", () => {
 
 // Handling cart items start
 document.addEventListener("DOMContentLoaded", function() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     // Function to format the price with spaces start
     function formatPrice(price) {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Updating the total price function start
     function updateSubtotal() {
-        const subtotalElement = document.getElementById('subtotal');
+        const subtotalElement = document.getElementById("subtotal");
         const subtotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
         subtotalElement.textContent = ` ${formatPrice(subtotal)}`;
     }
@@ -53,23 +53,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to delete cart items start
     function deleteCartItem(index) {
         cart.splice(index, 1);
-        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem("cart", JSON.stringify(cart));
         renderCartItems();
     }
     // Function to delete cart items end
 
     // Handle empty Cart start
     function handleEmptyCart() {
-        const container = document.getElementById('purchased-items-container');
+        const container = document.getElementById("purchased-items-container");
         if (cart.length === 0) {
-            const emptyMessage = document.createElement('div');
-            emptyMessage.classList.add('text-center', 'text-gray-700', 'my-8', 'text-xl');
+            const emptyMessage = document.createElement("div");
+            emptyMessage.classList.add("text-center", "text-gray-700", "my-8", "text-xl","mt-24");
             emptyMessage.textContent = "Your exquisite collection awaits... Embrace the allure of the finest.";
 
-            const catalogLink = document.createElement('a');
-            catalogLink.classList.add('underline', 'text-center', 'text-goldenrod', 'text-lg', 'mt-2', 'mb-2', 'block');
-            catalogLink.href = 'All_Products.html';
-            catalogLink.textContent = 'Explore Our Catalog';
+            const catalogLink = document.createElement("a");
+            catalogLink.classList.add("underline", "text-center", "text-goldenrod", "text-lg", "mt-2", "mb-2", "block");
+            catalogLink.href = "All_Products.html";
+            catalogLink.textContent = "Explore Our Catalog";
+
+            const subtotal = document.getElementById("rm-subtotal")
+            const cart_buttons = document.getElementById("cart-buttons")
+            container.classList.add("h-[300px]")
+            subtotal.style.display="none"
+            cart_buttons.style.display="none"
 
             container.appendChild(emptyMessage);
             container.appendChild(catalogLink);
@@ -79,16 +85,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // creation of cart item start
     function renderCartItems() {
-        const container = document.getElementById('purchased-items-container');
-        container.innerHTML = '';
+        const container = document.getElementById("purchased-items-container");
+        container.innerHTML = "";
 
-        const divider = document.createElement('div');
+        const divider = document.createElement("div");
         divider.className = "w-full h-px bg-gray_used_in_divider_lines";
         container.appendChild(divider);
 
         if (cart.length > 0) {
             cart.forEach((item, index) => {
-                const itemElement = document.createElement('article');
+                const itemElement = document.createElement("article");
                 itemElement.className = "py-11 h-min border-b border-gray_used_in_divider_lines flex flex-col 503:flex-row justify-between";
 
                 itemElement.innerHTML = `
@@ -119,11 +125,11 @@ document.addEventListener("DOMContentLoaded", function() {
                             <label class="text-gray_used_in_small_text">Size :</label>
                             <div class="relative inline-block border-2">
                                 <select class="w-24 h-8 pl-3 pr-8 bg-white cursor-pointer focus:outline-none" onchange="updateSize(${index}, this.value)">
-                                    <option ${item.size === '6' ? 'selected' : ''}>6</option>
-                                    <option ${item.size === '7' ? 'selected' : ''}>7</option>
-                                    <option ${item.size === '8' ? 'selected' : ''}>8</option>
-                                    <option ${item.size === '9' ? 'selected' : ''}>9</option>
-                                    <option ${item.size === '10' ? 'selected' : ''}>10</option>
+                                    <option ${item.size === "6" ? "selected" : ""}>6</option>
+                                    <option ${item.size === "7" ? "selected" : ""}>7</option>
+                                    <option ${item.size === "8" ? "selected" : ""}>8</option>
+                                    <option ${item.size === "9" ? "selected" : ""}>9</option>
+                                    <option ${item.size === "10" ? "selected" : ""}>10</option>
                                 </select>
                                 <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none bg-button_divs_background">
                                     <img src="../images/Icons/arrow down.svg" alt="Dropdown arrow" class="w-4 h-4">
@@ -147,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.updateQuantity = function(index, change) {
         if (cart[index].quantity + change > 0) {
             cart[index].quantity += change;
-            localStorage.setItem('cart', JSON.stringify(cart));
+            localStorage.setItem("cart", JSON.stringify(cart));
             renderCartItems();
         }
     };
@@ -157,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Update size function start
     window.updateSize = function(index, newSize) {
         cart[index].size = newSize;
-        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem("cart", JSON.stringify(cart));
     };
     // Update size function end
 
