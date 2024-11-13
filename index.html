@@ -283,41 +283,16 @@
         </div>
       </div>
     </section>
+   <!-- --------------------------------------------------- -->
     <!-- Best Sellers sections -->
-    <section class="best_sellers p-4">
-      <div class="bestSeller py-8">
-        <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative">
-          <!-- Carte 1 -->
-          <div id="card1"
-            class="product-card bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/images/Products/Rings/Men/Product 5/RMP5-1.webp" alt="ring"
-              class="w-full h-[200px] sm:h-full object-cover rounded-lg">
-          </div>
-
-          <!-- Carte 2 -->
-          <div id="card2"
-            class="product-card bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/images/Products/Rings/Men/Product 7/RMP7-2.jpg" alt="ring"
-              class="w-full h-[200px] sm:h-full object-cover rounded-lg">
-          </div>
-
-          <!-- Carte 3 -->
-          <div id="card3"
-            class="product-card bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/images/Products/Rings/Women/Product 6/RWP6-2.webp" alt="ring"
-              class="w-full h-[200px] sm:h-full object-cover rounded-lg">
-          </div>
-
-          <!-- Carte 4 -->
-          <div id="card4"
-            class="product-card bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/images/Products/Rings/Women/Product 10/RWP10-2.webp" alt="ring"
-              class="w-full h-[200px] sm:h-full object-cover rounded-lg">
-          </div>
-        </div>
-      </div>
-    </section>
-
+<section class="best_sellers p-4">
+  <div class="bestSeller py-8">
+    <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative" id="card-container">
+      <!-- Les cartes seront insérées ici dynamiquement par le JavaScript -->
+    </div>
+  </div>
+</section>
+   <!-- --------------------------------------------------- -->
     <section class="video overflow-hidden">
       <!-- Premier bloc vidéo -->
       <div
@@ -331,8 +306,8 @@
 
         <!-- Texte -->
         <div class="flex flex-col items-center sm:items-start text-center sm:text-right space-y-4 sm:ml-8">
-          <h1 class="text-3xl font-bold text-goldenrod">-- Eternia --</h1>
-          <p class="text-lg italic">"Timeless Luxury, Uniquely Yours"</p>
+          <h1 class="text-3xl font-montaga text-goldenrod">-- Eternia --</h1>
+          <p class="text-lg italic font-inria">"Timeless Luxury, Uniquely Yours"</p>
         </div>
       </div>
 
@@ -341,8 +316,8 @@
         class="flex flex-col sm:flex-row items-center justify-center min-h-[50vh] space-y-8 sm:space-y-0 sm:space-x-[20%] p-4">
         <!-- Texte -->
         <div class="flex flex-col items-center sm:items-start text-center sm:text-left space-y-4">
-          <h1 class="text-3xl font-bold text-goldenrod">-- Eternia --</h1>
-          <p class="text-lg italic">"Crafted for the Discerning"</p>
+          <h1 class="text-3xl font-montaga text-goldenrod">-- Eternia --</h1>
+          <p class="text-lg italic font-inria">"Crafted for the Discerning"</p>
         </div>
 
         <!-- Conteneur vidéo -->
@@ -357,8 +332,8 @@
     <!-- Section newsletter -->
     <section class="py-16 bg-gray-100">
       <div class="mx-auto text-center bg-yellow-400 p-8 w-full shadow-lg">
-        <h1 class="text-3xl font-bold mb-4 sm:text-4xl lg:text-5xl">Stay informed</h1>
-        <p class="text-lg mb-6 sm:text-xl lg:text-2xl text-gray-700">
+        <h1 class="text-3xl font-montaga mb-4 sm:text-4xl lg:text-5xl">Stay informed</h1>
+        <p class="text-lg mb-6 sm:text-xl lg:text-2xl text-gray-700 font-montaga">
           Subscribe to our newsletter to receive our latest news and special offers.
         </p>
 
@@ -367,7 +342,7 @@
           <input type="email" name="email" placeholder="Enter your email" required
             class="px-4 py-2 w-full sm:w-80 md:w-96 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
           <button type="submit"
-            class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
+            class="px-6 py-2 bg-white text-black rounded-lg hover:bg-blue-700 transition-colors duration-300">
             Register
           </button>
         </form>

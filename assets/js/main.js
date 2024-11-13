@@ -132,4 +132,148 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
   });
 });
+// -----------------------------------------------------------------
+// Chargement des données depuis le fichier JSON
+fetch('./assets/Data/products.json')
+  .then(response => response.json())
+  .then(data => {
+    // Appeler la fonction pour créer les cartes
+    createProductCards(data);
+  })
+  .catch(error => {
+    console.error('Erreur lors du chargement des données :', error);
+  });
 
+// Fonction pour créer les cartes des produits
+function createProductCards(products) {
+  const cardContainer = document.getElementById('card-container');
+
+  products.forEach(product => {
+    if (product.bestsellers) {
+      const card = document.createElement('div');
+      card.classList.add('product-card', 'bg-white', 'p-4', 'sm:p-6', 'rounded-lg', 'shadow-lg', 'hover:shadow-xl', 'transition-shadow', 'duration-300');
+
+      const cardImage = document.createElement('div');
+      cardImage.classList.add('h-[200px]', 'sm:h-full');
+
+      const img = document.createElement('img');
+      img.src = product.imageUrl;
+      img.alt = product.name;
+      img.classList.add('w-full', 'h-full', 'object-cover', 'rounded-lg');
+
+      cardImage.appendChild(img);
+      card.appendChild(cardImage);
+      cardContainer.appendChild(card);
+    }
+  });
+}
+
+// ---------------- best sellers ----------------------
+class CategoryGallery {
+  constructor(containerId) {
+      this.container = document.getElementById(containerId);
+      this.categories = ['Watches', 'Bracelets', 'Rings', 'Necklaces']; // Vos catégories
+      this.products = {};  // Stockage des produits par catégorie
+      this.intervals = {}; // Stockage des intervalles pour chaque catégorie
+      this.loadProducts();
+  }
+
+  async loadProducts() {
+      try {
+          const response = await fetch('assets/Data/products.json');
+          if (!response.ok) throw new Error('Loading products faliled');
+          
+          const data = await response.json();
+          const productsArray = Object.values(data).flat();
+          data.products.forEach(product => {
+            if (product.images && Array.isArray(product.images)) {
+              product.images = product.images.map(imagePath => {
+                return imagePath.replace(/^\.{2}/, 'assets');
+              });
+            }
+          });
+          // Grouper les produits par catégorie
+          this.categories.forEach(category => {
+              this.products[category] = productsArray.filter(p => 
+                  p && p.category === category && p.images && p.images.length > 0
+              );
+          });
+
+          this.renderCategories();
+      } catch (error) {
+          console.error('Erreur:', error);
+          this.container.innerHTML = `
+              <div class="col-span-full text-red-500 p-4">
+                  Load failed
+              </div>
+          `;
+      }
+  }
+
+  renderCategories() {
+      this.container.innerHTML = ''; // Nettoyer le conteneur
+
+      this.categories.forEach(category => {
+          const card = this.createCategoryCard(category);
+          this.container.appendChild(card);
+      });
+  }
+
+  createCategoryCard(category) {
+      const card = document.createElement('div');
+      card.className = 'relative h-64 overflow-hidden rounded-lg shadow-lg';
+
+      // Créer l'image
+      const img = document.createElement('img');
+      img.className = 'w-full h-full object-cover transition-all duration-500';
+
+      // Si nous avons des produits pour cette catégorie
+      if (this.products[category] && this.products[category].length > 0) {
+          let currentIndex = 0;
+          const categoryProducts = this.products[category];
+
+          // Définir la première image
+          img.src = categoryProducts[0].images[0];
+          card.appendChild(img);
+
+          // Créer le diaporama automatique
+          this.intervals[category] = setInterval(() => {
+              currentIndex = (currentIndex + 1) % categoryProducts.length;
+              img.style.opacity = '0';
+              
+              setTimeout(() => {
+                  img.src = categoryProducts[currentIndex].images[0];
+                  img.style.opacity = '1';
+              }, 200);
+          }, 2000);
+      }
+
+      return card;
+  }
+
+  // Nettoyer les intervalles lors de la destruction
+  destroy() {
+      Object.values(this.intervals).forEach(interval => clearInterval(interval));
+  }
+}
+
+// Style pour la transition des images
+const style = document.createElement('style');
+style.textContent = `
+  img {
+      transition: opacity 0.2s ease-in-out;
+  }
+`;
+document.head.appendChild(style);
+
+// Initialiser la galerie
+document.addEventListener('DOMContentLoaded', () => {
+  new CategoryGallery('card-container');
+});
+
+// Nettoyer les intervalles lors du rechargement/fermeture de la page
+window.addEventListener('beforeunload', () => {
+  if (window.gallery) {
+      window.gallery.destroy();
+  }
+});
