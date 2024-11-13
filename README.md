@@ -15,7 +15,7 @@
 - **Figma Maquette:** [View on Figma](https://www.figma.com/design/eHJGu8LdfvYEMxXdRQ46O2/CIMA-Startup-2?node-id=1-3&t=5ofrBzNfbjfrYXDm-1)
 - **GitHub Repository:** [View on GitHub](https://github.com/Youcode-Classe-E-2024-2025/CIMA_Startup2.git)
 - **Hosted Page:** [View Live](https://youcode-classe-e-2024-2025.github.io/CIMA_Startup2/)
-- **Color Palette:** [View Color Palette]()
+- **Color Palette:** [View Color Palette](https://coolors.co/000000-ffffff-b8860b-1e2b3c)
 
 ### **Level :** Niveau 1
 
