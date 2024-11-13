@@ -137,3 +137,16 @@ document.getElementById("filterprice").addEventListener("click", function() {
     filterprice();
     document.getElementById("filterprice").classList.add("text-goldenrod");
 });
+
+function filtertitle() {
+    const resultat = data.sort((a, b) => b.titre.localeCompare(a.titre));
+    currentpage = 1;
+    totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
+
+    displayProducts(currentpage);
+}
+
+document.getElementById("filtertitle").addEventListener("click", function() {
+    filtertitle();
+    document.getElementById("filtertitle").classList.add("text-goldenrod");
+});
