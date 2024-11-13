@@ -77,6 +77,22 @@
 /* Cart pop up fade-in and fade-out animations end */
 
 
+/* Cart items delete transition start */
+.trash {
+    fill: currentColor;
+    transition: fill 0.3s ease;
+}
+
+.self-end:hover .trash {
+    fill: red;
+}
+
+.trash:hover {
+    filter: invert(27%) sepia(84%) saturate(4675%) hue-rotate(353deg) brightness(97%) contrast(101%);
+}
+/* Cart items delete transition end */
+
+
 /* stroke navbar */
 .text-outline {
     text-shadow: 
