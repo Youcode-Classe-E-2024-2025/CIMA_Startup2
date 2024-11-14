@@ -19,7 +19,7 @@
     rel="stylesheet" />
 </head>
 
-<body>
+<body class="sm:w-full">
   <header class="w-full absolute top-0 left-0 z-10">
     <!-- Navbar -->
     <nav class="relative">
@@ -32,16 +32,17 @@
           <div class="hidden md:flex items-center justify-between flex-1 pl-12">
             <!-- Menu principal centré -->
             <div class="flex-1 flex justify-center space-x-8 font-inria">
-              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Bracelets</a>
-              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Necklaces</a>
-              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Rings</a>
-              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Watches</a>
+              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline navbar-link">Bracelets</a>
+              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline navbar-link">Necklaces</a>
+              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline navbar-link">Rings</a>
+              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline navbar-link">Watches</a>
             </div>
 
             <!-- Menu droite (Us + Panier) -->
             <div class="flex items-center space-x-8 font-inria">
-              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Us</a>
-              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80">
+              <a href="assets/html/About_Contact.html"
+                class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Us</a>
+              <a href="assets/html/Cart.html" class="hover:text-gray-200 lg:hover:text-goldenrod/80">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor" class="size-6 text-white">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -51,7 +52,7 @@
             </div>
           </div>
 
-          <!-- Menu Mobile Button + Cart -->
+          <!-- Menu Mobile Button Cart -->
           <div class="flex items-center space-x-4 md:hidden">
             <a href="#" class="hover:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -69,7 +70,11 @@
         </div>
       </div>
     </nav>
+
+
+
   </header>
+
 
   <main>
     <section>
@@ -77,104 +82,302 @@
       <div class="relative overflow-hidden">
         <!-- Élément carrousel -->
         <div class="carousel relative">
+          <!-- points de navigation -->
+          <div
+            class="carousel-dots absolute z-10 left-1/2 transform -translate-x-1/2 bottom-10 flex justify-center hidden sm:flex space-x-2">
+          </div>
           <!-- Conteneur interne-->
-          <div class="carousel-inner flex overflow-hidden sm:h-72 md:h-80 lg:h-screen">
+          <div class="carousel-inner flex overflow-hidden sm:h-72 md:h-80 lg:h-screen ">
             <!-- Première diapositive -->
             <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
               <img src="assets/images/Home Carroussel/pexels-andersbk-447570.jpg" alt="Image 1"
-                class="w-full h-full object-cover">
+                class="sm:w-full object-cover h-auto">
             </div>
             <!-- Deuxième diapositive -->
             <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
               <img src="assets/images/Home Carroussel/pexels-cottonbro-9544231.jpg" alt="Image 2"
-                class="w-full h-full object-cover">
+                class="sm:w-full object-cover h-auto">
             </div>
             <!-- Troisième diapositive -->
             <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
               <img src="assets/images/Home Carroussel/pexels-olly-974911.jpg" alt="Image 3"
-                class="w-full h-full object-cover">
+                class="sm:w-full object-cover h-auto">
             </div>
           </div>
-          <!-- points de navigation -->
-          <div class="carousel-dots absolute z-10 left-1/2 transform -translate-x-1/2 bottom-10 flex justify-center">
+
+        </div>
+
+        <!-- All Products -->
+        <div class="absolute z-10 left-[90%] transform -translate-x-1/2 bottom-10 flex top-[85%] hidden md:block">
+              <a href="assets/html/All_Products.html">
+                  <h1 class="text-xl font-montaga text-white underline text-outline whitespace-nowrap">
+                      All Products
+                  </h1>
+              </a>
+          </div>
+      </div>
+    </section>
+
+
+    <section class="elementOfNavbar">
+      <!-- Bracelets sections -->
+      <div class="braceletsOfNavbar py-8">
+        <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative">
+          <!-- Carte 1 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Bracelets/Men/Product 2/BMP2-1.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Gather Wood Zigzag Tray</h3>
+            </div>
+          </div>
+
+          <!-- Carte 2 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Bracelets/Men/Product 2/BMP2-2.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Wood Zigzag</h3>
+            </div>
+          </div>
+
+          <!-- Carte 3 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Bracelets/Men/Product 2/BMP2-5.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Tray</h3>
+            </div>
+          </div>
+
+          <!-- Carte 4 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Bracelets/Men/Product 2/BMP2-4.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Nice</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Necklaces section -->
+      <div class="necklacesOfNavbar py-8">
+        <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative">
+          <!-- Carte 1 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Necklaces/Men/Product 3/NMP3-2.jpg" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Gather Wood Zigzag Tray</h3>
+            </div>
+          </div>
+
+          <!-- Carte 2 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Necklaces/Men/Product 5/NMP5-2.jpg" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Wood Zigzag</h3>
+            </div>
+          </div>
+
+          <!-- Carte 3 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Necklaces/Women/Product 4/NWP4-2.jpg" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Tray</h3>
+            </div>
+          </div>
+
+          <!-- Carte 4 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Necklaces/Women/Product 6/NWP6-3.jpg" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Nice</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rings section -->
+      <div class="ringsOfNavbar py-8">
+        <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative">
+          <!-- Carte 1 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Rings/Men/Product 5/RMP5-1.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Gather Wood Zigzag Tray</h3>
+            </div>
+          </div>
+
+          <!-- Carte 2 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Rings/Men/Product 7/RMP7-2.jpg" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Wood Zigzag</h3>
+            </div>
+          </div>
+
+          <!-- Carte 3 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Rings/Women/Product 6/RWP6-2.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Tray</h3>
+            </div>
+          </div>
+
+          <!-- Carte 4 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Rings/Women/Product 10/RWP10-2.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Nice</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Watches section -->
+      <div class="watchesOfNavbar py-8">
+        <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative">
+          <!-- Carte 1 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Watches/Women/Product 7/WWP7-2.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Gather Wood Zigzag Tray</h3>
+            </div>
+          </div>
+
+          <!-- Carte 2 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Watches/Men/Product 7/WMP7-3.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Wood Zigzag</h3>
+            </div>
+          </div>
+
+          <!-- Carte 3 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Watches/Men/Product 3/WMP3-2.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Tray</h3>
+            </div>
+          </div>
+
+          <!-- Carte 4 -->
+          <div
+            class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+            <img src="assets/images/Products/Watches/Men/Product 2/WMP2-2.webp" alt="bracelet"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="font-inria text-xl text-center">Nice</h3>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="cardOfNavbar py-8">
-      <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative">
-        <!-- Carte 1 -->
-        <div class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <img src="assets/images/Products/Bracelets/Men/Product 2/BMP2-1.webp" alt="bracelet"
-            class="w-full h-48 object-cover rounded-lg">
-          <div class="mt-4">
-            <h3 class="font-inria text-xl font-semibold">Gather Wood Zigzag Tray</h3>
-            <p class="font-inria text-darkGolden text-lg mt-2">$69.00</p>
-          </div>
-          <button
-            class="mt-4 w-full py-2 px-4 bg-goldenrod text-white rounded-lg hover:bg-goldenrod/80 transition-colors duration-300">
-            Add
-          </button>
+    <!-- --------------------------------------------------- -->
+    <section>
+      <h1 class="text-5xl font-montaga text-goldenrod p-4 mt-4 flex justify-center underline">Best Sellers</h1>
+    </section>
+    <!-- Best Sellers sections -->
+    <section class="best_sellers p-4">
+      <div class="bestSeller py-8">
+        <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative"
+          id="card-container">
+          <!-- Les cartes seront insérées ici dynamiquement par le JavaScript -->
+        </div>
+      </div>
+    </section>
+    <!-- --------------------------------------------------- -->
+    <section>
+      <a href="assets/html/All_Products.html">
+        <h1 class="text-5xl font-montaga text-goldenrod p-4 mt-4 flex justify-center underline">
+          Our collection</h1>
+      </a>
+    </section>
+
+    <section class="video overflow-hidden">
+      <!-- Premier bloc vidéo -->
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center min-h-[50vh] space-y-8 sm:space-y-0 sm:space-x-[20%] p-4">
+        <!-- Conteneur vidéo -->
+        <div class="relative w-full sm:w-2/3 max-w-lg group">
+          <video class="w-full h-full object-cover rounded-lg shadow-lg" autoplay loop muted>
+            <source src="assets/videos/v1.mp4" type="video/mp4">
+          </video>
         </div>
 
-        <!-- Carte 2 -->
-        <div class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <img src="assets/images/Products/Bracelets/Men/Product 2/BMP2-2.webp" alt="bracelet"
-            class="w-full h-48 object-cover rounded-lg">
-          <div class="mt-4">
-            <h3 class="font-inria text-xl font-semibold">Wood Zigzag</h3>
-            <p class="font-inria text-darkGolden text-lg mt-2">$49.00</p>
-          </div>
-          <button
-            class="mt-4 w-full py-2 px-4 bg-goldenrod text-white rounded-lg hover:bg-goldenrod/80 transition-colors duration-300">
-            Add
-          </button>
-        </div>
-
-        <!-- Carte 3 -->
-        <div class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <img src="assets/images/Products/Bracelets/Men/Product 2/BMP2-5.webp" alt="bracelet"
-            class="w-full h-48 object-cover rounded-lg">
-          <div class="mt-4">
-            <h3 class="font-inria text-xl font-semibold">Tray</h3>
-            <p class="font-inria text-darkGolden text-lg mt-2">$102.00</p>
-          </div>
-          <button
-            class="mt-4 w-full py-2 px-4 bg-goldenrod text-white rounded-lg hover:bg-goldenrod/80 transition-colors duration-300">
-            Add
-          </button>
-        </div>
-
-        <!-- Carte 4 -->
-        <div class="product-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <img src="assets/images/Products/Bracelets/Men/Product 2/BMP2-4.webp" alt="bracelet"
-            class="w-full h-48 object-cover rounded-lg">
-          <div class="mt-4">
-            <h3 class="font-inria text-xl font-semibold">Nice</h3>
-            <p class="font-inria text-darkGolden text-lg mt-2">$88.00</p>
-          </div>
-          <button
-            class="mt-4 w-full py-2 px-4 bg-goldenrod text-white rounded-lg hover:bg-goldenrod/80 transition-colors duration-300">
-            Add
-          </button>
+        <!-- Texte -->
+        <div class="flex flex-col items-center sm:items-start text-center sm:text-right space-y-4 sm:ml-8">
+          <h1 class="text-3xl font-montaga text-goldenrod">-- Eternia --</h1>
+          <p class="text-lg italic font-inria">"Timeless Luxury, Uniquely Yours"</p>
         </div>
       </div>
 
-      <!-- Bouton "Voir tous les produits" -->
-      <div class="text-center mt-8">
-        <a href="/tous-les-produits"
-          class="py-2 px-6 bg-goldenrod text-white text-lg font-semibold rounded-lg hover:bg-goldenrod/80 transition-colors duration-300">
-          All Products
-        </a>
+      <!-- Deuxième bloc vidéo -->
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center min-h-[50vh] space-y-8 sm:space-y-0 sm:space-x-[20%] p-4">
+        <!-- Texte -->
+        <div class="flex flex-col items-center sm:items-start text-center sm:text-left space-y-4">
+          <h1 class="text-3xl font-montaga text-goldenrod">-- Eternia --</h1>
+          <p class="text-lg italic font-inria">"Crafted for the Discerning"</p>
+        </div>
+
+        <!-- Conteneur vidéo -->
+        <div class="relative w-full sm:w-2/3 max-w-lg group">
+          <video class="w-full h-full object-cover rounded-lg shadow-lg" autoplay loop muted>
+            <source src="assets/videos/v2.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </section>
 
+    <!-- Section newsletter -->
+    <section class="py-16 bg-gray-100">
+      <div class="mx-auto text-center bg-yellow-400 p-8 w-full shadow-lg">
+        <h1 class="text-3xl font-montaga mb-4 sm:text-4xl lg:text-5xl">Stay informed</h1>
+        <p class="mb-6 sm:text-xl md:text-2xl text-gray-700 font-inria whitespace-nowrap">
+          Subscribe to our newsletter to receive our latest news and special offers.
+        </p>
+
+        <form id="newsletterForm"
+          class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <input type="email" name="email" placeholder="Enter Email ..." required
+            class="px-4 py-2 md:w-[42rem] sm:w-80 md:w-96 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <button type="submit"
+            class="px-6 py-2 bg-white text-black rounded-lg hover:bg-blue-700 transition-colors duration-300 font-inria">
+            Register
+          </button>
+        </form>
+      </div>
+    </section>
 
   </main>
-
-
-
-
 
   <!-- footer section -->
   <footer class="font-inria flex flex-col items-center mb-5 gap-4 px-3">
