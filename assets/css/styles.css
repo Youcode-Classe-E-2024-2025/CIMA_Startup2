@@ -50,7 +50,6 @@
 .carousel-inner {
   display: flex;
   overflow: hidden;
-  height: 100vh;
   flex-wrap: nowrap;
 }
 .slide {
@@ -58,19 +57,7 @@
   height: 100%;
   transition: 0.5s ease-in-out;
 }
-.carousel-controls {
-  position: absolute;
-  z-index: 5;
-  left: 10%;
-  right: 10%;
-  top: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-.carousel-controls button {
-  padding: 10px;
-  background-color: aquamarine;
-}
+
 .carousel-dots .dot {
   border-radius: 50%;
   margin: 5px;

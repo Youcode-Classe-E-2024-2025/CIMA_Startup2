@@ -19,7 +19,7 @@
     rel="stylesheet" />
 </head>
 
-<body>
+<body class="sm:w-full">
   <header class="w-full absolute top-0 left-0 z-10">
     <!-- Navbar -->
     <nav class="relative">
@@ -40,8 +40,9 @@
 
             <!-- Menu droite (Us + Panier) -->
             <div class="flex items-center space-x-8 font-inria">
-              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Us</a>
-              <a href="#" class="hover:text-gray-200 lg:hover:text-goldenrod/80">
+              <a href="assets/html/About_Contact.html"
+                class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline">Us</a>
+              <a href="assets/html/Cart.html" class="hover:text-gray-200 lg:hover:text-goldenrod/80">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor" class="size-6 text-white">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -69,7 +70,11 @@
         </div>
       </div>
     </nav>
+
+
+
   </header>
+
 
   <main>
     <section>
@@ -77,30 +82,42 @@
       <div class="relative overflow-hidden">
         <!-- Élément carrousel -->
         <div class="carousel relative">
+          <!-- points de navigation -->
+          <div
+            class="carousel-dots absolute z-10 left-1/2 transform -translate-x-1/2 bottom-10 flex justify-center hidden sm:flex space-x-2">
+          </div>
           <!-- Conteneur interne-->
-          <div class="carousel-inner flex overflow-hidden sm:h-72 md:h-80 lg:h-screen">
+          <div class="carousel-inner flex overflow-hidden sm:h-72 md:h-80 lg:h-screen ">
             <!-- Première diapositive -->
             <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
               <img src="assets/images/Home Carroussel/pexels-andersbk-447570.jpg" alt="Image 1"
-                class="w-full object-cover h-auto">
+                class="sm:w-full object-cover h-auto">
             </div>
             <!-- Deuxième diapositive -->
             <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
               <img src="assets/images/Home Carroussel/pexels-cottonbro-9544231.jpg" alt="Image 2"
-                class="w-full object-cover h-auto">
+                class="sm:w-full object-cover h-auto">
             </div>
             <!-- Troisième diapositive -->
             <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
               <img src="assets/images/Home Carroussel/pexels-olly-974911.jpg" alt="Image 3"
-                class="w-full object-cover h-auto">
+                class="sm:w-full object-cover h-auto">
             </div>
           </div>
-          <!-- points de navigation -->
-          <div
-            class="carousel-dots absolute z-10 left-1/2 transform -translate-x-1/2 bottom-10 flex justify-center hidden sm:flex">
-          </div>
+
         </div>
+
+        <!-- All Products -->
+        <div class="absolute z-10 left-[90%] transform -translate-x-1/2 bottom-10 flex top-[85%] hidden md:block">
+              <a href="assets/html/All_Products.html">
+                  <h1 class="text-xl font-montaga text-white underline text-outline whitespace-nowrap">
+                      All Products
+                  </h1>
+              </a>
+          </div>
+      </div>
     </section>
+
 
     <section class="elementOfNavbar">
       <!-- Bracelets sections -->
@@ -283,23 +300,34 @@
         </div>
       </div>
     </section>
-   <!-- --------------------------------------------------- -->
+    <!-- --------------------------------------------------- -->
+    <section>
+      <h1 class="text-5xl font-montaga text-goldenrod p-4 mt-4 flex justify-center underline">Best Sellers</h1>
+    </section>
     <!-- Best Sellers sections -->
-<section class="best_sellers p-4">
-  <div class="bestSeller py-8">
-    <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative" id="card-container">
-      <!-- Les cartes seront insérées ici dynamiquement par le JavaScript -->
-    </div>
-  </div>
-</section>
-   <!-- --------------------------------------------------- -->
+    <section class="best_sellers p-4">
+      <div class="bestSeller py-8">
+        <div class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative"
+          id="card-container">
+          <!-- Les cartes seront insérées ici dynamiquement par le JavaScript -->
+        </div>
+      </div>
+    </section>
+    <!-- --------------------------------------------------- -->
+    <section>
+      <a href="assets/html/All_Products.html">
+        <h1 class="text-5xl font-montaga text-goldenrod p-4 mt-4 flex justify-center underline">
+          Our collection</h1>
+      </a>
+    </section>
+
     <section class="video overflow-hidden">
       <!-- Premier bloc vidéo -->
       <div
         class="flex flex-col sm:flex-row items-center justify-center min-h-[50vh] space-y-8 sm:space-y-0 sm:space-x-[20%] p-4">
         <!-- Conteneur vidéo -->
         <div class="relative w-full sm:w-2/3 max-w-lg group">
-          <video class="w-full h-full object-cover rounded-lg shadow-lg" controls autoplay loop muted>
+          <video class="w-full h-full object-cover rounded-lg shadow-lg" autoplay loop muted>
             <source src="assets/videos/v1.mp4" type="video/mp4">
           </video>
         </div>
@@ -322,7 +350,7 @@
 
         <!-- Conteneur vidéo -->
         <div class="relative w-full sm:w-2/3 max-w-lg group">
-          <video class="w-full h-full object-cover rounded-lg shadow-lg" controls autoplay loop muted>
+          <video class="w-full h-full object-cover rounded-lg shadow-lg" autoplay loop muted>
             <source src="assets/videos/v2.mp4" type="video/mp4">
           </video>
         </div>
@@ -333,21 +361,22 @@
     <section class="py-16 bg-gray-100">
       <div class="mx-auto text-center bg-yellow-400 p-8 w-full shadow-lg">
         <h1 class="text-3xl font-montaga mb-4 sm:text-4xl lg:text-5xl">Stay informed</h1>
-        <p class="text-lg mb-6 sm:text-xl lg:text-2xl text-gray-700 font-montaga">
+        <p class="mb-6 sm:text-xl md:text-2xl text-gray-700 font-inria whitespace-nowrap">
           Subscribe to our newsletter to receive our latest news and special offers.
         </p>
 
         <form id="newsletterForm"
           class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <input type="email" name="email" placeholder="Enter your email" required
-            class="px-4 py-2 w-full sm:w-80 md:w-96 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <input type="email" name="email" placeholder="Enter Email ..." required
+            class="px-4 py-2 md:w-[42rem] sm:w-80 md:w-96 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
           <button type="submit"
-            class="px-6 py-2 bg-white text-black rounded-lg hover:bg-blue-700 transition-colors duration-300">
+            class="px-6 py-2 bg-white text-black rounded-lg hover:bg-blue-700 transition-colors duration-300 font-inria">
             Register
           </button>
         </form>
       </div>
     </section>
+
   </main>
 
   <!-- footer section -->
