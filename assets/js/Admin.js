@@ -260,3 +260,9 @@ document.addEventListener("DOMContentLoaded", function () {
     loadProductData();
 });
 // Initialize event listeners end
+
+// Redirect to main page start
+function directBack(){
+    window.location.href="../../index.html"
+}
+// Redirect to main page end
