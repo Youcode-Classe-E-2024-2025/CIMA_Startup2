@@ -1,33 +1,28 @@
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
 let currentFilters = {
-  search: "",
-  category: "all",
-  gender: "all",
-  sortBy: "none",
+    search: "",
+    category: "all",
+    gender: "all",
+    sortBy: "none",
 };
 
 // Toggle form visibility start
 function toggleForm() {
-  const form = document.getElementById("productForm");
-  const product_management_filter = document.getElementById("product-management-filter");
+    const form = document.getElementById("productForm");
+    const product_management_filter = document.getElementById("product-management-filter");
 
-  // Debug log
-  console.log("Toggle form clicked");
-  console.log("Form element:", form);
-  console.log("Filter element:", product_management_filter);
+    if (form && product_management_filter) {
+        form.classList.toggle("hidden");
+        product_management_filter.classList.toggle("hidden");
 
-  if (form && product_management_filter) {
-    form.classList.toggle("hidden");
-    product_management_filter.classList.toggle("hidden");
-
-    if (form.classList.contains("hidden")) {
-      document.getElementById("productId").value = "";
-      document.querySelector("form").reset();
+        if (form.classList.contains("hidden")) {
+        document.getElementById("productId").value = "";
+        document.querySelector("form").reset();
+        }
+    } else {
+        console.error("Required elements not found");
     }
-  } else {
-    console.error("Required elements not found");
-  }
 }
 // Toggle form visibility end
 
