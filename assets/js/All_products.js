@@ -161,6 +161,12 @@ document.getElementById("filtercategory").addEventListener("click", function() {
   const categoryList = document.createElement("div");
   categoryList.classList.add("absolute", "top-16", "bg-white", "shadow-lg", "rounded-md", "w-30", "mt-20", "font-normal", "text-sm");
   
+  const existingList = this.querySelector("div");
+  if (existingList) {
+    this.removeChild(existingList);
+    return; 
+  }
+
   categories.forEach(category => {
     const categoryItem = document.createElement("div");
     categoryItem.classList.add("cursor-pointer", "px-4", "py-2", "hover:bg-yellow-500");
@@ -175,13 +181,16 @@ document.getElementById("filtercategory").addEventListener("click", function() {
       resetFilters();
       if (categoryFilter) document.getElementById("filtercategory").classList.add("text-goldenrod");
       applyFilters();
-      document.body.removeChild(categoryList); 
+
+      if (this.contains(categoryList)) {
+        this.removeChild(categoryList);
+      }
     });
 
     categoryList.appendChild(categoryItem);
   });
 
-  document.getElementById('filtercategory').appendChild(categoryList);
+  this.appendChild(categoryList);
 });
 
 document.getElementById("search").addEventListener("input", function () {
