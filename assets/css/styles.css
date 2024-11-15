@@ -179,6 +179,17 @@ to {
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
   }
+
+  
+
+/* Contrôler la taille de l'image prise dans la base de donnee*/
+.product-image {
+  width: 250px; 
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+}
+
   
   .delay-100 {
     animation-delay: 100ms;
@@ -199,3 +210,4 @@ to {
 .button:hover{
     background-color: rgb(246, 246, 159);
 }
+
