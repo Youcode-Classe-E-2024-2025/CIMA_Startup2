@@ -1191,6 +1191,10 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-none {
+  border-style: none;
+}
+
 .border-\[rgba\(0\2c 0\2c 0\2c 0\.24\)\] {
   border-color: rgba(0,0,0,0.24);
 }
@@ -1243,6 +1247,10 @@ video {
 .bg-yellow-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-opacity-50 {
