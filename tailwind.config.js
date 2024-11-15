@@ -31,6 +31,9 @@ module.exports = {
         montaga: ["Montaga", "serif"],
         inria: ["Inria Serif", "serif"],
       },
+      screens:{
+        "503":"503px",
+      },
     },
   },
   plugins: [],

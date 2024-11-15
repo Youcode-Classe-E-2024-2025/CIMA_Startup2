@@ -6,7 +6,7 @@
       "category": "Watches",
       "description": "A masterpiece of precision and luxury, this timepiece combines timeless elegance with innovative craftsmanship.",
       "price": 5899,
-      "inStock": true,
+      "inStock": false,
       "promotion": "Crafted with high-quality materials, this watch is perfect for adding elegance and sophistication to any style.",
       "images": [
         "../images/Products/Watches/Men/Product%201/WMP1-1.jpg",
@@ -89,7 +89,7 @@
       "category": "Watches",
       "description": "With a fiery glow that catches the light, the Ember Glow is a watch for those who appreciate vibrant sophistication.",
       "price": 4699,
-      "inStock": true,
+      "inStock": false,
       "promotion": "Crafted with intricate details and premium materials, this watch will make a lasting impression wherever you go.",
       "images": [
         "../images/Products/Watches/Men/Product%206/WMP6-1.webp",
@@ -140,7 +140,7 @@
       "category": "Watches",
       "description": "The Apex Monarch is a sophisticated timepiece, blending classic elegance with modern engineering.",
       "price": 6499,
-      "inStock": true,
+      "inStock": false,
       "promotion": "Perfect for the distinguished gentleman, this watch boasts both style and functionality, embodying the essence of luxury.",
       "images": [
         "../images/Products/Watches/Men/Product%209/WMP9-1.webp",
@@ -210,7 +210,7 @@
       "category": "Watches",
       "description": "A luxurious timepiece designed with an opalescent dial that captures light beautifully, perfect for those who appreciate understated elegance.",
       "price": 3999,
-      "inStock": true,
+      "inStock": false,
       "promotion": "With a stunning design, this watch evokes a sense of timeless beauty, crafted to elevate any wardrobe.",
       "images": [
         "../images/Products/Watches/Women/Product%203/WWP3-1.webp",
@@ -311,7 +311,7 @@
       "category": "Watches",
       "description": "A rich, velvety timepiece with a dark, luxurious dial and gleaming rose gold details, perfect for those who desire elegance with a touch of mystery.",
       "price": 4699,
-      "inStock": true,
+      "inStock": false,
       "promotion": "Designed for sophistication and beauty, this watch exudes luxury with every glance.",
       "images": [
         "../images/Products/Watches/Women/Product%209/WWP9-1.webp",
@@ -436,7 +436,7 @@
       "category": "Necklaces",
       "description": "An obsidian-based necklace that evokes strength and mystery, designed for the man who values both power and subtlety.",
       "price": 4899,
-      "inStock": true,
+      "inStock": false,
       "promotion": "Crafted from the rarest materials, the Obsidian Legacy is an enduring symbol of elegance and resilience.",
       "images": [
         "../images/Products/Necklaces/Men/Product%206/NMP6-1.webp",
@@ -541,7 +541,7 @@
       "category": "Necklaces",
       "description": "Inspired by the mystical hues of twilight, this necklace features delicate gems set to shimmer like the stars.",
       "price": 3999,
-      "inStock": true,
+      "inStock": false,
       "promotion": "Designed for those who seek elegance with a touch of celestial wonder, this piece brings an aura of mystery and grace.",
       "images": [
         "../images/Products/Necklaces/Women/Product%202/NWP2-1.jpg",
@@ -637,7 +637,7 @@
       "category": "Necklaces",
       "description": "Inspired by the depths of the ocean, this necklace evokes the allure of the sea with its deep blue tones and shimmering finish.",
       "price": 5299,
-      "inStock": true,
+      "inStock": false,
       "promotion": "A luxurious statement piece, crafted to add an element of mystery and beauty to your collection.",
       "images": [
         "../images/Products/Necklaces/Women/Product%208/NWP8-1.webp",
@@ -706,7 +706,7 @@
       "category": "Rings",
       "description": "A striking ring inspired by the vanguard of timeless elegance, forged from polished silver and highlighted with sleek geometric accents.",
       "price": 4199,
-      "inStock": true,
+      "inStock": false,
       "promotion": "A design that speaks of modern luxury and refined taste, this ring is the ultimate statement of class.",
       "images": [
         "../images/Products/Rings/Men/Product%202/RMP2-1.webp",
@@ -772,7 +772,7 @@
       "category": "Rings",
       "description": "This dramatic ring features a stunning interplay of fire and light, crafted to shine with a fiery brilliance.",
       "price": 5599,
-      "inStock": true,
+      "inStock": false,
       "promotion": "With a bold, fiery design, the Emberflare ring represents passion and confidence, crafted for those who dare to stand out.",
       "images": [
         "../images/Products/Rings/Men/Product%206/RMP6-1.webp",
@@ -941,7 +941,7 @@
       "category": "Rings",
       "description": "With its luxurious crystal centerpiece, the Crystal Dynasty ring exudes opulence and grandeur.",
       "price": 5499,
-      "inStock": true,
+      "inStock": false,
       "promotion": "Crafted with exceptional care, this ring offers both boldness and elegance, perfect for a statement look.",
       "images": [
         "../images/Products/Rings/Women/Product%206/RWP6-1.webp",
@@ -1058,7 +1058,7 @@
       "category": "Bracelets",
       "description": "A bracelet designed to embody the power and elegance of royalty, featuring intricate detailing and luxurious accents.",
       "price": 4999,
-      "inStock": true,
+      "inStock": false,
       "promotion": "A true statement piece, this bracelet exudes power and elegance, perfect for those who command attention.",
       "images": [
         "../images/Products/Bracelets/Men/Product%203/BMP3-1.webp",
@@ -1176,7 +1176,7 @@
       "category": "Bracelets",
       "description": "A bracelet forged from the finest steel, perfect for adding a luxurious touch of sophistication to any attire.",
       "price": 4599,
-      "inStock": true,
+      "inStock": false,
       "promotion": "The Luxor Steel bracelet combines strength and elegance, designed for the modern man who demands the best.",
       "images": [
         "../images/Products/Bracelets/Men/Product%2010/BMP10-1.webp",
@@ -1278,7 +1278,7 @@
       "category": "Bracelets",
       "description": "A radiant design symbolizing the infinite beauty of luxury, this bracelet adds a glamorous touch to any ensemble.",
       "price": 6799,
-      "inStock": true,
+      "inStock": false,
       "promotion": "The Infinity Radiance bracelet shines with its delicate craftsmanship, making it the perfect addition to any luxury collection.",
       "images": [
         "../images/Products/Bracelets/Women/Product%206/BWP6-1.jpg",
@@ -1344,7 +1344,7 @@
       "category": "Bracelets",
       "description": "A design inspired by the gentle light of the moon and the beauty of blooming flowers, this bracelet is a symbol of grace and elegance.",
       "price": 4199,
-      "inStock": true,
+      "inStock": false,
       "promotion": "Moonlit Blossom brings a sense of tranquility and elegance, perfect for evening wear or any occasion that calls for a touch of luxury.",
       "images": [
         "../images/Products/Bracelets/Women/Product%2010/BWP10-1.jpg",
