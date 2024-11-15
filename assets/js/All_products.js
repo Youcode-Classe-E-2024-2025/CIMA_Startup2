@@ -110,37 +110,56 @@ function resetFilters() {
 }
 
 document.getElementById("filtermen").addEventListener("click", () => {
-  resetFilters(); 
-  genderFilter = "men"; 
+  if (genderFilter === "men") {
+    genderFilter = "";
+  } else {
+    genderFilter = "men";
+  }
+  resetFilters();
+  if (genderFilter) document.getElementById("filtermen").classList.add("text-goldenrod");
   applyFilters();
-  document.getElementById("filtermen").classList.add("text-goldenrod");
 });
 
 document.getElementById("filterwomen").addEventListener("click", () => {
-  resetFilters(); 
-  genderFilter = "women";
+  if (genderFilter === "women") {
+    genderFilter = "";
+  } else {
+    genderFilter = "women";
+  }
+  resetFilters();
+  if (genderFilter) document.getElementById("filterwomen").classList.add("text-goldenrod");
   applyFilters();
-  document.getElementById("filterwomen").classList.add("text-goldenrod");
 });
 
 document.getElementById("filterprice").addEventListener("click", function() {
-  resetFilters(); 
-  filterprice();
-  document.getElementById("filterprice").classList.add("text-goldenrod");
+  if (this.classList.contains("text-goldenrod")) {
+    resetFilters();
+    filteredProducts = products;
+  } else {
+    resetFilters();
+    filterprice();
+    this.classList.add("text-goldenrod");
+  }
+  applyFilters();
 });
 
 document.getElementById("filtertitle").addEventListener("click", function() {
-  resetFilters(); 
-  filtertitle();
-  document.getElementById("filtertitle").classList.add("text-goldenrod");
+  if (this.classList.contains("text-goldenrod")) {
+    resetFilters();
+    filteredProducts = products;
+  } else {
+    resetFilters();
+    filtertitle();
+    this.classList.add("text-goldenrod");
+  }
+  applyFilters();
 });
 
 document.getElementById("filtercategory").addEventListener("click", function() {
   const categories = ["Watches", "Rings", "Necklaces", "Bracelets"];
   
   const categoryList = document.createElement("div");
-  categoryList.classList.add("absolute", "top-16", "bg-white", "shadow-lg", "rounded-md", "w-30","mt-20","font-normal","text-sm"
-  );
+  categoryList.classList.add("absolute", "top-16", "bg-white", "shadow-lg", "rounded-md", "w-30", "mt-20", "font-normal", "text-sm");
   
   categories.forEach(category => {
     const categoryItem = document.createElement("div");
@@ -148,10 +167,14 @@ document.getElementById("filtercategory").addEventListener("click", function() {
     categoryItem.textContent = category;
 
     categoryItem.addEventListener("click", () => {
-      categoryFilter = category.toLowerCase();
+      if (categoryFilter === category.toLowerCase()) {
+        categoryFilter = "";
+      } else {
+        categoryFilter = category.toLowerCase();
+      }
       resetFilters();
+      if (categoryFilter) document.getElementById("filtercategory").classList.add("text-goldenrod");
       applyFilters();
-      document.getElementById("filtercategory").classList.add("text-goldenrod");
       document.body.removeChild(categoryList); 
     });
 
@@ -177,7 +200,6 @@ function filterprice() {
 
 function filtertitle() {
   filteredProducts = filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
-  
   currentpage = 1;
   totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
 
@@ -185,5 +207,3 @@ function filtertitle() {
 }
 
 loadProducts();
-
-
