@@ -1,9 +1,29 @@
 
 // navbar
-const menuButton = document.getElementById('menuButton');
-const mobileMenu = document.getElementById('mobileMenu');
-const menuIcon = document.getElementById('menuIcon');
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.getElementById('menuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
 
+  menuButton.addEventListener('click', () => {
+    // Toggle mobile menu visibility
+    mobileMenu.classList.toggle('hidden');
+    
+    // Optional: Add slide animation
+    if (!mobileMenu.classList.contains('hidden')) {
+      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+    } else {
+      mobileMenu.style.maxHeight = '0';
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.style.maxHeight = '0';
+    }
+  });
 menuButton.addEventListener('click', () => {
   mobileMenu.classList.toggle('hidden');
   if (mobileMenu.classList.contains('hidden')) {
@@ -12,6 +32,7 @@ menuButton.addEventListener('click', () => {
     menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>`;
   }
 });
+
 // caroussel
 (function () {
   "use stict"
@@ -223,6 +244,7 @@ class CategoryGallery {
     const card = document.createElement('div');
     card.className = 'relative h-64 overflow-hidden rounded-lg shadow-lg';
 
+
     // Créer l'image
     const img = document.createElement('img');
     img.className = 'w-full h-full object-cover transition-all duration-500';
@@ -277,3 +299,98 @@ window.addEventListener('beforeunload', () => {
     window.gallery.destroy();
   }
 });
+
+// ------------------------------------------
+async function loadProducts() {
+  try {
+    const response = await fetch('assets/Data/products.json');
+    if (!response.ok) throw new Error('Loading products failed');
+
+    const data = await response.json();
+    const productsArray = Object.values(data).flat();
+
+    // Catégories de produits
+    const categories = ['bracelets', 'necklaces', 'rings', 'watches'];
+
+    categories.forEach(category => {
+      // Filtrer les produits pour chaque catégorie
+      const categoryProducts = productsArray.filter(product => product.category && product.category.toLowerCase() === category);
+
+      // Limiter à 4 produits seulement
+      const top4CategoryProducts = categoryProducts.slice(0, 4);
+
+      // Récupérer le conteneur de chaque catégorie
+      const container = document.querySelector(`#${category}-container .product-list`);
+      container.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux produits
+
+      // Ajouter chaque produit à la grille
+      top4CategoryProducts.forEach(product => {
+        if (product.images && Array.isArray(product.images)) {
+          product.images = product.images.slice(0, 1).map(imagePath => imagePath.replace(/^\.{2}/, 'assets')); // Prendre seulement la première image
+        }
+
+        // Créer la carte de produit
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card', 'bg-white', 'p-6', 'rounded-lg', 'shadow-lg', 'hover:shadow-xl', 'transition-shadow', 'duration-300', 'flex', 'flex-col', 'items-center');
+
+        // Ajouter l'image du produit
+        const productImage = document.createElement('img');
+        productImage.src = product.images[0];
+        productImage.alt = product.name;
+        //productImage.classList.add('w-full', 'h-full', 'object-cover', 'rounded-lg', 'mt-4');
+        productImage.classList.add('product-image');
+
+        // Ajouter le titre du produit
+        const productTitle = document.createElement('h3');
+        productTitle.classList.add('font-inria', 'text-xl', 'text-center', 'mt-4');
+        productTitle.textContent = product.name;
+
+        // Ajouter un lien vers la page de détails
+        const productLink = document.createElement('a');
+        productLink.href = `assets/html/Descri_page.html?id=${product.id}`; // Lien dynamique avec l'ID du produit
+        productLink.classList.add('w-full');
+        
+        // Ajouter les éléments au produit
+        productCard.appendChild(productImage);
+        productCard.appendChild(productTitle);
+        productLink.appendChild(productCard);
+
+        // Ajouter la carte de produit au conteneur
+        container.appendChild(productLink);
+      });
+    });
+  } catch (error) {
+    console.error('Erreur lors du chargement des produits:', error);
+
+    return card;
+  }
+
+  // Nettoyer les intervalles lors de la destruction
+  destroy() {
+    Object.values(this.intervals).forEach(interval => clearInterval(interval));
+  }
+}
+
+// Style pour la transition des images
+const style = document.createElement('style');
+style.textContent = `
+  img {
+      transition: opacity 0.2s ease-in-out;
+  }
+`;
+document.head.appendChild(style);
+
+// Initialiser la galerie
+document.addEventListener('DOMContentLoaded', () => {
+  new CategoryGallery('card-container');
+});
+
+// Nettoyer les intervalles lors du rechargement/fermeture de la page
+window.addEventListener('beforeunload', () => {
+  if (window.gallery) {
+    window.gallery.destroy();
+  }
+}
+
+// Appeler la fonction pour charger les produits dès que la page est prête
+document.addEventListener('DOMContentLoaded', loadProducts);

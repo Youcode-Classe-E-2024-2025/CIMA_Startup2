@@ -809,14 +809,6 @@ video {
   margin-top: 2rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
-.mt-28 {
-  margin-top: 7rem;
-}
-
 .block {
   display: block;
 }
@@ -1264,11 +1256,6 @@ video {
 .bg-button_divs_background {
   --tw-bg-opacity: 1;
   background-color: rgb(251 214 92 / var(--tw-bg-opacity));
-}
-
-.bg-goldenrod {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 157 14 / var(--tw-bg-opacity));
 }
 
 .bg-gray_used_in_divider_lines {
@@ -1932,6 +1919,16 @@ video {
 .animate-fadeIn {
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
+}
+
+/* Contrôler la taille de l'image prise dans la base de donnee*/
+
+.product-image {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
 }
 
 .delay-100 {
