@@ -721,6 +721,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -803,6 +807,14 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-28 {
+  margin-top: 7rem;
 }
 
 .block {
@@ -1252,6 +1264,11 @@ video {
 .bg-button_divs_background {
   --tw-bg-opacity: 1;
   background-color: rgb(251 214 92 / var(--tw-bg-opacity));
+}
+
+.bg-goldenrod {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 157 14 / var(--tw-bg-opacity));
 }
 
 .bg-gray_used_in_divider_lines {
@@ -1927,12 +1944,7 @@ video {
 
 .button{
   background-color: rgba(251, 214, 92, 1);
-  border-radius: 1rem;
   padding: 0.90rem;
-}
-
-.button:hover{
-  background-color: rgb(246, 246, 159);
 }
 
 .hover\:bg-yellow-500:hover {
