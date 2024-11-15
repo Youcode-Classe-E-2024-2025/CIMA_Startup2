@@ -179,8 +179,27 @@ to {
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
   }
+
   
-  .delay-100 {
-    animation-delay: 100ms;
-  }
+
+/* Contrôler la taille de l'image prise dans la base de donnee*/
+.product-image {
+  width: 250px; 
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+}
+
   
+.delay-100 {
+  animation-delay: 100ms;
+}
+  
+.input{
+    background: rgba(231, 205, 140, 0.29) ;
+}
+
+.button{
+    background-color: rgba(251, 214, 92, 1);
+    padding: 0.90rem;
+}
