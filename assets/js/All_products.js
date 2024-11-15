@@ -112,6 +112,7 @@ document.getElementById("filtermen").addEventListener("click", () => {
   genderFilter = "men"; 
   applyFilters();
   document.getElementById("filtermen").classList.add("text-goldenrod"); 
+});
 
 document.getElementById("filterwomen").addEventListener("click", () => {
   resetFilters(); 
