@@ -3,89 +3,221 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Eternia for luxury accessories for men and women" />
-    <meta name="keywords" content="Eternia, accessories, men, women, independent" />
-    <meta name="author" content="CIMA team" />
     <title>ETERNIA || Download Estimate</title>
-
     <link rel="stylesheet" href="../css/tailwind/output.css" />
-    <link rel="icon" href="../images/Logo/Favicon/fav-32-eternia.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montaga&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Montaga&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <style>
+      @page {
+        margin: 0;
+      }
+      .pdf-content {
+        width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        background: white;
+      }
+      .quotation-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      .quotation-table th,
+      .quotation-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      .quotation-table th {
+        background-color: #f8fafc;
+        font-weight: 600;
+      }
+      .logo-section {
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+      .total-section {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 2px solid #e2e8f0;
+      }
+      .terms-list {
+        list-style: none;
+        padding-left: 0;
+      }
+      .terms-list li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 8px;
+      }
+      .terms-list li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #4a5568;
+      }
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .terms-list li:before {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <header></header>
-    <main class="font-inria">
-      <div class="container mx-auto px-4 py-8">
-        <div class="flex justify-evenly items-center mb-6">
-          <div class="w-32 text-2xl flex gap-1 items-center">
-            <img src="../images/Logo/navbar-logo-150-50-eternia.png" alt="Eternia Logo" />
-            <p class="font-montaga">Eternia</p>
+  <body class="bg-gray-100">
+    <div class="min-h-screen">
+      <div id="quotationContent" class="pdf-content">
+        <!-- Header Section -->
+        <div class="logo-section flex justify-between items-center">
+          <div class="flex items-center gap-4">
+            <img src="../images/Logo/navbar-logo-150-50-eternia.png" alt="Eternia Logo" class="h-12" />
+            <span class="font-montaga text-2xl">Eternia</span>
           </div>
           <div class="text-right">
-            <h1 class="text-2xl font-bold">Quotation</h1>
+            <h1 class="text-3xl font-bold mb-2">Quotation</h1>
             <p class="text-gray-600">Date: <span id="quotation-date"></span></p>
-            <p class="text-gray-600">Quotation #: <span id="quotation-number"></span></p>
+            <p class="text-gray-600">Quotation : <span id="quotation-number"></span></p>
           </div>
         </div>
-        
-        <div class="bg-white rounded-lg shadow p-6 mx-auto w-2/3">
-          <table class="w-full border-collapse">
-            <thead>
-              <tr>
-                <th class="text-left pb-2 border-b border-gray-200">Product</th>
-                <th class="text-left pb-2 border-b border-gray-200">Quantity</th>
-                <th class="text-left pb-2 border-b border-gray-200">Price</th>
-                <th class="text-left pb-2 border-b border-gray-200">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="py-4 border-b border-gray-200">Product 1</td>
-                <td class="py-4 border-b border-gray-200">2</td>
-                <td class="py-4 border-b border-gray-200">$10.00</td>
-                <td class="py-4 border-b border-gray-200">$20.00</td>
-              </tr>
-              <tr>
-                <td class="py-4 border-b border-gray-200">Product 2</td>
-                <td class="py-4 border-b border-gray-200">1</td>
-                <td class="py-4 border-b border-gray-200">$15.00</td>
-                <td class="py-4 border-b border-gray-200">$15.00</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="text-right mt-4 text-lg font-bold">
-            Total: $35.00
-          </div>
-        </div>
-        
-        <button
-        onclick="downloadQuotationPDF()"
-        class="text-white font-bold py-2 px-4 mt-4 block mx-auto bg-button_divs_background rounded w-full sm:w-auto outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform"
-        >
-        Download Quotation
-      </button>
-    </div>
-    </main>
 
-    <footer class="font-inria flex flex-col items-center mb-5 gap-4 px-3">
-      <a href="../../index.html"
-      ><img src="../images/Logo/logo-eternia-400-400.png" alt="Eternia Logo" width="180" height="180"
-      /></a>
-      <div class="flex gap-4 text-xs sm:text-base lg:text-xl">
-        <p>Hold The Moon With Your Purchase.</p>
+        <!-- Products Table -->
+        <table class="quotation-table" id="itemsTable">
+          <thead>
+            <tr>
+              <th class="w-1/2">Product</th>
+              <th class="w-1/6 text-right">Size</th>
+              <th class="w-1/6 text-right">Quantity</th>
+              <th class="w-1/6 text-right">Price</th>
+              <th class="w-1/6 text-right">Total</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Items will be dynamically inserted here -->
+          </tbody>
+        </table>
+
+        <!-- Totals Section -->
+        <div class="total-section">
+          <div class="flex justify-end">
+            <div class="w-64">
+              <div class="flex justify-between py-2">
+                <span class="font-semibold">Subtotal:</span>
+                <span id="subtotalAmount">$0.00</span>
+              </div>
+              <div class="flex justify-between py-2">
+                <span class="font-semibold">Tax (8%):</span>
+                <span id="taxAmount">$0.00</span>
+              </div>
+              <div class="flex justify-between py-2 text-lg font-bold">
+                <span>Total:</span>
+                <span id="totalAmount">$0.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terms and Notes -->
+        <div class="mt-8 text-sm text-gray-600">
+          <p class="font-semibold mb-2">Terms & Conditions:</p>
+          <ul class="terms-list">
+            <li>Quotation valid for 30 days from the date of issue</li>
+            <li>50% advance payment required to confirm the order</li>
+            <li>Delivery within 7-10 business days after payment confirmation</li>
+          </ul>
+        </div>
       </div>
-      <p class="font-montaga text-xs text-center sm:text-sm lg:text-xl">&copy; Eternia 2024.</p>
-    </footer>
-    
 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
-    <script src="../js/pdf.js"></script>
+      <!-- Download Button -->
+      <div class="flex justify-center my-8">
+        <button
+          onclick="downloadQuotation()"
+          class="bg-button_divs_background font-inria font-bold py-3 px-6 rounded transition-color outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transforms"
+        >
+          Download Quotation
+        </button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Format price function
+        function formatPrice(price) {
+          return `$ ${price.toLocaleString()}`;
+        }
+
+        // Get cart data from localStorage
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const tableBody = document.getElementById("tableBody");
+        
+        // Calculate totals
+        let subtotal = 0;
+
+        // Populate table with cart items
+        cart.forEach(item => {
+          const row = document.createElement('tr');
+          const itemTotal = item.price * item.quantity;
+          subtotal += itemTotal;
+
+          row.innerHTML = `
+            <td class="py-4">
+              <div class="flex items-center gap-4">
+                <img src="${item.selectedImage}" alt="${item.name}" class="w-16 h-16 object-cover">
+                <span>${item.name}</span>
+              </div>
+            </td>
+            <td class="text-right">${item.size}</td>
+            <td class="text-right">${item.quantity}</td>
+            <td class="text-right">${formatPrice(item.price)}</td>
+            <td class="text-right text-nowrap">${formatPrice(itemTotal)}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+
+        // Calculate tax and total
+        const tax = subtotal * 0.08;
+        const total = subtotal + tax;
+
+        // Update amounts
+        document.getElementById('subtotalAmount').textContent = formatPrice(subtotal);
+        document.getElementById('taxAmount').textContent = formatPrice(tax);
+        document.getElementById('totalAmount').textContent = formatPrice(total);
+
+        // Set date and quotation number
+        document.getElementById('quotation-date').textContent = new Date().toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        document.getElementById('quotation-number').textContent = `QT-${new Date().getFullYear()}-${Math.floor(10000 + Math.random() * 90000)}`;
+      });
+
+      function downloadQuotation() {
+        const element = document.getElementById('quotationContent');
+        
+        const opt = {
+          filename: 'eternia-quotation.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { 
+            scale: 2,
+            useCORS: true,
+            letterRendering: true
+          },
+          jsPDF: { 
+            unit: 'pt',
+            format: 'a4',
+            orientation: 'portrait'
+          }
+        };
+
+        // Generate PDF
+        html2pdf().from(element).set(opt).save();
+      }
+    </script>
   </body>
 </html>
