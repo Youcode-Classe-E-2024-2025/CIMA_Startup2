@@ -109,3 +109,7 @@
     animation-delay: 100ms;
   }
   
+  * {
+    box-sizing: border-box;
+  }
+  

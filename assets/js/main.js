@@ -1,17 +1,42 @@
 
 // navbar
-const menuButton = document.getElementById('menuButton');
-const mobileMenu = document.getElementById('mobileMenu');
-const menuIcon = document.getElementById('menuIcon');
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.getElementById('menuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-menuButton.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
-  if (mobileMenu.classList.contains('hidden')) {
-    menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>`;
-  } else {
-    menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>`;
-  }
+  menuButton.addEventListener('click', () => {
+    // Toggle mobile menu visibility
+    mobileMenu.classList.toggle('hidden');
+    
+    // Optional: Add slide animation
+    if (!mobileMenu.classList.contains('hidden')) {
+      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+    } else {
+      mobileMenu.style.maxHeight = '0';
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.style.maxHeight = '0';
+    }
+  });
 });
+// const menuButton = document.getElementById('menuButton');
+// const mobileMenu = document.getElementById('mobileMenu');
+// const menuIcon = document.getElementById('menuIcon');
+
+// menuButton.addEventListener('click', () => {
+//     mobileMenu.classList.toggle('hidden');
+//     if (mobileMenu.classList.contains('hidden')) {
+//         menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>`;
+//     } else {
+//         menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>`;
+//     }
+// });
 // caroussel
 (function () {
   "use stict"
