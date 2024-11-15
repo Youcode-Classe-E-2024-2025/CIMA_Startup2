@@ -5,6 +5,7 @@ const numbre_elements_page = 16;
 let totalpages = 1;
 let genderFilter = ""; 
 let searchQuery = ""; 
+let categoryFilter = ""; 
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -93,8 +94,9 @@ function applyFilters() {
   filteredProducts = products.filter(item => {
     const matchesGender = genderFilter ? item.gender && item.gender.toLowerCase() === genderFilter : true;
     const matchesSearch = item.name.toLowerCase().includes(searchQuery);
+    const matchesCategory = categoryFilter ? item.category.toLowerCase() === categoryFilter : true;
 
-    return matchesGender && matchesSearch;
+    return matchesGender && matchesSearch && matchesCategory;
   });
 
   currentpage = 1;
@@ -103,7 +105,7 @@ function applyFilters() {
 }
 
 function resetFilters() {
-  const filters = document.querySelectorAll("#filtermen, #filterwomen, #filterprice, #filtertitle");
+  const filters = document.querySelectorAll("#filtermen, #filterwomen, #filterprice, #filtertitle, #filtercategory");
   filters.forEach(filter => filter.classList.remove("text-goldenrod"));
 }
 
@@ -111,26 +113,52 @@ document.getElementById("filtermen").addEventListener("click", () => {
   resetFilters(); 
   genderFilter = "men"; 
   applyFilters();
-  document.getElementById("filtermen").classList.add("text-goldenrod"); 
+  document.getElementById("filtermen").classList.add("text-goldenrod");
 });
 
 document.getElementById("filterwomen").addEventListener("click", () => {
   resetFilters(); 
   genderFilter = "women";
   applyFilters();
-  document.getElementById("filterwomen").classList.add("text-goldenrod"); 
+  document.getElementById("filterwomen").classList.add("text-goldenrod");
 });
 
 document.getElementById("filterprice").addEventListener("click", function() {
   resetFilters(); 
   filterprice();
-  document.getElementById("filterprice").classList.add("text-goldenrod"); 
+  document.getElementById("filterprice").classList.add("text-goldenrod");
 });
 
 document.getElementById("filtertitle").addEventListener("click", function() {
   resetFilters(); 
   filtertitle();
-  document.getElementById("filtertitle").classList.add("text-goldenrod"); 
+  document.getElementById("filtertitle").classList.add("text-goldenrod");
+});
+
+document.getElementById("filtercategory").addEventListener("click", function() {
+  const categories = ["Watches", "Rings", "Necklaces", "Bracelets"];
+  
+  const categoryList = document.createElement("div");
+  categoryList.classList.add("absolute", "top-16", "bg-white", "shadow-lg", "rounded-md", "w-30","mt-20","font-normal","text-sm"
+  );
+  
+  categories.forEach(category => {
+    const categoryItem = document.createElement("div");
+    categoryItem.classList.add("cursor-pointer", "px-4", "py-2", "hover:bg-yellow-500");
+    categoryItem.textContent = category;
+
+    categoryItem.addEventListener("click", () => {
+      categoryFilter = category.toLowerCase();
+      resetFilters();
+      applyFilters();
+      document.getElementById("filtercategory").classList.add("text-goldenrod");
+      document.body.removeChild(categoryList); 
+    });
+
+    categoryList.appendChild(categoryItem);
+  });
+
+  document.getElementById('filtercategory').appendChild(categoryList);
 });
 
 document.getElementById("search").addEventListener("input", function () {
@@ -139,21 +167,23 @@ document.getElementById("search").addEventListener("input", function () {
 });
 
 function filterprice() {
-    const sortedProducts = products.sort((a, b) => a.price - b.price);
-    filteredProducts = sortedProducts; 
-    currentpage = 1;
-    totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
+  const sortedProducts = products.sort((a, b) => a.price - b.price);
+  filteredProducts = sortedProducts; 
+  currentpage = 1;
+  totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
 
-    displayProducts(currentpage);
+  displayProducts(currentpage);
 }
 
 function filtertitle() {
-    filteredProducts = filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
-    
-    currentpage = 1;
-    totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
+  filteredProducts = filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+  
+  currentpage = 1;
+  totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
 
-    displayProducts(currentpage);
+  displayProducts(currentpage);
 }
 
 loadProducts();
+
+
