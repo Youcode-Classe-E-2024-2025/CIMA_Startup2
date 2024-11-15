@@ -46,8 +46,6 @@
     background-color: rgba(251, 214, 92, 1);
     border-radius: 1rem;
     padding: 0.90rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
 .button:hover{
     background-color: rgb(246, 246, 159);
