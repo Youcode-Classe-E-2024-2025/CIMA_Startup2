@@ -1,4 +1,3 @@
-
 // navbar
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   menuButton.addEventListener('click', () => {
     // Toggle mobile menu visibility
     mobileMenu.classList.toggle('hidden');
-    
+
     // Optional: Add slide animation
     if (!mobileMenu.classList.contains('hidden')) {
       mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
@@ -24,13 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.style.maxHeight = '0';
     }
   });
-menuButton.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
-  if (mobileMenu.classList.contains('hidden')) {
-    menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>`;
-  } else {
-    menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>`;
-  }
 });
 
 // caroussel
@@ -130,28 +122,28 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(el);
   });
 
-// Gestion du formulaire newsletter
- const form = document.getElementById('newsletterForm');
- const confirmationMessage = document.getElementById('confirmationMessage');
+  // Gestion du formulaire newsletter
+  const form = document.getElementById('newsletterForm');
+  const confirmationMessage = document.getElementById('confirmationMessage');
 
- form.addEventListener('submit', function(e) {
-   e.preventDefault();
-   
-   const email = form.email.value;
-   
-   // Simulation d'envoi (remplacer par votre logique d'envoi réelle)
-   setTimeout(() => {
-     form.reset();
-     form.style.display = 'none';
-     confirmationMessage.classList.remove('hidden');
-     
-     // Réinitialiser après 5 secondes
-     setTimeout(() => {
-       form.style.display = 'flex';
-       confirmationMessage.classList.add('hidden');
-     }, 5000);
-   }, 1000);
- });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const email = form.email.value;
+
+    // Simulation d'envoi (remplacer par votre logique d'envoi réelle)
+    setTimeout(() => {
+      form.reset();
+      form.style.display = 'none';
+      confirmationMessage.classList.remove('hidden');
+
+      // Réinitialiser après 5 secondes
+      setTimeout(() => {
+        form.style.display = 'flex';
+        confirmationMessage.classList.add('hidden');
+      }, 5000);
+    }, 1000);
+  });
 });
 // -----------------------------------------------------------------
 // Chargement des données depuis le fichier JSON
@@ -242,8 +234,33 @@ class CategoryGallery {
 
   createCategoryCard(category) {
     const card = document.createElement('div');
-    card.className = 'relative h-64 overflow-hidden rounded-lg shadow-lg';
+    card.className = 'relative overflow-hidden rounded-lg shadow-lg';
 
+    // Définir les dimensions spécifiques pour chaque catégorie
+    let cardWidth, cardHeight;
+    switch (category) {
+      case 'Bracelets':
+      case 'Necklaces':
+        cardWidth = '613px';
+        cardHeight = '317px';
+        break;
+      case 'Rings':
+        cardWidth = '463px';
+        cardHeight = '664px';
+        break;
+      case 'Watches':
+        cardWidth = '1117px';
+        cardHeight = '339px';
+        break;
+      default:
+        cardWidth = '100%'; // Dimensions par défaut
+        cardHeight = '300px';
+        break;
+    }
+
+    // Appliquer les dimensions au conteneur de la carte
+    card.style.width = cardWidth;
+    card.style.height = cardHeight;
 
     // Créer l'image
     const img = document.createElement('img');
@@ -267,11 +284,12 @@ class CategoryGallery {
           img.src = categoryProducts[currentIndex].images[0];
           img.style.opacity = '1';
         }, 200);
-      }, 2000);
+      }, 5000);
     }
 
     return card;
   }
+
 
   // Nettoyer les intervalles lors de la destruction
   destroy() {
@@ -349,7 +367,7 @@ async function loadProducts() {
         const productLink = document.createElement('a');
         productLink.href = `assets/html/Descri_page.html?id=${product.id}`; // Lien dynamique avec l'ID du produit
         productLink.classList.add('w-full');
-        
+
         // Ajouter les éléments au produit
         productCard.appendChild(productImage);
         productCard.appendChild(productTitle);
@@ -361,34 +379,6 @@ async function loadProducts() {
     });
   } catch (error) {
     console.error('Erreur lors du chargement des produits:', error);
-
-    return card;
-  }
-
-  // Nettoyer les intervalles lors de la destruction
-  destroy() {
-    Object.values(this.intervals).forEach(interval => clearInterval(interval));
-  }
-}
-
-// Style pour la transition des images
-const style = document.createElement('style');
-style.textContent = `
-  img {
-      transition: opacity 0.2s ease-in-out;
-  }
-`;
-document.head.appendChild(style);
-
-// Initialiser la galerie
-document.addEventListener('DOMContentLoaded', () => {
-  new CategoryGallery('card-container');
-});
-
-// Nettoyer les intervalles lors du rechargement/fermeture de la page
-window.addEventListener('beforeunload', () => {
-  if (window.gallery) {
-    window.gallery.destroy();
   }
 }
 

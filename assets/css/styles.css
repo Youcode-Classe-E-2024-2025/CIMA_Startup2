@@ -191,13 +191,10 @@ to {
 }
 
   
-  .delay-100 {
-    animation-delay: 100ms;
-  }
+.delay-100 {
+  animation-delay: 100ms;
+}
   
-
-
-
 .input{
     background: rgba(231, 205, 140, 0.29) ;
 }
