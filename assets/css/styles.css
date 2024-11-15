@@ -184,3 +184,18 @@ to {
     animation-delay: 100ms;
   }
   
+
+
+
+.input{
+    background: rgba(231, 205, 140, 0.29) ;
+}
+
+.button{
+    background-color: rgba(251, 214, 92, 1);
+    border-radius: 1rem;
+    padding: 0.90rem;
+}
+.button:hover{
+    background-color: rgb(246, 246, 159);
+}
