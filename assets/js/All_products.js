@@ -25,8 +25,9 @@ function displayProducts(page) {
   currentProducts.forEach(product => {
     const productdiv = document.createElement("div");
     productdiv.classList.add("product");
+    
     productdiv.innerHTML = `
-      <img src="${product.images[0]}" alt="${product.name}" class="w-full h-[80%] object-cover">
+      <a href="assets/html/Descri_page.html?id=${product.id}"><img src="${product.images[0]}" alt="${product.name}" class="w-full h-[80%] object-cover"></a>
       <div class="mx-2">${product.name}</div>
       <div class="ml-2 text-darkGolden text-xl">${product.price} $</div>
     `;
