@@ -3,9 +3,9 @@ let filteredProducts = [];
 let currentpage = 1;
 const numbre_elements_page = 16;
 let totalpages = 1;
-let genderFilter = ""; 
-let searchQuery = ""; 
-let categoryFilter = ""; 
+let genderFilter = "";
+let searchQuery = "";
+let categoryFilter = "";
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -208,7 +208,16 @@ function filterprice() {
 }
 
 function filtertitle() {
-  filteredProducts = filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+  const sortedProducts = products.sort((a, b) => a.name.localeCompare(b.name));
+
+  filteredProducts = sortedProducts.filter(item => {
+    const matchesGender = genderFilter ? item.gender && item.gender.toLowerCase() === genderFilter : true;
+    const matchesSearch = item.name.toLowerCase().includes(searchQuery);
+    const matchesCategory = categoryFilter ? item.category.toLowerCase() === categoryFilter : true;
+
+    return matchesGender && matchesSearch && matchesCategory;
+  });
+
   currentpage = 1;
   totalpages = Math.ceil(filteredProducts.length / numbre_elements_page);
 
