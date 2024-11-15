@@ -32,8 +32,83 @@
 .quote.active {
   opacity: 1;
 }
-
 /* Product Description Page Animation end */
+
+
+/* Shipping estimator section : option function animation start */
+#country-list {
+    background-color: #f9fafb;
+    border: 1px solid;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#country-list div {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #4a5568;
+    border-bottom: 1px solid;
+}
+
+#country-list div:hover {
+    background-color: #e2e8f0;
+    color: #1a202c;
+}
+
+/* Shipping estimator section : option function animation end */
+
+/* Cart pop up fade-in and fade-out animations start */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Cart pop up fade-in and fade-out animations end */
+
+
+/* Cart items delete transition start */
+.trash {
+    fill: currentColor;
+    transition: fill 0.3s ease;
+}
+
+.self-end:hover .trash {
+    fill: red;
+}
+
+.trash:hover {
+    filter: invert(27%) sepia(84%) saturate(4675%) hue-rotate(353deg) brightness(97%) contrast(101%);
+}
+/* Cart items delete transition end */
+
+/* Checkout animation Button start */
+#purchase-animation text {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: line-draw 7s ease-in forwards;
+  }
+  
+@keyframes line-draw {
+to {
+    stroke-dashoffset: 0;
+}
+}
+/* Checkout animation Button end */
+
+
+
 /* stroke navbar */
 .text-outline {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -107,9 +182,5 @@
   
   .delay-100 {
     animation-delay: 100ms;
-  }
-  
-  * {
-    box-sizing: border-box;
   }
   

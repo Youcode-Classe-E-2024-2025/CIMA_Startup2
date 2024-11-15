@@ -23,50 +23,49 @@
     <main class=" mx-auto ">
      
     <!-- Product Description Section -->
-    <section class=" max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 container mx-auto mb-32 px-4 lg:px-8 py-8">
-
+    <section class="max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 container mx-auto mb-32 px-4 lg:px-8 py-8">
         <!-- Left Side - Image Gallery -->
         <article class="flex flex-col items-center gap-6">
-            <div class="w-full max-w-[530px] aspect-square">
+            <div class="w-full max-w-[530px] aspect-square overflow-hidden">
                 <img 
-                    src="../images/Products/Bracelets/Men/Product 1/BMP1-1.webp" 
-                    alt="Luminous Embrace Ring" 
+                    src="" 
+                    alt="Product Main Image" 
                     width="530" 
                     height="530" 
-                    class="w-full h-full object-cover shadow-lg"
+                    class="w-full h-full object-cover shadow-lg transition-transform duration-200"
                 >
             </div>
-            <div class="flex justify-center gap-4 w-full max-w-[530px]">
-                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0">
+            <div class="flex justify-center gap-4 w-full max-w-[530px] flex-wrap">
+                <!-- <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0 thumbnail-btn">
                     <img 
                         src="../images/Products/Bracelets/Men/Product 1/BMP1-2.webp" 
-                        alt="Ring view 1" 
+                        alt="Product view 1" 
                         width="110" 
                         height="110" 
                         class="w-full h-full object-cover border border-[rgba(0,0,0,0.24)]"
                     >
                 </button>
-                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0">
+                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0 thumbnail-btn">
                     <img 
                         src="../images/Products/Bracelets/Men/Product 1/BMP1-3.webp" 
-                        alt="Ring view 2" 
+                        alt="Product view 2" 
                         width="110" 
                         height="110" 
                         class="w-full h-full object-cover border border-[rgba(0,0,0,0.24)]"
                     >
                 </button>
-                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0">
+                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0 thumbnail-btn">
                     <img 
                         src="../images/Products/Bracelets/Men/Product 1/BMP1-4.webp" 
-                        alt="Ring view 3" 
+                        alt="Product view 3" 
                         width="110" 
                         height="110" 
                         class="w-full h-full object-cover border border-[rgba(0,0,0,0.24)]"
                     >
-                </button>
+                </button> -->
             </div>
         </article>
-
+    
         <!-- Right Side - Product Details -->
         <article class="flex flex-col text-center gap-5 lg:text-left lg:justify-evenly lg:h-[530px] font-inria">
             <div class="space-y-2">
@@ -74,32 +73,32 @@
                 <p class="text-gray_used_in_small_text">Out of Stock</p>
                 <p class="text-2xl text-darkGolden">$ 4599</p>
             </div>
-
+    
             <p class="text-[#333333] mt-6 lg:mt-0">-- Shipping all over The World --</p>
-
+    
             <div class="flex flex-wrap justify-center lg:justify-start gap-8 mt-6 lg:mt-0">
                 <div class="flex items-center gap-2">
                     <label class="text-gray_used_in_small_text">Qty :</label>
                     <div class="flex items-center border-2">
-                        <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center">
-                            <img src="../images/Icons/minus.svg" alt="">
+                        <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center quantity-btn" data-action="decrease">
+                            <img src="../images/Icons/minus.svg" alt="Decrease quantity">
                         </button>
-                        <input type="text" value="3" class="w-12 h-8 text-center">
-                        <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center">
-                            <img src="../images/Icons/plus.svg" alt="">
+                        <input type="text" value="1" class="w-12 h-8 text-center quantity-input" min="1" max="99">
+                        <button class="w-8 h-8 bg-button_divs_background flex items-center justify-center quantity-btn" data-action="increase">
+                            <img src="../images/Icons/plus.svg" alt="Increase quantity">
                         </button>
                     </div>
                 </div>
-
+    
                 <div class="flex items-center gap-2">
                     <label class="text-gray_used_in_small_text">Size :</label>
                     <div class="relative inline-block border-2">
-                        <select class="w-24 h-8 pl-3 pr-8 bg-white cursor-pointer focus:outline-none">
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
+                        <select class="w-24 h-8 pl-3 pr-8 bg-white cursor-pointer focus:outline-none size-select">
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
                         </select>
                         <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none bg-button_divs_background">
                             <img src="../images/Icons/arrow down.svg" alt="Dropdown arrow" class="w-4 h-4">
@@ -107,12 +106,10 @@
                     </div>
                 </div>
             </div>
-
-            <p class="text-gray-700 max-w-md mx-auto lg:mx-0 mt-6 lg:mt-0">
-                The Luminous Embrace ring is crafted to reflect light and elegance, designed for those who value subtle opulence.
-            </p>
-
-            <button class="w-1/2 lg:w-full mx-auto rounded bg-button_divs_background py-4 text-xl font-medium mt-6 lg:mt-0 outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform">
+    
+            <p class="text-gray-700 max-w-md mx-auto lg:mx-0 mt-6 lg:mt-0 product-description"></p>
+    
+            <button class="add-to-cart-btn w-1/2 lg:w-full mx-auto rounded bg-button_divs_background py-4 text-xl font-medium mt-6 lg:mt-0 outline-none focus:ring-4 shadow-lg transform active:scale-75 transition-transform add-to-cart-btn">
                 Own This Piece
             </button>
         </article>
@@ -158,12 +155,12 @@
     <section class="suite mb-32">
         <div class="container mx-auto px-4 max-w-6xl py-8 font-inria">
             <header class="mb-12">
-                <h1 class="text-4xl text-center font-montaga">The <span class="category-used"> Rings </span> Suite</h1>
+                <h1 class="text-4xl text-center font-montaga">The <span id="category-name"> Rings </span> Suite</h1>
             </header>
             
-            <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <main id="related-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <article class="flex flex-col cursor-pointer">
+                <!-- <article class="flex flex-col cursor-pointer">
                     <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
                         <img 
                             src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
@@ -251,7 +248,7 @@
                         <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
                         <p class="text-sm text-darkGolden">$69.00</p>
                     </div>
-                </article>
+                </article> -->
             </main>
         </div>
     </section>
@@ -273,7 +270,9 @@
             <img class="cursor-pointer" src="../images/Icons/twitter.svg" alt="our twitter social media page">
         </div>
     </footer>
+    <button class="cart-icon">dadzadzd</button>
 
+    <script src="../js/Cart_pop_up.js"></script>
     <script src="../js/Desc_page.js"></script>
   </body>
 </html>
