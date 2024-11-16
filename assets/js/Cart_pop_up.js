@@ -183,8 +183,16 @@ async function createPopup() {
 }
 // Function to create and show the popup end
 
-
-// Add event listener for the cart icon click to trigger popup start
-const cartIcon = document.querySelector('.cart-icon');
-cartIcon.addEventListener('click', createPopup);
-// Add event listener for the cart icon click to trigger popup end
+// document.addEventListener("DOMContentLoaded", function () {
+//     const restartButton = document.getElementById("restart");
+//     const checkIcon = document.getElementById("check-icon");
+  
+//     rest
+//       checkIcon.style.display = "block";
+  
+      
+//       setTimeout(function () {
+//         checkIcon.style.display = "none";
+//       }, 2000); // 2 seconds
+//     });
+//   });
