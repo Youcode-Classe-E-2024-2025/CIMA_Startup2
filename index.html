@@ -91,10 +91,10 @@
         <div class="carousel relative">
           <!-- points de navigation -->
           <div
-            class="carousel-dots absolute z-10 left-1/2 transform -translate-x-1/2 bottom-10 justify-center hidden sm:flex space-x-2">
+            class="carousel-dots absolute z-10 left-1/2 transform -translate-x-1/2 bottom-10 justify-center hidden 442:flex  space-x-2">
           </div>
           <!-- Conteneur interne-->
-          <div class="carousel-inner flex overflow-hidden sm:h-72 md:h-80 lg:h-screen">
+          <div class="carousel-inner flex overflow-hidden">
             <!-- Première diapositive -->
             <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
               <img src="assets/images/Home Carroussel/pexels-andersbk-447570.jpg" alt="Image 1"
@@ -155,24 +155,43 @@
       </div>
 
     </section>
-
-<!-- --------------------------------------------------- -->
-      <section>
-        <h1 class="text-5xl font-montaga text-goldenrod p-4 mt-4 flex justify-center underline">
-          Best Sellers
-        </h1>
-      </section>
-      <!-- Best Sellers sections -->
+    <!-- ----------------   Best Sellers sections ------------>
+    <section>
+      <h1 class="text-3xl md:text-5xl  font-montaga text-goldenrod p-4 mt-4 flex justify-center underline">
+        Best Sellers
+      </h1>
+    </section>
       <section class="best_sellers p-4">
         <div class="bestSeller py-8">
-          <div
-            class="bracelets grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative"
-            id="card-container"
-          >
-            <!-- Les cartes seront insérées ici dynamiquement par le JavaScript -->
+          <!-- Conteneur des cartes avec gestion de la grille responsive -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative"
+            id="card-container">
+
+            <!-- Carte 1 -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg w-full h-auto">
+              <img src="" alt="Bracelets" class="w-full h-full object-cover transition-all duration-500">
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg w-full h-auto">
+              <img src="" alt="Necklaces" class="w-full h-full object-cover transition-all duration-500">
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg w-full h-auto">
+              <img src="" alt="Rings" class="w-full h-full object-cover transition-all duration-500">
+            </div>
+
+            <!-- Carte 4 -->
+            <div class="relative overflow-hidden rounded-lg shadow-lg w-full h-auto">
+              <img src="" alt="Watches" class="w-full h-full object-cover transition-all duration-500">
+            </div>
+
           </div>
         </div>
       </section>
+
+    </section>
       <!-- --------------------------------------------------- -->
       <section>
         <a href="assets/html/All_Products.html">
