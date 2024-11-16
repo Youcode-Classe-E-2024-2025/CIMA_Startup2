@@ -26,8 +26,10 @@
       <div class="px-4 mx-auto max-w-7xl">
         <div class="flex items-center justify-between h-16">
           <!-- Logo -->
-          <h1 class="text-2xl font-montaga text-outline">E<span class="cursor-pointer hover:text-goldenrod"
-              onclick="window.location.href='assets/html/Admin_page.html'">T</span>ERNIA</h1>
+          <h1 onclick="window.location.href='index.html'" class="cursor-pointer text-2xl font-montaga text-outline">
+            E<span class="cursor-pointer hover:text-goldenrod"onclick="event.stopPropagation(); window.location.href='assets/html/Admin_page.html';">T</span>ERNIA
+          </h1>
+          
 
           <!-- Menu Desktop -->
           <div class="hidden md:flex items-center justify-between flex-1 pl-12">
@@ -88,13 +90,13 @@
       <!-- Conteneur carrousel -->
       <div class="relative overflow-hidden">
         <!-- Élément carrousel -->
-        <div class="carousel relative">
+        <div class=" relative">
           <!-- points de navigation -->
           <div
-            class="carousel-dots absolute z-10 left-1/2 transform -translate-x-1/2 bottom-10 justify-center hidden 442:flex  space-x-2">
+            class="carousel-dots m-1 cursor-pointer absolute z-10 left-1/2 transform -translate-x-1/2 bottom-16 justify-center hidden 442:flex space-x-2">
           </div>
           <!-- Conteneur interne-->
-          <div class="carousel-inner flex overflow-hidden">
+          <div class="carousel-inner flex overflow-hidden lg:h-screen">
             <!-- Première diapositive -->
             <div class="slide flex-0 h-full transition-all duration-500 ease-in-out">
               <img src="assets/images/Home Carroussel/pexels-andersbk-447570.jpg" alt="Image 1"
@@ -197,9 +199,7 @@
         <a href="assets/html/All_Products.html">
           <h1
             class="text-5xl font-montaga text-goldenrod p-4 mt-4 mb-20 flex justify-center underline"
-          >
-            → Our collection
-          </h1>
+          >→ Our collection</h1>
         </a>
       </section>
 
@@ -265,8 +265,7 @@
             <button
               type="submit"
               class="px-6 py-4 bg-white text-black rounded transition-colors duration-300 font-inria"
-            >
-              Register
+            >Register
             </button>
           </form>
         </div>
@@ -280,7 +279,7 @@
       /></a>
       <div class="flex gap-4 text-goldenrod font-semibold text-xs sm:text-base lg:text-xl">
         <a href="assets/html/All_Products.html">Our Catalog</a>
-        <a href="assets/html/About_Contact.html">Contact Us</a>
+        <a href="assets/html/About_Contact.html#contact-us">Contact Us</a>
         <a href="assets/html/About_Contact.html">About Us</a>
       </div>
       <p class="font-montaga text-xs text-center sm:text-sm lg:text-xl">
