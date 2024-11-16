@@ -3,7 +3,6 @@ let productsData = null;
 // Fetch products data from JSON file start
 async function fetchProductData() {
     try {
-        // Check if we're in the root (index) or in another page
         const isRoot = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
         const jsonPath = isRoot ? 'assets/Data/products.json' : '../Data/products.json';
         
