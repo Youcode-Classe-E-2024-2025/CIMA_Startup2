@@ -119,14 +119,7 @@ to {
 /* caroussel */
 
 /* Définition du carrousel */
-.carousel {
-  position: relative;
-}
-.carousel-inner {
-  display: flex;
-  overflow: hidden;
-  flex-wrap: nowrap;
-}
+
 .slide {
   flex: 0 0 100%;
   height: 100%;
@@ -135,14 +128,12 @@ to {
 
 .carousel-dots .dot {
   border-radius: 50%;
-  margin: 5px;
-  cursor: pointer;
 }
 .carousel-dots .active {
   border: 10px solid #d19d0e !important;
 }
 .carousel-dots .inactive {
-  border: 10px solid grey;
+  border: 10px solid rgba(255, 255, 255, 0.2);
 }
 
 /* card products */
@@ -179,21 +170,28 @@ to {
     opacity: 0;
     animation: fadeIn 1s ease-out forwards;
   }
-  
-  .delay-100 {
-    animation-delay: 100ms;
-  }
+
   
 
+/* Contrôler la taille de l'image prise dans la base de donnee*/
+.product-image {
+  width: 250px; 
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+}
 
-
+  
+.delay-100 {
+  animation-delay: 100ms;
+}
+  
 .input{
     background: rgba(231, 205, 140, 0.29) ;
 }
 
 .button{
     background-color: rgba(251, 214, 92, 1);
-    border-radius: 1rem;
     padding: 0.90rem;
 }
 .button:hover{

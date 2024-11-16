@@ -1,17 +1,30 @@
-
 // navbar
-const menuButton = document.getElementById('menuButton');
-const mobileMenu = document.getElementById('mobileMenu');
-const menuIcon = document.getElementById('menuIcon');
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.getElementById('menuButton');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-menuButton.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
-  if (mobileMenu.classList.contains('hidden')) {
-    menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>`;
-  } else {
-    menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>`;
-  }
+  menuButton.addEventListener('click', () => {
+    // Toggle mobile menu visibility
+    mobileMenu.classList.toggle('hidden');
+
+    // Optional: Add slide animation
+    if (!mobileMenu.classList.contains('hidden')) {
+      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+    } else {
+      mobileMenu.style.maxHeight = '0';
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.style.maxHeight = '0';
+    }
+  });
 });
+
 // caroussel
 (function () {
   "use stict"
@@ -109,28 +122,28 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(el);
   });
 
-// Gestion du formulaire newsletter
- const form = document.getElementById('newsletterForm');
- const confirmationMessage = document.getElementById('confirmationMessage');
+  // Gestion du formulaire newsletter
+  const form = document.getElementById('newsletterForm');
+  const confirmationMessage = document.getElementById('confirmationMessage');
 
- form.addEventListener('submit', function(e) {
-   e.preventDefault();
-   
-   const email = form.email.value;
-   
-   // Simulation d'envoi (remplacer par votre logique d'envoi réelle)
-   setTimeout(() => {
-     form.reset();
-     form.style.display = 'none';
-     confirmationMessage.classList.remove('hidden');
-     
-     // Réinitialiser après 5 secondes
-     setTimeout(() => {
-       form.style.display = 'flex';
-       confirmationMessage.classList.add('hidden');
-     }, 5000);
-   }, 1000);
- });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const email = form.email.value;
+
+    // Simulation d'envoi (remplacer par votre logique d'envoi réelle)
+    setTimeout(() => {
+      form.reset();
+      form.style.display = 'none';
+      confirmationMessage.classList.remove('hidden');
+
+      // Réinitialiser après 5 secondes
+      setTimeout(() => {
+        form.style.display = 'flex';
+        confirmationMessage.classList.add('hidden');
+      }, 5000);
+    }, 1000);
+  });
 });
 // -----------------------------------------------------------------
 // Chargement des données depuis le fichier JSON
@@ -218,36 +231,77 @@ class CategoryGallery {
       this.container.appendChild(card);
     });
   }
-
   createCategoryCard(category) {
     const card = document.createElement('div');
-    card.className = 'relative h-64 overflow-hidden rounded-lg shadow-lg';
+    card.className = 'relative overflow-hidden rounded-lg shadow-lg';
+  
+    // Définir les dimensions spécifiques pour chaque catégorie
+    let cardWidth = '100%';
+    let cardHeight = '30%';
+  
+    // Utiliser les classes de Tailwind pour adapter les cartes à différentes tailles d'écran
+    switch (category) {
+      case 'Bracelets':
+        cardWidth = 'full'; 
+        cardHeight = '40'; 
+        break;
+      case 'Necklaces':
+        cardWidth = 'full';
+        cardHeight = '45';
+        break;
+      case 'Rings':
+        cardWidth = 'full';
+        cardHeight = '60';
+        break;
+      case 'Watches':
+        cardWidth = 'full';
+        cardHeight = '50';
+        break;
+      default:
+        cardWidth = 'full';
+        cardHeight = '35';
+        break;
+    }
+  
+    // Appliquer les dimensions de base
+    card.style.width = cardWidth;
+    card.style.height = cardHeight;
+  
 
     // Créer l'image
     const img = document.createElement('img');
     img.className = 'w-full h-full object-cover transition-all duration-500';
-
-    // Si nous avons des produits pour cette catégorie
-    if (this.products[category] && this.products[category].length > 0) {
+    img.alt = `Image of ${category}`;
+  
+    // Vérifier les produits pour cette catégorie
+    if (this.products && this.products[category] && this.products[category].length > 0) {
       let currentIndex = 0;
       const categoryProducts = this.products[category];
-
+  
       // Définir la première image
       img.src = categoryProducts[0].images[0];
       card.appendChild(img);
-
+  
       // Créer le diaporama automatique
+      if (this.intervals[category]) {
+        clearInterval(this.intervals[category]);
+      }
+  
       this.intervals[category] = setInterval(() => {
         currentIndex = (currentIndex + 1) % categoryProducts.length;
         img.style.opacity = '0';
-
+  
         setTimeout(() => {
           img.src = categoryProducts[currentIndex].images[0];
           img.style.opacity = '1';
         }, 200);
-      }, 2000);
-    }
+      }, 5000);
+    } else {
+      img.src = 'default-placeholder.jpg'; // Image par défaut
+      card.appendChild(img);
 
+    }
+  
     return card;
   }
 
@@ -277,3 +331,70 @@ window.addEventListener('beforeunload', () => {
     window.gallery.destroy();
   }
 });
+
+// ------------------------------------------
+async function loadProducts() {
+  try {
+    const response = await fetch('assets/Data/products.json');
+    if (!response.ok) throw new Error('Loading products failed');
+
+    const data = await response.json();
+    const productsArray = Object.values(data).flat();
+
+    // Catégories de produits
+    const categories = ['bracelets', 'necklaces', 'rings', 'watches'];
+
+    categories.forEach(category => {
+      // Filtrer les produits pour chaque catégorie
+      const categoryProducts = productsArray.filter(product => product.category && product.category.toLowerCase() === category);
+
+      // Limiter à 4 produits seulement
+      const top4CategoryProducts = categoryProducts.slice(0, 4);
+
+      // Récupérer le conteneur de chaque catégorie
+      const container = document.querySelector(`#${category}-container .product-list`);
+      container.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux produits
+
+      // Ajouter chaque produit à la grille
+      top4CategoryProducts.forEach(product => {
+        if (product.images && Array.isArray(product.images)) {
+          product.images = product.images.slice(0, 1).map(imagePath => imagePath.replace(/^\.{2}/, 'assets')); // Prendre seulement la première image
+        }
+
+        // Créer la carte de produit
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card', 'bg-white', 'p-6', 'rounded-lg', 'shadow-lg', 'hover:shadow-xl', 'transition-shadow', 'duration-300', 'flex', 'flex-col', 'items-center');
+
+        // Ajouter l'image du produit
+        const productImage = document.createElement('img');
+        productImage.src = product.images[0];
+        productImage.alt = product.name;
+        //productImage.classList.add('w-full', 'h-full', 'object-cover', 'rounded-lg', 'mt-4');
+        productImage.classList.add('product-image');
+
+        // Ajouter le titre du produit
+        const productTitle = document.createElement('h3');
+        productTitle.classList.add('font-inria', 'text-xl', 'text-center', 'mt-4');
+        productTitle.textContent = product.name;
+
+        // Ajouter un lien vers la page de détails
+        const productLink = document.createElement('a');
+        productLink.href = `assets/html/Descri_page.html?id=${product.id}`; // Lien dynamique avec l'ID du produit
+        productLink.classList.add('w-full');
+
+        // Ajouter les éléments au produit
+        productCard.appendChild(productImage);
+        productCard.appendChild(productTitle);
+        productLink.appendChild(productCard);
+
+        // Ajouter la carte de produit au conteneur
+        container.appendChild(productLink);
+      });
+    });
+  } catch (error) {
+    console.error('Erreur lors du chargement des produits:', error);
+  }
+}
+
+// Appeler la fonction pour charger les produits dès que la page est prête
+document.addEventListener('DOMContentLoaded', loadProducts);
