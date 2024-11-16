@@ -25,9 +25,9 @@
       "inStock": true,
       "promotion": "This watch exudes strength and sophistication, ideal for those who demand both style and performance.",
       "images": [
-        "../images/Products/Watches/Men/Product%202/WMP2-1.webp",
-        "../images/Products/Watches/Men/Product%202/WMP2-2.webp",
         "../images/Products/Watches/Men/Product%202/WMP2-3.webp",
+        "../images/Products/Watches/Men/Product%202/WMP2-2.webp",
+        "../images/Products/Watches/Men/Product%202/WMP2-1.webp",
         "../images/Products/Watches/Men/Product%202/WMP2-4.webp"
       ],
       "bestSeller": true,
@@ -42,9 +42,9 @@
       "inStock": true,
       "promotion": "Designed for those who seek refinement in every aspect of their life, this timepiece radiates luxury.",
       "images": [
-        "../images/Products/Watches/Men/Product%203/WMP3-1.webp",
-        "../images/Products/Watches/Men/Product%203/WMP3-2.webp",
         "../images/Products/Watches/Men/Product%203/WMP3-3.webp",
+        "../images/Products/Watches/Men/Product%203/WMP3-2.webp",
+        "../images/Products/Watches/Men/Product%203/WMP3-1.webp",
         "../images/Products/Watches/Men/Product%203/WMP3-4.webp"
       ],
       "bestSeller": false,
@@ -59,8 +59,8 @@
       "inStock": true,
       "promotion": "Built to last, the Titanium Royale is a true statement of both rugged durability and sophistication.",
       "images": [
-        "../images/Products/Watches/Men/Product%204/WMP4-1.webp",
         "../images/Products/Watches/Men/Product%204/WMP4-2.webp",
+        "../images/Products/Watches/Men/Product%204/WMP4-1.webp",
         "../images/Products/Watches/Men/Product%204/WMP4-3.webp"
       ],
       "bestSeller": true,
@@ -75,9 +75,9 @@
       "inStock": true,
       "promotion": "Subtle yet bold, this watch exudes an air of mystery and sophistication for the discerning individual.",
       "images": [
-        "../images/Products/Watches/Men/Product%205/WMP5-1.webp",
-        "../images/Products/Watches/Men/Product%205/WMP5-2.webp",
         "../images/Products/Watches/Men/Product%205/WMP5-3.webp",
+        "../images/Products/Watches/Men/Product%205/WMP5-2.webp",
+        "../images/Products/Watches/Men/Product%205/WMP5-1.webp",
         "../images/Products/Watches/Men/Product%205/WMP5-4.webp"
       ],
       "bestSeller": true,
@@ -92,10 +92,10 @@
       "inStock": false,
       "promotion": "Crafted with intricate details and premium materials, this watch will make a lasting impression wherever you go.",
       "images": [
-        "../images/Products/Watches/Men/Product%206/WMP6-1.webp",
-        "../images/Products/Watches/Men/Product%206/WMP6-2.webp",
-        "../images/Products/Watches/Men/Product%206/WMP6-3.webp",
         "../images/Products/Watches/Men/Product%206/WMP6-4.webp",
+        "../images/Products/Watches/Men/Product%206/WMP6-2.webp",
+        "../images/Products/Watches/Men/Product%206/WMP6-1.webp",
+        "../images/Products/Watches/Men/Product%206/WMP6-3.webp",
         "../images/Products/Watches/Men/Product%206/WMP6-5.webp"
       ],
       "bestSeller": false,
@@ -371,9 +371,9 @@
       "inStock": true,
       "promotion": "Made with premium materials, this necklace is the perfect accessory for those who seek adventure and elegance.",
       "images": [
-        "../images/Products/Necklaces/Men/Product%202/NMP2-1.webp",
         "../images/Products/Necklaces/Men/Product%202/NMP2-2.webp",
         "../images/Products/Necklaces/Men/Product%202/NMP2-3.webp",
+        "../images/Products/Necklaces/Men/Product%202/NMP2-1.webp",
         "../images/Products/Necklaces/Men/Product%202/NMP2-4.webp",
         "../images/Products/Necklaces/Men/Product%202/NMP2-5.webp"
       ],
@@ -458,9 +458,9 @@
       "inStock": true,
       "promotion": "With unmatched craftsmanship, this necklace is a bold statement of style, grace, and power.",
       "images": [
-        "../images/Products/Necklaces/Men/Product%207/NMP7-1.webp",
         "../images/Products/Necklaces/Men/Product%207/NMP7-2.webp",
-        "../images/Products/Necklaces/Men/Product%207/NMP7-3.webp",
+        "../images/Products/Necklaces/Men/Product%207/NMP7-1.webp",
+        "../images/Products/Necklaces/Men/Product%207/NMP7-1.webp",
         "../images/Products/Necklaces/Men/Product%207/NMP7-4.webp",
         "../images/Products/Necklaces/Men/Product%207/NMP7-5.webp"
       ],
@@ -608,8 +608,8 @@
       "inStock": true,
       "promotion": "Made from the highest quality materials, this necklace captures the spirit of sophistication and timeless allure.",
       "images": [
-        "../images/Products/Necklaces/Women/Product%206/NWP6-1.jpg",
         "../images/Products/Necklaces/Women/Product%206/NWP6-2.jpg",
+        "../images/Products/Necklaces/Women/Product%206/NWP6-1.jpg",
         "../images/Products/Necklaces/Women/Product%206/NWP6-3.jpg"
       ],
       "bestSeller": false,
@@ -693,9 +693,9 @@
       "inStock": true,
       "promotion": "Crafted from the finest materials, this ring brings a touch of royal elegance to any occasion.",
       "images": [
+        "../images/Products/Rings/Men/Product%201/RMP1-3.webp",
         "../images/Products/Rings/Men/Product%201/RMP1-1.webp",
-        "../images/Products/Rings/Men/Product%201/RMP1-2.webp",
-        "../images/Products/Rings/Men/Product%201/RMP1-3.webp"
+        "../images/Products/Rings/Men/Product%201/RMP1-2.webp"
       ],
       "bestSeller": true,
       "gender": "Men"
@@ -1026,9 +1026,9 @@
       "inStock": true,
       "promotion": "This bracelet combines innovation and luxury, perfect for adding a sophisticated yet bold touch to any style.",
       "images": [
-        "../images/Products/Bracelets/Men/Product%201/BMP1-1.webp",
-        "../images/Products/Bracelets/Men/Product%201/BMP1-2.webp",
         "../images/Products/Bracelets/Men/Product%201/BMP1-3.webp",
+        "../images/Products/Bracelets/Men/Product%201/BMP1-2.webp",
+        "../images/Products/Bracelets/Men/Product%201/BMP1-1.webp",
         "../images/Products/Bracelets/Men/Product%201/BMP1-4.webp"
       ],
       "bestSeller": true,
@@ -1043,10 +1043,10 @@
       "inStock": true,
       "promotion": "With its timeless design, the Luxe Infinity bracelet elevates your look with a touch of sophistication.",
       "images": [
+        "../images/Products/Bracelets/Men/Product%202/BMP2-4.webp",
+        "../images/Products/Bracelets/Men/Product%202/BMP2-3.webp",
         "../images/Products/Bracelets/Men/Product%202/BMP2-1.webp",
         "../images/Products/Bracelets/Men/Product%202/BMP2-2.webp",
-        "../images/Products/Bracelets/Men/Product%202/BMP2-3.webp",
-        "../images/Products/Bracelets/Men/Product%202/BMP2-4.webp",
         "../images/Products/Bracelets/Men/Product%202/BMP2-5.webp"
       ],
       "bestSeller": false,
@@ -1094,9 +1094,9 @@
       "inStock": true,
       "promotion": "The Zenith Steel bracelet represents the highest level of craftsmanship and design, an essential for the discerning gentleman.",
       "images": [
-        "../images/Products/Bracelets/Men/Product%205/BMP5-1.webp",
-        "../images/Products/Bracelets/Men/Product%205/BMP5-2.webp",
         "../images/Products/Bracelets/Men/Product%205/BMP5-3.webp",
+        "../images/Products/Bracelets/Men/Product%205/BMP5-2.webp",
+        "../images/Products/Bracelets/Men/Product%205/BMP5-1.webp",
         "../images/Products/Bracelets/Men/Product%205/BMP5-4.webp"
       ],
       "bestSeller": false,
@@ -1161,10 +1161,10 @@
       "inStock": true,
       "promotion": "With a perfect blend of tradition and modernity, the Noble Essence bracelet is an elegant piece that complements any look.",
       "images": [
-        "../images/Products/Bracelets/Men/Product%209/BMP9-1.webp",
+        "../images/Products/Bracelets/Men/Product%209/BMP9-4.webp",
         "../images/Products/Bracelets/Men/Product%209/BMP9-2.webp",
         "../images/Products/Bracelets/Men/Product%209/BMP9-3.webp",
-        "../images/Products/Bracelets/Men/Product%209/BMP9-4.webp",
+        "../images/Products/Bracelets/Men/Product%209/BMP9-1.webp",
         "../images/Products/Bracelets/Men/Product%209/BMP9-5.webp"
       ],
       "bestSeller": false,
@@ -1179,10 +1179,10 @@
       "inStock": false,
       "promotion": "The Luxor Steel bracelet combines strength and elegance, designed for the modern man who demands the best.",
       "images": [
-        "../images/Products/Bracelets/Men/Product%2010/BMP10-1.webp",
+        "../images/Products/Bracelets/Men/Product%2010/BMP10-4.webp",
         "../images/Products/Bracelets/Men/Product%2010/BMP10-2.webp",
         "../images/Products/Bracelets/Men/Product%2010/BMP10-3.webp",
-        "../images/Products/Bracelets/Men/Product%2010/BMP10-4.webp",
+        "../images/Products/Bracelets/Men/Product%2010/BMP10-1.webp",
         "../images/Products/Bracelets/Men/Product%2010/BMP10-5.webp"
       ],
       "bestSeller": false,
