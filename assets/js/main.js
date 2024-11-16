@@ -231,65 +231,79 @@ class CategoryGallery {
       this.container.appendChild(card);
     });
   }
-
   createCategoryCard(category) {
     const card = document.createElement('div');
     card.className = 'relative overflow-hidden rounded-lg shadow-lg';
-
+  
     // Définir les dimensions spécifiques pour chaque catégorie
-    let cardWidth, cardHeight;
+    let cardWidth = '100%';
+    let cardHeight = '30%';
+  
+    // Utiliser les classes de Tailwind pour adapter les cartes à différentes tailles d'écran
     switch (category) {
       case 'Bracelets':
+        cardWidth = 'full'; 
+        cardHeight = '40'; 
+        break;
       case 'Necklaces':
-        cardWidth = '613px';
-        cardHeight = '317px';
+        cardWidth = 'full';
+        cardHeight = '45';
         break;
       case 'Rings':
-        cardWidth = '463px';
-        cardHeight = '664px';
+        cardWidth = 'full';
+        cardHeight = '60';
         break;
       case 'Watches':
-        cardWidth = '1117px';
-        cardHeight = '339px';
+        cardWidth = 'full';
+        cardHeight = '50';
         break;
       default:
-        cardWidth = '100%'; // Dimensions par défaut
-        cardHeight = '300px';
+        cardWidth = 'full';
+        cardHeight = '35';
         break;
     }
-
-    // Appliquer les dimensions au conteneur de la carte
+  
+    // Appliquer les dimensions de base
     card.style.width = cardWidth;
     card.style.height = cardHeight;
+  
 
     // Créer l'image
     const img = document.createElement('img');
     img.className = 'w-full h-full object-cover transition-all duration-500';
-
-    // Si nous avons des produits pour cette catégorie
-    if (this.products[category] && this.products[category].length > 0) {
+    img.alt = `Image of ${category}`;
+  
+    // Vérifier les produits pour cette catégorie
+    if (this.products && this.products[category] && this.products[category].length > 0) {
       let currentIndex = 0;
       const categoryProducts = this.products[category];
-
+  
       // Définir la première image
       img.src = categoryProducts[0].images[0];
       card.appendChild(img);
-
+  
       // Créer le diaporama automatique
+      if (this.intervals[category]) {
+        clearInterval(this.intervals[category]);
+      }
+  
       this.intervals[category] = setInterval(() => {
         currentIndex = (currentIndex + 1) % categoryProducts.length;
         img.style.opacity = '0';
-
+  
         setTimeout(() => {
           img.src = categoryProducts[currentIndex].images[0];
           img.style.opacity = '1';
         }, 200);
       }, 5000);
-    }
+    } else {
+      img.src = 'default-placeholder.jpg'; // Image par défaut
+      card.appendChild(img);
 
+    }
+  
     return card;
   }
-
 
   // Nettoyer les intervalles lors de la destruction
   destroy() {
