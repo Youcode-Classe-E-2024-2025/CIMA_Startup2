@@ -1,4 +1,3 @@
-
 // navbar
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', () => {
@@ -268,6 +267,7 @@ class CategoryGallery {
     card.style.width = cardWidth;
     card.style.height = cardHeight;
   
+
     // Créer l'image
     const img = document.createElement('img');
     img.className = 'w-full h-full object-cover transition-all duration-500';
@@ -299,12 +299,12 @@ class CategoryGallery {
     } else {
       img.src = 'default-placeholder.jpg'; // Image par défaut
       card.appendChild(img);
+
     }
   
     return card;
   }
-  
- 
+
   // Nettoyer les intervalles lors de la destruction
   destroy() {
     Object.values(this.intervals).forEach(interval => clearInterval(interval));

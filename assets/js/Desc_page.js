@@ -300,7 +300,7 @@ function displayRelatedProducts() {
         article.innerHTML = `
             <a href="javascript:void(0)" class="product-link" data-product-id="${product.id}">
                 <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg transition-all duration-1000 ease-in-out">
-                    <img src="${product.images[0]}" alt="${product.name}" data-hover-src="${product.images[1]}" class="product-image object-cover w-full h-full transition-transform duration-500" loading="lazy">
+                    <img src="${product.images[0]}" alt="${product.name}" data-hover-src="${product.images[1]}" class="product-image-desc object-cover w-full h-full transition-transform duration-500" loading="lazy">
                 </figure>
                 <div class="px-1">
                     <h2 class="text-sm font-light">${product.name}</h2>
@@ -309,7 +309,7 @@ function displayRelatedProducts() {
             </a>
         `;
 
-        const imageElement = article.querySelector('.product-image');
+        const imageElement = article.querySelector('.product-image-desc');
         const productLink = article.querySelector('.product-link');
         
         imageElement.addEventListener('mouseenter', () => {
