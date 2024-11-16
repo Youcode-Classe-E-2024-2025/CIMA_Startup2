@@ -3,7 +3,11 @@ let productsData = null;
 // Fetch products data from JSON file start
 async function fetchProductData() {
     try {
-        const response = await fetch('../Data/products.json');
+        // Check if we're in the root (index) or in another page
+        const isRoot = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+        const jsonPath = isRoot ? 'assets/Data/products.json' : '../Data/products.json';
+        
+        const response = await fetch(jsonPath);
         if (!response.ok) {
             throw new Error('Failed to load product data');
         }
@@ -157,14 +161,16 @@ async function createPopup() {
     esPdfButton.classList.add('bg-button_divs_background', 'hover:bg-yellow-500', 'text-gray-800', 'py-2', 'px-12', 'rounded', 'font-semibold');
     esPdfButton.textContent = 'Es. Pdf';
     esPdfButton.addEventListener('click', () => {
-        window.location.href = 'Estimate_pdf.html';
+        const isRoot = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+        window.location.href = isRoot ? 'assets/html/Estimate_pdf.html' : 'Estimate_pdf.html';
     });
 
     const goCartButton = document.createElement('button');
     goCartButton.classList.add('bg-button_divs_background', 'hover:bg-yellow-500', 'text-gray-800', 'py-2', 'px-12', 'rounded', 'font-semibold');
     goCartButton.textContent = 'Go Cart';
     goCartButton.addEventListener('click', () => {
-        window.location.href = 'cart.html';
+        const isRoot = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+        window.location.href = isRoot ? 'assets/html/cart.html' : 'cart.html';
     });
     // Creating each button with styling end
 
