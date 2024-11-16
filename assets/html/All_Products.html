@@ -6,7 +6,7 @@
     <meta name="description" content="Eternia for luxury accessories for men and women " />
     <meta name="keywords" content="Eternia, accessories, men,women,independent" />
     <meta name="author" content="CIMA team" />
-    <title>ETERNIA || All Products</title>
+    <title>ETERNIA || Our Catalog</title>
 
     <link rel="stylesheet" href="../css/tailwind/output.css" />
     <link rel="icon" href="../images/Logo/Favicon/fav-32-eternia.png" type="image/x-icon" />
@@ -117,9 +117,25 @@
 
     <main>
       <section>
-        <div class="text-center my-10 relative">
-          <input id="search" class="border-2 rounded-lg pl-4 pr-12 w-80 max-sm:w-full" type="search" placeholder="search..." />
+        <div class="text-center my-10">
+          <div class="relative w-80 mx-auto">
+            <input 
+              id="search" 
+              class="border-2 border-gray-300 rounded-lg pl-4 pr-12 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition" 
+              type="search" 
+              placeholder="Search..." 
+            />
+            <img 
+              src="../images/Icons/search.svg" 
+              alt="Search Icon" 
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 pointer-events-none"
+            />
+          </div>
         </div>
+        
+        
+        
+        
 
         <div class="flex flex-wrap justify-center gap-4 text-center text-2xl font-medium font-inria max-lg:text-lg max-sm:text-xs cursor-pointer">
           <span id="filtermen" class="px-10 underline max-md:px-4 max-sm:px-3">men</span>
@@ -143,13 +159,13 @@
     
       <section>
         <div class="flex justify-center font-inria my-10">
-          <span id="prevPage" class="px-3 cursor-pointer rounded-full text-xl self-center hover:bg-yellow-500 transition-all duration-200">
+          <span id="prevPage" class="px-3 cursor-pointer rounded-full text-xl self-center transition-all duration-200">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fill-current text-gray-700 hover:text-yellow-500 transition-all duration-200">
               <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
             </svg>
           </span>
           <div id="paginationNumbers" class="flex items-center"></div>
-          <span id="nextPage" class="px-3 cursor-pointer rounded-full text-xl self-center hover:bg-yellow-500 transition-all duration-200">
+          <span id="nextPage" class="px-3 cursor-pointer rounded-full text-xl self-center transition-all duration-200">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fill-current text-gray-700 hover:text-yellow-500 transition-all duration-200">
               <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
             </svg>
