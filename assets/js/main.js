@@ -237,38 +237,27 @@ class CategoryGallery {
     card.className = 'relative overflow-hidden rounded-lg shadow-lg';
   
     // Définir les dimensions spécifiques pour chaque catégorie
-    let cardWidth = '100%';
-    let cardHeight = '30%';
+    // let cardWidth = '100%';
+    // let cardHeight = '30%';
   
     // Utiliser les classes de Tailwind pour adapter les cartes à différentes tailles d'écran
     switch (category) {
       case 'Bracelets':
-        cardWidth = 'full'; 
-        cardHeight = '40'; 
+        card.classList.add('card-bracelets');
         break;
       case 'Necklaces':
-        cardWidth = 'full';
-        cardHeight = '45';
+        card.classList.add('card-necklaces');
         break;
       case 'Rings':
-        cardWidth = 'full';
-        cardHeight = '60';
+        card.classList.add('card-rings');
         break;
       case 'Watches':
-        cardWidth = 'full';
-        cardHeight = '50';
+        card.classList.add('card-watches');
         break;
       default:
-        cardWidth = 'full';
-        cardHeight = '35';
+        card.classList.add('card-bracelets');
         break;
     }
-  
-    // Appliquer les dimensions de base
-    card.style.width = cardWidth;
-    card.style.height = cardHeight;
-  
-
     // Créer l'image
     const img = document.createElement('img');
     img.className = 'w-full h-full object-cover transition-all duration-500';
