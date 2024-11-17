@@ -162,40 +162,35 @@
 
     <!-- ----------------   Best Sellers sections ------------>
     <section>
-      <h1 class="text-3xl md:text-5xl  font-montaga text-goldenrod p-4 mt-4 flex justify-center underline">
+      <h1 class="text-3xl md:text-5xl font-montaga text-goldenrod p-4 mt-4 flex justify-center underline">
         Best Sellers
       </h1>
     </section>
-      <section class="best_sellers p-4">
-        <div class="bestSeller py-8">
-          <!-- Conteneur des cartes avec gestion de la grille responsive -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 relative"
-            id="card-container">
-
-            <!-- Carte 1 -->
-            <div class="relative overflow-hidden rounded-lg shadow-lg w-full h-auto">
-              <img src="" alt="Bracelets" class="w-full h-full object-cover transition-all duration-500">
-            </div>
-
-            <!-- Carte 2 -->
-            <div class="relative overflow-hidden rounded-lg shadow-lg w-full h-auto">
-              <img src="" alt="Necklaces" class="w-full h-full object-cover transition-all duration-500">
-            </div>
-
-            <!-- Carte 3 -->
-            <div class="relative overflow-hidden rounded-lg shadow-lg w-full h-auto">
-              <img src="" alt="Rings" class="w-full h-full object-cover transition-all duration-500">
-            </div>
-
-            <!-- Carte 4 -->
-            <div class="relative overflow-hidden rounded-lg shadow-lg w-full h-auto">
-              <img src="" alt="Watches" class="w-full h-full object-cover transition-all duration-500">
-            </div>
-
+    
+    <section class="best-sellers relative w-full min-h-screen p-4 sm:mb-40 md:mb-60">
+      <div class="best-seller-container relative w-full h-full">
+        <div id="card-container" class="gallery-grid relative w-full">
+          <!-- Bracelets Card -->
+          <div class="card card-bracelets">
+            <img src="" alt="Bracelets" class="w-full h-full object-cover transition-opacity duration-500">
+          </div>
+          
+          <!-- Watches Card -->
+          <div class="card card-watches">
+            <img src="" alt="Watches" class="w-full h-full object-cover transition-opacity duration-500">
+          </div>
+          
+          <!-- Necklaces Card -->
+          <div class="card card-necklaces">
+            <img src="" alt="Necklaces" class="w-full h-full object-cover transition-opacity duration-500">
+          </div>
+          
+          <!-- Rings Card -->
+          <div class="card card-rings">
+            <img src="" alt="Rings" class="w-full h-full object-cover transition-opacity duration-500">
           </div>
         </div>
-      </section>
-
+      </div>
     </section>
       <!-- --------------------------------------------------- -->
       <section>
