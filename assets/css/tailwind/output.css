@@ -780,10 +780,6 @@ video {
   margin-bottom: 2rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -1302,6 +1298,11 @@ video {
   border-color: rgb(179 179 179 / var(--tw-border-opacity));
 }
 
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
 .bg-\[\#FBD65C\] {
   --tw-bg-opacity: 1;
   background-color: rgb(251 214 92 / var(--tw-bg-opacity));
@@ -1330,6 +1331,11 @@ video {
 .bg-green-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 .bg-orange-100 {
@@ -2002,6 +2008,10 @@ video {
   padding: 0.90rem;
 }
 
+.button:hover{
+  background-color: rgb(246, 246, 159);
+}
+
 .product-section {
   overflow: hidden;
   transition: height 0.3s ease, visibility 0.3s ease;
@@ -2015,6 +2025,22 @@ video {
 .product-section.visible {
   height: auto;
   visibility: visible;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
 }
 
 .hover\:bg-yellow-500:hover {

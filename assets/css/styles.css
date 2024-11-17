@@ -199,8 +199,6 @@ to {
 } 
 
 
-
-
 .product-section {
   overflow: hidden;
   transition: height 0.3s ease, visibility 0.3s ease;
@@ -214,4 +212,19 @@ to {
 .product-section.visible {
   height: auto;
   visibility: visible;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
 }
