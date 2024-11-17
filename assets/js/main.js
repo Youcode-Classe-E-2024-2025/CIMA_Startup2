@@ -270,7 +270,7 @@ class CategoryGallery {
 
     // Créer l'image
     const img = document.createElement('img');
-    img.className = 'w-full h-full object-cover transition-all duration-500';
+    img.className = 'w-full h-full object-cover transition-all duration-500 category-image';
     img.alt = `Image of ${category}`;
   
     // Vérifier les produits pour cette catégorie

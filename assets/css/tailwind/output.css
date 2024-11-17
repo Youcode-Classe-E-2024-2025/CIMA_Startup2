@@ -1960,6 +1960,33 @@ video {
   padding: 0.90rem;
 }
 
+/* ------------------------------------- */
+
+@media (max-width: 768px) {
+  .category-image {
+    width: 100%;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .category-image {
+    width: 100%;
+    height: 300px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .category-image {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+  }
+}
+
 .hover\:bg-yellow-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
