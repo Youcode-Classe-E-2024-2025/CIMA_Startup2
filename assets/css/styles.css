@@ -178,7 +178,7 @@ to {
   width: 250px; 
   height: 250px; 
   object-fit: cover; 
-  border-radius: 8px; 
+  border-radius: 5px; 
 }
 
   
@@ -199,3 +199,19 @@ to {
 } 
 
 
+
+
+.product-section {
+  overflow: hidden;
+  transition: height 0.3s ease, visibility 0.3s ease;
+}
+
+.product-section.hidden {
+  height: 0;
+  visibility: hidden;
+}
+
+.product-section.visible {
+  height: auto;
+  visibility: visible;
+}

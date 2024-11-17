@@ -19,9 +19,103 @@
     />
   </head>
   <body>
-    <header></header>
-    <main class=" mx-auto ">
-     
+    <header class=" bg-black top-0">
+        <!-- Navbar -->
+        <nav class="relative">
+          <div class="px-4 mx-auto max-w-7xl">
+            <div class="flex items-center justify-between h-16">
+              <!-- Logo -->
+              <p onclick="window.location.href='../../index.html'" class="cursor-pointer text-2xl font-montaga text-outline">
+                E<span class="cursor-pointer hover:text-goldenrod" onclick="event.stopPropagation(); window.location.href='../html/Admin_page.html';">T</span>ERNIA
+              </p>
+      
+              <!-- Menu Desktop -->
+              <div class="hidden md:flex items-center justify-between flex-1 pl-12">
+                <!-- Menu principal centré -->
+                <div class="flex-1 flex justify-center space-x-8 font-inria">
+                  <a href="#" class=" hover:text-goldenrod text-outline navbar-link text-white">Bracelets</a>
+                  <a href="#" class=" hover:text-goldenrod text-outline navbar-link text-white">Necklaces</a>
+                  <a href="#" class=" hover:text-goldenrod text-outline navbar-link text-white">Rings</a>
+                  <a href="#" class=" hover:text-goldenrod text-outline navbar-link text-white">Watches</a>
+                </div>
+      
+                <!-- Menu droite (Us + Panier) -->
+                <div class="flex items-center space-x-8 font-inria">
+                  <a href="../html/About_Contact.html" class="hover:text-gray-200 lg:hover:text-goldenrod/80 text-outline text-white">Us</a>
+                  <button class="hover:text-gray-200 lg:hover:text-goldenrod/80 cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6 text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+      
+              <!-- Menu Mobile Button Cart -->
+              <div class="flex items-center space-x-4 md:hidden">
+                <button class="hover:text-gray-200 lg:hover:text-goldenrod/80 cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6 text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                  </button>
+                <button class="" id="menuButton">
+                  <svg class="w-6 h-6 text-white" id="menuIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+      
+            <!-- Menu Mobile -->
+            <div class="absolute left-0 hidden w-full md:hidden" id="mobileMenu">
+              <div class="flex flex-col items-center py-4 space-y-4 font-inria bg-white">
+                <a href="../html/All_Products.html" class="hover:text-gray-200">Bracelets</a>
+                <a href="../html/All_Products.html" class="hover:text-gray-200">Necklaces</a>
+                <a href="../html/All_Products.html" class="hover:text-gray-200">Rings</a>
+                <a href="../html/All_Products.html" class="hover:text-gray-200">Watches</a>
+                <a href="../html/About_Contact.html" class="hover:text-gray-200">Us</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+      <!-- Dynamic Product Sections Container -->
+      <section class="elementOfNavbar w-full">
+        <!-- Bracelet Products -->
+        <div class="product-section w-full" id="bracelets-container">
+          <div class="product-list visible grid grid-cols-4 gap-6 px-4 py-8 relative bg-white"
+            data-category="bracelets">
+          </div>
+        </div>
+      
+        <!-- Necklace Products -->
+        <div class="product-section w-full" id="necklaces-container">
+          <div class="product-list visible grid grid-cols-4 gap-6 px-4 py-8 relative bg-white"
+            data-category="necklaces">
+          </div>
+        </div>
+      
+        <!-- Ring Products -->
+        <div class="product-section w-full" id="rings-container">
+          <div class="product-list visible grid grid-cols-4 gap-6 px-4 py-8 relative bg-white"
+            data-category="rings">
+          </div>
+        </div>
+      
+        <!-- Watch Products -->
+        <div class="product-section w-full" id="watches-container">
+          <div class="product-list visible grid grid-cols-4 gap-6 px-4 py-8 relative bg-white"
+            data-category="watches">
+          </div>
+        </div>
+      </section>
+
+    
+    <main class=" mx-auto relative ">
     <!-- Product Description Section -->
     <section class="max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 container mx-auto mb-32 px-4 lg:px-8 py-8">
         <!-- Left Side - Image Gallery -->
@@ -36,42 +130,15 @@
                 >
             </div>
             <div class="flex justify-center gap-4 w-full max-w-[530px] flex-wrap">
-                <!-- <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0 thumbnail-btn">
-                    <img 
-                        src="../images/Products/Bracelets/Men/Product 1/BMP1-2.webp" 
-                        alt="Product view 1" 
-                        width="110" 
-                        height="110" 
-                        class="w-full h-full object-cover border border-[rgba(0,0,0,0.24)]"
-                    >
-                </button>
-                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0 thumbnail-btn">
-                    <img 
-                        src="../images/Products/Bracelets/Men/Product 1/BMP1-3.webp" 
-                        alt="Product view 2" 
-                        width="110" 
-                        height="110" 
-                        class="w-full h-full object-cover border border-[rgba(0,0,0,0.24)]"
-                    >
-                </button>
-                <button class="w-[80px] h-[80px] md:w-[110px] md:h-[110px] flex-shrink-0 thumbnail-btn">
-                    <img 
-                        src="../images/Products/Bracelets/Men/Product 1/BMP1-4.webp" 
-                        alt="Product view 3" 
-                        width="110" 
-                        height="110" 
-                        class="w-full h-full object-cover border border-[rgba(0,0,0,0.24)]"
-                    >
-                </button> -->
             </div>
         </article>
     
         <!-- Right Side - Product Details -->
         <article class="flex flex-col text-center gap-5 lg:text-left lg:justify-evenly lg:h-[530px] font-inria">
             <div class="space-y-2">
-                <h1 class="text-4xl font-montaga">Luminous Embrace</h1>
+                <h1 class="text-4xl font-montaga"></h1>
                 <p class="text-gray_used_in_small_text">Out of Stock</p>
-                <p class="text-2xl text-darkGolden">$ 4599</p>
+                <p class="text-2xl text-darkGolden"></p>
             </div>
     
             <p class="text-[#333333] mt-6 lg:mt-0">-- Shipping all over The World --</p>
@@ -155,107 +222,16 @@
     <section class="suite mb-32">
         <div class="container mx-auto px-4 max-w-6xl py-8 font-inria">
             <header class="mb-12">
-                <h1 class="text-4xl text-center font-montaga">The <span id="category-name"> Rings </span> Suite</h1>
+                <h1 class="text-4xl text-center font-montaga">The <span id="category-name">  </span> Suite</h1>
             </header>
-            
             <main id="related-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- <article class="flex flex-col cursor-pointer">
-                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
-                        <img 
-                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
-                            alt="Crystal Ring" 
-                            class="object-cover w-full h-full transition-transform duration-300"
-                            loading="lazy"
-                        >
-                    </figure>
-                    <div class="px-1">
-                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
-                        <p class="text-sm text-darkGolden">$69.00</p>
-                    </div>
-                </article>
-
-                <article class="flex flex-col">
-                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
-                        <img 
-                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
-                            alt="Golden Ring" 
-                            class="object-cover w-full h-full transition-transform duration-300"
-                            loading="lazy"
-                        >
-                    </figure>
-                    <div class="px-1">
-                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
-                        <p class="text-sm text-darkGolden">$69.00</p>
-                    </div>
-                </article>
-
-                <article class="flex flex-col">
-                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
-                        <img 
-                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
-                            alt="Simple Ring" 
-                            class="object-cover w-full h-full transition-transform duration-300"
-                            loading="lazy"
-                        >
-                    </figure>
-                    <div class="px-1">
-                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
-                        <p class="text-sm text-darkGolden">$69.00</p>
-                    </div>
-                </article>
-
-                <article class="flex flex-col">
-                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
-                        <img 
-                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
-                            alt="Vintage Ring" 
-                            class="object-cover w-full h-full transition-transform duration-300"
-                            loading="lazy"
-                        >
-                    </figure>
-                    <div class="px-1">
-                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
-                        <p class="text-sm text-darkGolden">$69.00</p>
-                    </div>
-                </article>
-
-                <article class="flex flex-col">
-                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
-                        <img 
-                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
-                            alt="Sun Ring" 
-                            class="object-cover w-full h-full transition-transform duration-300"
-                            loading="lazy"
-                        >
-                    </figure>
-                    <div class="px-1">
-                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
-                        <p class="text-sm text-darkGolden">$69.00</p>
-                    </div>
-                </article>
-
-                <article class="flex flex-col">
-                    <figure class="relative w-full aspect-square bg-gray-50 mb-4 overflow-hidden shadow-lg ">
-                        <img 
-                            src="../images/Products/Rings/Women/Product 1/RWP1-1.jpg" 
-                            alt="Heart Ring" 
-                            class="object-cover w-full h-full transition-transform duration-300"
-                            loading="lazy"
-                        >
-                    </figure>
-                    <div class="px-1">
-                        <h2 class="text-sm font-light text-gray-800">Gather Wood Zigzag Tray (Pxl - Maple)</h2>
-                        <p class="text-sm text-darkGolden">$69.00</p>
-                    </div>
-                </article> -->
             </main>
         </div>
     </section>
     </main>
 
     <!-- footer section -->
-    <footer class="font-inria flex flex-col items-center mb-5 gap-4 px-3">
+    <footer class="font-inria flex flex-col items-center mb-5 gap-4 px-3 relative">
         <a href="../../index.html"><img src="../images/Logo/logo-eternia-400-400.png" alt="" width="180" height="180"></a>
         <div class="flex gap-4 text-goldenrod font-semibold text-xs sm:text-base lg:text-xl">
             <a href="../../index.html">Home</a>
@@ -271,6 +247,7 @@
         </div>
     </footer>
 
+    <script src="../js/header.js"></script>
     <script src="../js/Cart_pop_up.js"></script>
     <script src="../js/Desc_page.js"></script>
   </body>

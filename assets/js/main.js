@@ -150,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 fetch('./assets/Data/products.json')
   .then(response => response.json())
   .then(data => {
+    console.log(data)
     // Appeler la fonction pour créer les cartes
     createProductCards(data);
   })
@@ -164,7 +165,7 @@ function createProductCards(products) {
   products.forEach(product => {
     if (product.bestsellers) {
       const card = document.createElement('div');
-      card.classList.add('product-card', 'bg-white', 'p-4', 'sm:p-6', 'rounded-lg', 'shadow-lg', 'hover:shadow-xl', 'transition-shadow', 'duration-300');
+      card.classList.add('product-card', 'bg-black', 'p-4', 'rounded', 'shadow-lg', 'hover:shadow-xl', 'transition-shadow', 'duration-300');
 
       const cardImage = document.createElement('div');
       cardImage.classList.add('h-[200px]', 'sm:h-full');
@@ -172,7 +173,7 @@ function createProductCards(products) {
       const img = document.createElement('img');
       img.src = product.imageUrl;
       img.alt = product.name;
-      img.classList.add('w-full', 'h-full', 'object-cover', 'rounded-lg');
+      img.classList.add('w-full', 'h-full', 'object-cover', 'rounded');
 
       cardImage.appendChild(img);
       card.appendChild(cardImage);
@@ -341,53 +342,58 @@ async function loadProducts() {
     const data = await response.json();
     const productsArray = Object.values(data).flat();
 
-    // Catégories de produits
+    // Categories
     const categories = ['bracelets', 'necklaces', 'rings', 'watches'];
 
     categories.forEach(category => {
-      // Filtrer les produits pour chaque catégorie
-      const categoryProducts = productsArray.filter(product => product.category && product.category.toLowerCase() === category);
+      // Filter and limit to 4 products per category
+      const categoryProducts = productsArray.filter(
+        product => product.category && product.category.toLowerCase() === category
+      ).slice(0, 4);
 
-      // Limiter à 4 produits seulement
-      const top4CategoryProducts = categoryProducts.slice(0, 4);
-
-      // Récupérer le conteneur de chaque catégorie
+      // Get container for the category
       const container = document.querySelector(`#${category}-container .product-list`);
-      container.innerHTML = ''; // Vider le conteneur avant d'ajouter les nouveaux produits
+      container.innerHTML = ''; // Clear previous content
 
-      // Ajouter chaque produit à la grille
-      top4CategoryProducts.forEach(product => {
+      // Create product cards
+      categoryProducts.forEach(product => {
         if (product.images && Array.isArray(product.images)) {
-          product.images = product.images.slice(0, 1).map(imagePath => imagePath.replace(/^\.{2}/, 'assets')); // Prendre seulement la première image
+          product.images = product.images.slice(0, 1).map(imagePath => imagePath.replace(/^\.{2}/, 'assets'));
         }
 
-        // Créer la carte de produit
+        // Create card
         const productCard = document.createElement('div');
-        productCard.classList.add('product-card', 'bg-white', 'p-6', 'rounded-lg', 'shadow-lg', 'hover:shadow-xl', 'transition-shadow', 'duration-300', 'flex', 'flex-col', 'items-center');
+        productCard.classList.add(
+          'bg-white', 'p-4', 'rounded', 'flex', 'flex-col', 'items-center', 'shadow-md'
+        );
 
-        // Ajouter l'image du produit
+        // Image container with aspect-square
+        const productImageContainer = document.createElement('div');
+        productImageContainer.classList.add('w-full', 'aspect-square', 'overflow-hidden', 'relative', 'rounded');
+
+        // Image element
         const productImage = document.createElement('img');
         productImage.src = product.images[0];
         productImage.alt = product.name;
-        //productImage.classList.add('w-full', 'h-full', 'object-cover', 'rounded-lg', 'mt-4');
-        productImage.classList.add('product-image');
+        productImage.classList.add('absolute', 'top-0', 'left-0', 'w-full', 'h-full', 'object-cover');
 
-        // Ajouter le titre du produit
+        // Append image to its container
+        productImageContainer.appendChild(productImage);
+
+        // Title
         const productTitle = document.createElement('h3');
-        productTitle.classList.add('font-inria', 'text-xl', 'text-center', 'mt-4');
+        productTitle.classList.add('font-inria', 'lg:text-lg', 'text-center', 'mt-4', 'text-gray-800');
         productTitle.textContent = product.name;
 
-        // Ajouter un lien vers la page de détails
+        // Link to product details
         const productLink = document.createElement('a');
-        productLink.href = `assets/html/Descri_page.html?id=${product.id}`; // Lien dynamique avec l'ID du produit
+        productLink.href = `assets/html/Descri_page.html?id=${product.id}`;
         productLink.classList.add('w-full');
 
-        // Ajouter les éléments au produit
-        productCard.appendChild(productImage);
+        // Append elements
+        productCard.appendChild(productImageContainer);
         productCard.appendChild(productTitle);
         productLink.appendChild(productCard);
-
-        // Ajouter la carte de produit au conteneur
         container.appendChild(productLink);
       });
     });
@@ -396,5 +402,5 @@ async function loadProducts() {
   }
 }
 
-// Appeler la fonction pour charger les produits dès que la page est prête
+// Load products on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', loadProducts);
