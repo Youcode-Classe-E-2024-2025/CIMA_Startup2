@@ -2,20 +2,19 @@
 let productsDatas = null;
 
 async function fetchProducts() {
-  if (productsDatas) return productsDatas;
-  
-  try {
-    const isInRoot = !window.location.pathname.includes('/assets/html/');
-    const jsonPath = isInRoot ? 'assets/Data/products.json' : '../Data/products.json';
-    const response = await fetch(jsonPath);
-    if (!response.ok) throw new Error('Loading products failed');
-    productsDatas = await response.json();
-    return productsDatas;
-  } catch (error) {
-    console.error('Error fetching products:', error);
-    return null;
+    if (productsDatas) return productsDatas;
+    
+    try {
+      const response = await fetch('../Data/products.json');
+      if (!response.ok) throw new Error('Loading products failed');
+      productsDatas = await response.json();
+      return productsDatas;
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      return null;
+    }
   }
-}
+  
 
 function initializeNavbarLinks() {
   const navbarLinks = document.querySelectorAll('.navbar-link');
@@ -132,6 +131,7 @@ function initializeNavbarLinks() {
 async function loadProducts() {
   try {
     const data = await fetchProducts();
+    console.log("enter")
     if (!data) return;
     
     const productsArray = Object.values(data).flat();
@@ -143,6 +143,7 @@ async function loadProducts() {
       const categoryProducts = productsArray.filter(
         product => product.category && product.category.toLowerCase() === category
       ).slice(0, 4);
+      console.log(categoryProducts)
 
       const container = document.querySelector(`#${category}-container .product-list`);
       if (!container) return;
@@ -161,6 +162,7 @@ async function loadProducts() {
         productCard.classList.add(
           'bg-white', 'p-4', 'rounded', 'flex', 'flex-col', 'items-center', 'shadow-md'
         );
+        console.log(productCard)
 
         const productImageContainer = document.createElement('div');
         productImageContainer.classList.add('w-full', 'aspect-square', 'overflow-hidden', 'relative', 'rounded');
@@ -200,5 +202,6 @@ async function loadProducts() {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', async () => {
   await loadProducts();
+  
   initializeNavbarLinks();
 });
