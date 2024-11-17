@@ -194,6 +194,11 @@ to {
     background-color: rgba(251, 214, 92, 1);
     padding: 0.90rem;
 }
+.button:hover{
+    background-color: rgb(246, 246, 159);
+} 
+
+
 
 
 .product-section {

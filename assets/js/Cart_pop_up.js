@@ -188,7 +188,6 @@ async function createPopup() {
 }
 // Function to create and show the popup end
 
-
 // Add event listener for the cart icon click to trigger popup start
 const cartIcon = document.querySelector('.cart-icon');
 cartIcon.addEventListener('click', createPopup);
