@@ -196,14 +196,13 @@ class CategoryGallery {
     try {
       const response = await fetch('assets/Data/products.json');
       if (!response.ok) throw new Error('Loading products failed');
-
       const data = await response.json();
       const productsArray = Object.values(data).flat();
-      
+     
       // Process image paths
       productsArray.forEach(product => {
         if (product.images && Array.isArray(product.images)) {
-          product.images = product.images.map(imagePath => 
+          product.images = product.images.map(imagePath =>
             imagePath.replace(/^\.{2}/, 'assets')
           );
         }
@@ -217,6 +216,7 @@ class CategoryGallery {
       });
 
       this.initializeImages();
+      this.setupClickHandlers(); // Add click handlers after loading products
     } catch (error) {
       console.error('Error:', error);
       this.container.innerHTML = `
@@ -229,14 +229,15 @@ class CategoryGallery {
 
   initializeImages() {
     const cards = {
-      'Watches': '.card-watches img',
-      'Bracelets': '.card-bracelets img',
-      'Rings': '.card-rings img',
-      'Necklaces': '.card-necklaces img'
+      'Watches': '.card-watches',
+      'Bracelets': '.card-bracelets',
+      'Rings': '.card-rings',
+      'Necklaces': '.card-necklaces'
     };
 
     Object.entries(cards).forEach(([category, selector]) => {
-      const img = this.container.querySelector(selector);
+      const card = this.container.querySelector(selector);
+      const img = card.querySelector('img');
       if (!img) return;
 
       const categoryProducts = this.products[category];
@@ -248,19 +249,49 @@ class CategoryGallery {
       let currentIndex = 0;
       img.src = categoryProducts[0].images[0];
 
+      // Store current product index in the card element
+      card.dataset.currentIndex = currentIndex;
+
       if (this.intervals[category]) {
         clearInterval(this.intervals[category]);
       }
 
       this.intervals[category] = setInterval(() => {
         currentIndex = (currentIndex + 1) % categoryProducts.length;
+        card.dataset.currentIndex = currentIndex; // Update stored index
         img.style.opacity = '0';
-
         setTimeout(() => {
           img.src = categoryProducts[currentIndex].images[0];
           img.style.opacity = '1';
         }, 200);
       }, 5000);
+    });
+  }
+
+  setupClickHandlers() {
+    const cards = {
+      'Watches': '.card-watches',
+      'Bracelets': '.card-bracelets',
+      'Rings': '.card-rings',
+      'Necklaces': '.card-necklaces'
+    };
+
+    Object.entries(cards).forEach(([category, selector]) => {
+      const card = this.container.querySelector(selector);
+      if (!card) return;
+
+      card.style.cursor = 'pointer'; // Make it clear it's clickable
+
+      card.addEventListener('click', () => {
+        const currentIndex = parseInt(card.dataset.currentIndex) || 0;
+        const categoryProducts = this.products[category];
+        
+        if (categoryProducts && categoryProducts[currentIndex]) {
+          const product = categoryProducts[currentIndex];
+          // Navigate to description page with product ID
+          window.location.href = `assets/html/Descri_page.html?id=${product.id}`;
+        }
+      });
     });
   }
 
