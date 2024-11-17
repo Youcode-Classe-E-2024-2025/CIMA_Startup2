@@ -13,11 +13,28 @@
         margin: 0;
       }
       .pdf-content {
-        width: 800px;
+        width: 210mm;
         margin: 0 auto;
         padding: 40px;
         background: white;
       }
+      table {
+            page-break-inside: auto;
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        td,
+        th {
+            word-wrap: break-word;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
       .quotation-table {
         width: 100%;
         border-collapse: collapse;
@@ -206,7 +223,9 @@
           html2canvas: { 
             scale: 2,
             useCORS: true,
-            letterRendering: true
+            letterRendering: true,
+            scrollX: 0,
+            scrollY: 0
           },
           jsPDF: { 
             unit: 'pt',

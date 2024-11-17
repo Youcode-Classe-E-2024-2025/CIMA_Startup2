@@ -99,17 +99,27 @@ async function createPopup() {
 
     // Handle empty Cart start
     if (Object.keys(cartItemsByCategory).length === 0) {
+        // Create the "empty" message
         const emptyMessage = document.createElement('div');
         emptyMessage.classList.add('text-center', 'text-gray-700', 'my-8', 'text-xl');
         emptyMessage.textContent = "Your exquisite collection awaits... Embrace the allure of the finest.";
-
+    
+        // Create the catalog link
         const catalogLink = document.createElement('a');
-        catalogLink.classList.add( 'underline','text-center','text-goldenrod', 'text-lg', 'mt-2','mb-2' ,'block');
-        catalogLink.href = 'All_Products.html';
+        catalogLink.classList.add('underline', 'text-center', 'text-goldenrod', 'text-lg', 'mt-2', 'mb-2', 'block');
+        
+        // Determine the link based on the current path
+        const isRoot = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
+        catalogLink.href = isRoot ? 'assets/html/All_Products.html' : 'All_Products.html';
+    
+        // Set the link text
         catalogLink.textContent = 'Explore Our Catalog';
-
+    
+        // Append both the empty message and the catalog link to the popup content
         popupContent.appendChild(emptyMessage);
         popupContent.appendChild(catalogLink);
+    
+    
     // Handle empty Cart end
     } else {
 
@@ -187,7 +197,6 @@ async function createPopup() {
     // Appending pop_Up inside proper parent end
 }
 // Function to create and show the popup end
-
 
 // Add event listener for the cart icon click to trigger popup start
 const cartIcon = document.querySelector('.cart-icon');

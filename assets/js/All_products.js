@@ -7,7 +7,10 @@ let totalpages = 1;
 let genderFilter = "";
 let searchQuery = "";
 let categoryFilter = "";
-let currentSort = "";
+let activeFilters = {
+  price: false,
+  title: false
+};
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -71,7 +74,6 @@ function updatePagination(page) {
   }
 }
 
-
 function setupNavigation() {
   document.getElementById("prevPage")?.addEventListener("click", () => {
     if (currentpage > 1) {
@@ -112,6 +114,7 @@ function loadProducts() {
 }
 
 function applyFilters() {
+  // First apply basic filters
   filteredProducts = products.filter(item => {
     const matchesGender = genderFilter ? item.gender?.toLowerCase() === genderFilter : true;
     const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase());
@@ -119,10 +122,21 @@ function applyFilters() {
     return matchesGender && matchesSearch && matchesCategory;
   });
 
-  if (currentSort === "price") {
-    filteredProducts.sort((a, b) => a.price - b.price);
-  } else if (currentSort === "title") {
-    filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+  // Apply multiple sorting criteria
+  if (activeFilters.price || activeFilters.title) {
+    filteredProducts.sort((a, b) => {
+      if (activeFilters.price && activeFilters.title) {
+        // First sort by price
+        const priceCompare = a.price - b.price;
+        // If prices are equal, sort by title
+        return priceCompare === 0 ? a.name.localeCompare(b.name) : priceCompare;
+      } else if (activeFilters.price) {
+        return a.price - b.price;
+      } else if (activeFilters.title) {
+        return a.name.localeCompare(b.name);
+      }
+      return 0;
+    });
   }
 
   currentpage = 1;
@@ -131,14 +145,27 @@ function applyFilters() {
 }
 
 function resetFilters() {
+  // Loop through all filters and reset only non-active ones
   const filters = document.querySelectorAll("#filtermen, #filterwomen, #filterprice, #filtertitle, #filtercategory");
-  filters.forEach(filter => filter.classList.remove("text-goldenrod"));
-  
+  filters.forEach(filter => {
+    if (
+      (filter.id === "filtermen" && genderFilter !== "men") ||
+      (filter.id === "filterwomen" && genderFilter !== "women") ||
+      (filter.id === "filterprice" && !activeFilters.price) ||
+      (filter.id === "filtertitle" && !activeFilters.title) ||
+      (filter.id === "filtercategory" && !categoryFilter)
+    ) {
+      filter.classList.remove("text-goldenrod");
+    }
+  });
+
+  // Remove the category dropdown, if present
   const categoryDropdown = document.querySelector("#filtercategory .category-dropdown");
   if (categoryDropdown) {
     categoryDropdown.remove();
   }
 }
+
 
 document.getElementById("filtermen")?.addEventListener("click", () => {
   genderFilter = genderFilter === "men" ? "" : "men";
@@ -155,24 +182,18 @@ document.getElementById("filterwomen")?.addEventListener("click", () => {
 });
 
 document.getElementById("filterprice")?.addEventListener("click", function() {
-  if (currentSort === "price") {
-    currentSort = "";
-    resetFilters();
-  } else {
-    currentSort = "price";
-    resetFilters();
+  activeFilters.price = !activeFilters.price;
+  resetFilters();
+  if (activeFilters.price) {
     this.classList.add("text-goldenrod");
   }
   applyFilters();
 });
 
 document.getElementById("filtertitle")?.addEventListener("click", function() {
-  if (currentSort === "title") {
-    currentSort = "";
-    resetFilters();
-  } else {
-    currentSort = "title";
-    resetFilters();
+  activeFilters.title = !activeFilters.title;
+  resetFilters();
+  if (activeFilters.title) {
     this.classList.add("text-goldenrod");
   }
   applyFilters();
@@ -214,7 +235,6 @@ document.getElementById("filtercategory")?.addEventListener("click", function(ev
     );
     categoryItem.textContent = category;
     
-    // Highlight the currently selected category
     if (categoryFilter === category.toLowerCase()) {
       categoryItem.classList.add("text-goldenrod");
     }
