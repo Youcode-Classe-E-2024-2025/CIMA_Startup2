@@ -10,6 +10,7 @@
 
 ## Links
 
+- **Brief Presentation:**[View Presentation](https://www.canva.com/design/DAGWuDS9Ocg/HTkUF8yTBjI1bOi8ziDSwQ/view?utm_content=DAGWuDS9Ocg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h495bf20bb8)
 - **Github Backlog:**[View Backlog](https://github.com/orgs/Youcode-Classe-E-2024-2025/projects/18/views/1)
 - **Low Fidelity:**[View low fidelity maquette](https://balsamiq.cloud/scrl6mm/pi6gno2/r604B)
 - **Figma Maquette:** [View on Figma](https://www.figma.com/design/eHJGu8LdfvYEMxXdRQ46O2/CIMA-Startup-2?node-id=1-3&t=5ofrBzNfbjfrYXDm-1)
